@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,900;1,500&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+                :root {
+        --sm: 1.4rem;
+        --md: 1.6rem;
+        --lg: 1.8rem;--blanco:#ffffff;
+        --crema: #E5D9B6;
+        --verde-agua: #A4BE7B;
+        --cocodrile:#5F8D4E;
+        --verde-oscuro:#285430;
+        --negro: #000;
+        --gris:rgba(32, 32, 32, 0.781);
+        
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            background-color: var(--negro);
+        }
+        .contact {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            font-family: 'Hanken Grotesk', sans-serif;
+            display: grid;
+            grid-template-rows: auto 1fr auto ;
+            width: 300px;
+            background-color:none;
+            border-radius: 6px;
+            border: 1px solid var(--blanco);
+            padding: 10px 20px;
+        }
+        .logo {
+            margin-bottom: 48px;
+            justify-self: center;
+            color: var(--cocodrile);
+            display: flex;
+        }
+        h1 {
+            font-family: 'Hanken Grotesk', sans-serif;
+            height: 58px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+        }
+        h2 {
+            color: var(--verde-agua);
+            margin-left: 5px;
+            font-size: 18px;
+            margin-top: -30px;
+
+        }
+        .k {
+            transform: rotate(-180deg);
+            -k-transform: rotate(-180deg);
+        }
+        .line1 {
+            height: 20px;
+            width: 20px;
+            background-color: var(--cocodrile);
+        }
+        .form div {
+            display: flex;
+            flex-direction: column;
+        }
+        .etiqueta {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: var(--blanco);
+        }
+        .input {
+            background-color: var(--verde-agua);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+
+        }
+        
+        .input-nombre,
+        .input-email,
+        .input-numero,
+        .input-mensaje {
+            border: 2px solid var(--verde-agua);
+            background-color: transparent;
+        }
+        .boton-enviar {
+            background-color: transparent;
+            border-radius: 8px;
+            border: 1px solid var(--blanco);
+            color: var(--blanco);
+            width: 80%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            margin-left: 29px;
+        }
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
+        /* animation1 */
+
+        @-webkit-keyframes hvr-wobble-to-bottom-right {
+        16.65% {
+            -webkit-transform: translate(8px, 8px);
+            transform: translate(8px, 8px);
+        }
+        33.3% {
+            -webkit-transform: translate(-6px, -6px);
+            transform: translate(-6px, -6px);
+        }
+        49.95% {
+            -webkit-transform: translate(4px, 4px);
+            transform: translate(4px, 4px);
+        }
+        66.6% {
+            -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+        }
+        83.25% {
+            -webkit-transform: translate(1px, 1px);
+            transform: translate(1px, 1px);
+        }
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+        }
+        @keyframes hvr-wobble-to-bottom-right {
+        16.65% {
+            -webkit-transform: translate(8px, 8px);
+            transform: translate(8px, 8px);
+        }
+        33.3% {
+            -webkit-transform: translate(-6px, -6px);
+            transform: translate(-6px, -6px);
+        }
+        49.95% {
+            -webkit-transform: translate(4px, 4px);
+            transform: translate(4px, 4px);
+        }
+        66.6% {
+            -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+        }
+        83.25% {
+            -webkit-transform: translate(1px, 1px);
+            transform: translate(1px, 1px);
+        }
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+        }
+        .hvr-wobble-to-bottom-right {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        }
+        .hvr-wobble-to-bottom-right:hover, .hvr-wobble-to-bottom-right:focus, .hvr-wobble-to-bottom-right:active {
+        -webkit-animation-name: hvr-wobble-to-bottom-right;
+        animation-name: hvr-wobble-to-bottom-right;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <div class="form-container">
+            
+            <h1 class="logo">-D<span class="k  inline-block">K</span><div class="line1"></div></h1><!-- dar vuelta la K y Agrandar lineas -->
+                
+            <h2 class="title">¿Necesitas nuestros servicios?</h2>
+            <form action="https://formsubmit.co/your@email.com" method="POST" class="form">
+            <div>
+                <label for="nombre" class="etiqueta">Nombre</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" class="input input-nombre">
+
+                <label for="email" class="etiqueta">Email</label>
+                <input type="text" id="email" placeholder="Ejemplo123@ejemplo.com" class="input input-email">
+
+                <label for="numero" class="etiqueta">Numero de telefono</label>
+                <input type="text" id="numero" placeholder="341999999" class="input input-numero">
+
+                <label for="Mensaje" class="etiqueta">Mensaje</label>
+                <input type="text" id="mensaje" placeholder="Envianos tu mensaje" class="input input-mensaje">
+
+            </div>
+                <input type="submit" value="Enviar" class="boton-enviar login-button hvr-wobble-to-bottom-right">
+                <!-- boton-enviar añadir segunda clase? -->
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
