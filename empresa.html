@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <title>DETEK</title>
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000;
+            --crema: #E5D9B6;
+            --verde-claro: #5F8D4E;
+            --verde-oscuro: #285430;
+            --sm: 1.4rem;
+            --md: 1.6rem;
+            --lg: 1.8rem;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            background-color: var(--black);
+        }
+        .menu {
+            display: flex;
+            padding: 2rem;
+        }
+        nav ul{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: var(--black);
+            width: 100%;
+            height: 3rem;
+            font-family: 'Catamaran', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 6px;
+            font-weight: bold;
+        }
+        .navbar-menu {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 2rem;
+            margin-right: 1.5rem;
+        }
+        .navbar-menu a{
+            list-style: none;
+            text-decoration: none;
+            border-right: 1px solid var(--verde-claro);
+            padding-right: 0.5rem;
+            color: var(--verde-oscuro);
+
+        }
+        .menu .navbar-menu a:hover {
+            background-color: none;
+            color: var(--verde-claro);
+        }
+        .portada {
+            width: 100%;
+            height: 80vh;
+        }
+        .imagen-portada figure img{
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+        }
+        .nuestra-empresa {
+            width: 100%;
+            padding: 5rem;
+        }
+        .titulo-nuestra-empresa {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 5rem;
+            font-family: 'Catamaran', sans-serif;
+            font-size: 5rem;
+            color: var(--white);
+            position: absolut;
+            top: 25%;
+            transform: translateY(400%);
+            left: 0;
+            padding: 0 50px;
+        }
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10rem;
+            font-size: var(--lg);
+            color: var(--verde-claro);
+            font-family: 'Catamaran', sans-serif;
+        }
+        .texto {
+            color: var(--crema);
+            font-size: var(--md);
+            font-family: 'Catamaran', sans-serif; 
+            width: 100%;
+            margin-top: 2rem;
+        }
+        .redes {
+            width: 187px;
+            display: grid;
+            justify-items: center; 
+            margin-top: 2.5rem;
+        }
+        .span-seguinos {
+            font-size: var(--sm);
+            color: var(--white);
+            margin-left: 25px;
+        }
+        .redes .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            width: 100px;
+        }
+        .redes ul li a {
+            display: flex;
+            justify-content: center;
+            align-content: space-between;
+            width: 2rem;
+            height: 2rem;
+        }
+        ul li {
+            text-decoration: none;
+            list-style: none;
+        }
+        ul li img{
+            border-radius: 50%;
+        }
+        .iconos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .iconos img {
+            width: 20px;
+            height: 20px;
+        }
+        footer {
+            border-top: 1px solid rgb(100, 98, 98);
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="menu">
+        <ul>
+            <li class="navbar-menu"><a href="/">HOME</a></li>
+            <li class="navbar-menu"><a href="/">EMPRESA</a></li>
+            <li class="navbar-menu"><a href="/">PRODUCTOS</a></li>
+            <li class="navbar-menu"><a href="/">CONTACTO</a></li>
+        </ul>
+    </nav>
+    </header>
+    <section>
+        <p class="titulo-nuestra-empresa">Nuestra empresa</p>
+        <div class="imagen-portada">
+        <figure class="portada">
+            <img class="foto-cartel" src="https://img.pccomponentes.com/pcblog/98/que-es-placa-base.jpg" alt="imagen de un cartel luminoso">
+        </figure>
+        </div>
+
+        <div class="nuestra-empresa">
+            <h3 class="title"> Somos una empresa dedicada a la fabricación de productos electrónicos en serie y a medida.</h3>
+            
+            <div class="iconos experiencia"> 
+                <img src="" alt="experiencia">
+            <p class="parrafo1 texto">En Detek realizamos desarrollo y producción de equipos electrónicos. Utilizando las herramientas mas avanzadas de diseño desarrollamos desde cero productos electrónicos; cubriendo inclusive las áreas de mecánica, paneles, software, gráfica y embalaje.</p>
+            </div>
+
+            <div class="iconos calidad">
+                <img src="" alt="calidad">
+            <p class="parrafo2 texto">De esta manera conseguimos los mejores resultados para incluir electrónica a medida en equipos industriales, agrícolas y comerciales.</p>
+            </div>
+
+            <div class="iconos profesionalidad">
+                <img src="./iconos/handshake.png" alt="profesionalidad">
+            <p class="parrafo3 texto">Experiencia y trato personal es lo que nos permiten establecer vínculos que siempre alcanzan resultados exitosos.</p>
+            </div>
+
+            <div class="iconos costos">
+            <img src="./iconos/dollar.png" alt="costos">
+            <p class="parrafo4 texto"> Competimos con los precios de otras empresas </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <section class="redes">
+        <span class="span-seguinos">Seguinos en nuestras redes</span>
+            <div class="orden-del-footer">
+            <ul class="social-icons">
+                <li class="facebook">
+                    <a href="https://www.facebook.com/">
+                    <img src="./redes/facebook.jpg" alt="facebook">
+                    </a>
+                </li>
+                <li class="instagram">
+                    <a href="/">
+                    <img src="./redes/instagram.jpg" alt="instagram">
+                    </a>
+                </li>
+                <li class="whatsapp">
+                    <a href="/">
+                    <img src="./redes/whatsapp.jpg" alt="whatsapp">
+                    </a>
+                </li>
+            </ul>
+            </div>
+    </section>
+</footer>
+</body>
+</html>
