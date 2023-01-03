@@ -12,13 +12,13 @@
         :root {
             --sm: 1.4rem;
             --md: 1.6rem;
-            --lg: 1.8rem;--blanco:#ffffff;
+            --lg: 1.8rem;
+            --white:#ffffff;
             --crema: #E5D9B6;
             --verde-agua: #A4BE7B;
-            --cocodrile: #5F8D4E;
+            --verde-claro: #5F8D4E;
             --verde-oscuro: #285430;
             --negro: #000;
-            --gris: rgba(32, 32, 32, 0.781);
         }
         * {
             box-sizing: border-box;
@@ -31,6 +31,7 @@
         body {
             background-color: var(--negro);
         }
+        /* Container */
         .contact {
             width: 100%;
             height: 100vh;
@@ -44,13 +45,14 @@
             width: 300px;
             background-color:none;
             border-radius: 6px;
-            border: 1px solid var(--blanco);
+            border: 1px solid var(--white);
             padding: 10px 20px;
         }
+        /* logo */
         .logo {
             margin-bottom: 48px;
             justify-self: center;
-            color: var(--cocodrile);
+            color: var(--verde-agua);
             display: flex;
         }
         h1 {
@@ -61,22 +63,28 @@
             align-items: center;
             font-size: 80px;
         }
-        h2 {
-            color: var(--verde-agua);
-            margin-left: 5px;
-            font-size: 18px;
-            margin-top: -30px;
-
-        }
         .k {
             transform: rotate(-180deg);
             -k-transform: rotate(-180deg);
         }
         .line1 {
-            height: 20px;
-            width: 20px;
-            background-color: var(--cocodrile);
+            height: 8px;
+            width: 43px;
+            background-color: var(--verde-agua);
         }
+        .line2 {
+            height: 8px;
+            width: 43px;
+            background-color: var(--verde-agua);
+        }
+        /* Pregunta */
+        h2 {
+            color: var(--verde-claro);
+            margin-left: 5px;
+            font-size: 18px;
+            margin-top: -30px;
+        }
+        /* imput */
         .form div {
             display: flex;
             flex-direction: column;
@@ -85,7 +93,7 @@
             font-size: var(--sm);
             font-weight: bold;
             margin-bottom: 4px;
-            color: var(--blanco);
+            color: var(--white);
         }
         .input {
             background-color: var(--verde-agua);
@@ -95,9 +103,7 @@
             font-size: var(--md);
             padding: 6px;
             margin-bottom: 12px;
-
         }
-        
         .input-nombre,
         .input-email,
         .input-numero,
@@ -108,8 +114,8 @@
         .boton-enviar {
             background-color: transparent;
             border-radius: 8px;
-            border: 1px solid var(--blanco);
-            color: var(--blanco);
+            border: 1px solid var(--white);
+            color: var(--white);
             width: 80%;
             cursor: pointer;
             font-size: var(--md);
@@ -119,11 +125,11 @@
             justify-content: center;
             margin-left: 29px;
         }
-        .login-button {
+        .send-button {
             margin-top: 14px;
             margin-bottom: 30px;
         }
-
+        
         /* animation1 */
 
         @-webkit-keyframes hvr-wobble-to-bottom-right {
@@ -201,7 +207,14 @@
     <div class="contact">
         <div class="form-container">
             
-            <h1 class="logo">-D<span class="k  inline-block">K</span><div class="line1"></div></h1><!-- dar vuelta la K y Agrandar lineas -->
+            <h1 class="logo">
+                <div class="line2"></div>
+                D
+                <span class="k  inline-block">
+                    K
+                </span>
+                <div class="line1"></div>
+            </h1><!-- dar vuelta la K y Agrandar lineas -->
                 
             <h2 class="title">¿Necesitas nuestros servicios?</h2>
             <form action="https://formsubmit.co/your@email.com" method="POST" class="form">
@@ -219,7 +232,7 @@
                 <input type="text" id="mensaje" placeholder="Envianos tu mensaje" class="input input-mensaje">
 
             </div>
-                <input type="submit" value="Enviar" class="boton-enviar login-button hvr-wobble-to-bottom-right">
+                <input type="submit" value="Enviar" class="boton-enviar send-button hvr-wobble-to-bottom-right">
                 <!-- boton-enviar añadir segunda clase? -->
             </form>
             
