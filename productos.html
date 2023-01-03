@@ -32,49 +32,46 @@
         body {
             background-color: var(--black);
         }
+
         /* portada */
         .portada {
-            height: 30rem;
+            width: 100%;
+            height: 40vh;
         }
         .imagen-portada figure img{
             width: 100vw;
             object-fit: cover;
-            height: 270px;
-            object-fit: cover;
+            height: 100%;
         }
-        .nombre-empresa {
+        .titulo {
             display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
-            height: 6rem;
             font-family: var(--font);
-            font-size: 5rem;
-            letter-spacing: 3px;
-            color: var(--crema);
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--white);
             position: absolute;
-            top: 30%;
+            top: 20%;
             left: 0;
             padding: 0 50px;
         }
-        h1 {
-            border-bottom: 2px solid var(--verde-oscuro);
-        }
-        .portada {
-            width: 100%;
-            height: 29vh;
-        }
+
         /* navvar */
         .menu {
+            position: fixed;
             display: flex;
-            padding: 2rem;
+            width: 100%;
+            z-index: 2;
         }
-        
         nav ul{
             display: flex;
             justify-content: flex-end;
             align-items: center;
             background-color: var(--black);
             width: 100%;
-            height: 3rem;
+            height: 6rem;
             font-family: var(--font);
             font-size: 2rem;
             letter-spacing: 6px;
@@ -98,41 +95,37 @@
             color: var(--verde-claro);
         }
         
-        .titulo {
+        /* productos */
+        .texto1 {
             display: flex;
             justify-content: center;
+            font-size: var(--md);
+            color: var(--white);
+            font-family: var(--font);
+            height: 60px;
+            margin-top: 5rem;
             align-items: center;
-            width: 100%;
-            font-family: var(--font);
-            font-size: 3rem;
-            font-weight: bold;
-            color: var(--white);
-            position: absolute;
-            top: 15%;
-            left: 0;
-            padding: 0 50px;
         }
-        h2 {
-            font-family: var(--font);
-            font-size: 2rem;
-            color: var(--white);
-        }
-        /* productos */
         .cards-rubros {
             display: grid;
             gap: 26px;/* separacion entre cards */
             grid-template-columns: repeat(3, 240px);
             place-content: center;
             justify-content: space-around;
+            margin-bottom: 5rem;
         }
         .card-rubros {
             width: 240px;
+            border: 1px solid var(--white);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
         }
         .card-rubros img { 
-            width: 240px;
-            height: 240px;
-            margin: 20px;
+            max-width: 220px;
+            height: 220px;
             object-fit: cover;
+            align-items: center;
         }
         .texto2 {
             font-size: 25px;
@@ -147,14 +140,7 @@
             text-decoration: none;
             list-style: none;
         }
-        .texto1 {
-            font-size: 30px;
-            background-color: var(--black);
-            color: var(--white);
-            font-family: var(--font);
-            height: 60px;
-            padding: 25px;
-        }
+        
         
         /* footer */
         .redes {
@@ -182,6 +168,9 @@
             height: 3rem;
             margin-right: 5px;
         }
+        .facebook img {
+            background-color: #4f60ff;
+        }
         ul li {
             text-decoration: none;
             list-style: none;
@@ -192,6 +181,7 @@
         footer {
             border-top: 1px solid rgb(100, 98, 98);
         }
+
         /* mediaqueri640 */
         @media (max-width: 640px) {
             .cards-rubros {
@@ -227,7 +217,7 @@
         </div>
     </section>
     </header>
-    <p class="texto1">Contamos con productos para todos los rubros</p>
+    <p class="texto1">Contamos con productos para todos los rubros</p> 
 
     <section class="main-categorias">
         
@@ -296,17 +286,17 @@
                 <ul class="social-icons">
                     <li class="facebook">
                         <a href="https://www.facebook.com/">
-                        <img src="./redes/facebook.jpg" alt="facebook">
+                        <img src="./redes/facebook.png" alt="facebook">
                         </a>
                     </li>
                     <li class="instagram">
                         <a href="/">
-                        <img src="./redes/instagram.jpg" alt="instagram">
+                        <img src="./redes/instagram.png" alt="instagram">
                         </a>
                     </li>
                     <li class="whatsapp">
                         <a href="/">
-                        <img src="./redes/whatsapp.jpg" alt="whatsapp">
+                        <img src="./redes/whatsapp.png" alt="whatsapp">
                         </a>
                     </li>
                 </ul>
