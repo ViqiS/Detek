@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.cdnfonts.com/css/christel-display?styles=138455" rel="stylesheet">
-    <title>DETEK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <title>Productos</title>
     <style>
         :root {
             --white: #ffffff;
             --black: #000;
             --crema: #E5D9B6;
+            --verde-agua: #A4BE7B;
             --verde-claro: #5F8D4E;
             --verde-oscuro: #285430;
-            --font: Christel Display, sans-serif;
             --sm: 1.4rem;
             --md: 1.6rem;
             --lg: 1.8rem;
@@ -37,38 +37,44 @@
         }
         .imagen-portada figure img{
             width: 100vw;
-            height: 30rem;
+            object-fit: cover;
+            height: 270px;
             object-fit: cover;
         }
         .nombre-empresa {
             display: flex;
-            justify-content: center;
-            align-items: center;
             width: 100%;
-            height: 5rem;
-            font-family: var(--font);
+            height: 6rem;
+            font-family: 'Catamaran', sans-serif;
             font-size: 5rem;
             letter-spacing: 3px;
             color: var(--crema);
             position: absolute;
-            top: 40%;
+            top: 30%;
             left: 0;
             padding: 0 50px;
         }
-        .menu {
-            position: fixed;
-            display: flex;
-            width: 100%;
-            z-index: 2;
+        h1 {
+            border-bottom: 2px solid var(--verde-oscuro);
         }
+        .portada {
+            width: 100%;
+            height: 29vh;
+        }
+        /* navvar */
+        .menu {
+            display: flex;
+            padding: 2rem;
+        }
+        
         nav ul{
             display: flex;
             justify-content: flex-end;
             align-items: center;
             background-color: var(--black);
             width: 100%;
-            height: 6rem;
-            font-family: var(--font);
+            height: 3rem;
+            font-family: 'Catamaran', sans-serif;
             font-size: 2rem;
             letter-spacing: 6px;
             font-weight: bold;
@@ -90,41 +96,66 @@
             background-color: none;
             color: var(--verde-claro);
         }
-        .portada {
-            width: 100%;
-            height: 80vh;
-        }
-        .imagen-portada figure img{
-            width: 100vw;
-            height: 100%;
-            object-fit: cover;
-        }
+        
         .titulo {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 2rem;
-            font-family: var(--font);
-            font-size: 1.6rem;
+            font-family: 'Catamaran', sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
             color: var(--white);
             position: absolute;
-            top: 47%;
+            top: 15%;
             left: 0;
             padding: 0 50px;
         }
         h2 {
-            font-family: var(--font);
+            font-family: 'Catamaran', sans-serif;
             font-size: 2rem;
             color: var(--white);
         }
-        .subtitulo {
-            display: flex;
-            justify-content: center;
-            font-family: var(--font);
-            font-size: 1.5rem;
-            color: var(--verde-claro);
+        /* productos */
+        .cards-rubros {
+            display: grid;
+            gap: 26px;/* separacion entre cards */
+            grid-template-columns: repeat(3, 240px);
+            place-content: center;
+            justify-content: space-around;
         }
+        .card-rubros {
+            width: 240px;
+        }
+        .card-rubros img { 
+            width: 240px;
+            height: 240px;
+            margin: 20px;
+            object-fit: cover;
+        }
+        .texto2 {
+            font-size: 25px;
+            color: #285430;
+            font-family:  'Catamaran', sans-serif;
+            font-weight: bold;
+            display: grid;
+            justify-content: center;
+            text-decoration-line: none;
+        }
+        a {
+            text-decoration: none;
+            list-style: none;
+        }
+        .texto1 {
+            font-size: 30px;
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Catamaran', sans-serif;
+            height: 60px;
+            padding: 25px;
+        }
+        
+        /* footer */
         .redes {
             width: 187px;
             display: grid;
@@ -160,13 +191,25 @@
         footer {
             border-top: 1px solid rgb(100, 98, 98);
         }
+        /* mediaqueri640 */
+        @media (max-width: 640px) {
+            .cards-rubros {
+                grid-template-columns: repeat(auto-fill, 140px);
+            }
+            .card-rubros {
+                width: 140px;
+            }
+            .card-rubros img {
+                width: 140px;
+                height: 140px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
     <section>
-        <h1 class="nombre-empresa">DETEK</h1>
-        <h2 class="titulo">Productos electrónicos</h2>
+        
         <nav class="menu">
             <ul>
                 <li class="navbar-menu"><a href="/">HOME</a></li>
@@ -175,7 +218,7 @@
                 <li class="navbar-menu"><a href="/">CONTACTO</a></li>
             </ul>
         </nav>
-
+        <h2 class="titulo">Nuestros Productos</h2>
         <div class="imagen-portada">
             <figure class="portada">
                 <img src="https://img.freepik.com/foto-gratis/primer-plano-placa-circuito-electronico-cpu-microchip-componentes-electronicos-fondo_1387-743.jpg?w=360" alt="Foto portada">
@@ -183,41 +226,92 @@
         </div>
     </section>
     </header>
+    <p class="texto1">Contamos con productos para todos los rubros</p>
 
-    <section>
-        <span class="subtitulo">Productos a medida</span>
+    <section class="main-categorias">
+        
+    <div class="cards-rubros">
+
+        <div class="card-rubros pesaje">
+            <a href="/"><img src="http://detek.com.ar/img/p300_sf.png" alt="pesaje">
+                <div class="product-info">
+                <p class="texto2">Pesaje</p>
+            </div>
+            </a>
+            
+        </div>
+
+        <div class="card-rubros control">
+            
+            <a href="/"><img src="http://detek.com.ar/img/C126.png" alt="control">
+            <div class="product-info">
+                <p class="texto2">Control</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="card-rubros placas">
+            
+            <a href="/"><img src="http://detek.com.ar/img/I-1101.png" alt="placas">
+            <div class="product-info">
+                <p class="texto2">Placas</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="card-rubros señalizacion-visual">
+            
+            <a href="/"><img src="http://indelros.com.ar/letrero/farmacia.jpg" alt="Señalizacion visual">
+            <div class="product-info">
+                <p class="texto2">Señalizacion visual</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="card-rubros deportes">
+            <a href="/"><img src="http://indelros.com.ar/deporte/water_polo.jpg" alt="Deportes">
+            <div class="product-info">
+                <p class="texto2">Deportes</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="card-rubros automatizacion">
+            <a href="/"><img src="http://indelros.com.ar/industria/panty.jpg" alt="Automatizacion">
+            <div class="product-info">
+                <p class="texto2">Automatizacion</p>
+            </div>
+            </a>
+        </div>
+
+    </div>
     </section>
 
     <footer>
-        <section class="redes">
+            <section class="redes">
 
             <span class="span-seguinos">Seguinos en nuestras redes</span>
-
-            <div class="orden-del-footer">
-
+                <div class="orden-del-footer">
                 <ul class="social-icons">
-
                     <li class="facebook">
                         <a href="https://www.facebook.com/">
                         <img src="./redes/facebook.jpg" alt="facebook">
                         </a>
                     </li>
-
                     <li class="instagram">
                         <a href="/">
                         <img src="./redes/instagram.jpg" alt="instagram">
                         </a>
                     </li>
-
                     <li class="whatsapp">
                         <a href="/">
                         <img src="./redes/whatsapp.jpg" alt="whatsapp">
                         </a>
                     </li>
-
                 </ul>
-            </div>
+                </div>
         </section>
     </footer>
+
 </body>
 </html>
