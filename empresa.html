@@ -169,7 +169,6 @@
             color: var(--crema);
             font-size: var(--md);
             font-family: var(--font);
-                                                
             width: 100%;
             margin-top: 2rem;
         }
@@ -194,7 +193,6 @@
             justify-content: center;
             align-items: center;
         }
-
         /* Footer */
         .container-footer {
             display: grid;
@@ -205,19 +203,19 @@
         footer {
             border-top: 1px solid rgb(100, 98, 98);
         }
-
         /* Redes */
         .redes {
             width: 250px;
             display: grid;
             justify-items: center; 
             margin-top: 2.5rem;
+            height: 20px;
         }
         .span-seguinos {
             font-family: var(--font);
             font-size: var(--sm);
             color: var(--white);
-            margin-left: 25px;
+            margin-left: 10px;
         }
         .redes .social-icons {
             display: flex;
@@ -248,11 +246,10 @@
         .derechos {
             background-color: var(--black);
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             font-size: 1.3rem;
             color: var(--white);
             font-family: var(--font);
-            
             width: 100%;
         }
         .copyright {
@@ -264,9 +261,24 @@
         }
         .copyright p {
             width: 100%;
+            text-align: center;
         }
-
-
+        /* contacto-footer */
+        .contac {
+            display: flex;
+            flex-direction: column;
+            color: var(--white);
+            font-size: 15px;
+            font-family: var(--font);
+            margin-top: 20px;
+        }
+        .telefonos p {
+            margin-top: 20px;
+        }
+        .direccion {
+            margin-top: 20px;
+        }
+        
     </style>
 </head>
 <body>
@@ -335,7 +347,9 @@
         <section class="container-footer"> 
 
         <section class="redes">
+
         <span class="span-seguinos">Seguinos en nuestras redes</span>
+
             <div class="orden-del-footer">
             <ul class="social-icons">
                 <li class="facebook">
@@ -362,6 +376,14 @@
                 <p>Copyright © DETEK-IER 2023 - Todos los Derechos Reservados</p>
                 <p class="diseñadores">Diseñado por Pablo Re & Victoria Escalada</p>
             </div>
+        </section>
+
+        <section class="contac">
+            <div class="telefonos">
+                <p>Ventas     : 341 653-5347 ventas@detek.com.ar</p>
+                <p>At. al cliente: 341 541-7731 consultas@detek.com.ar</p>
+            </div>
+            <div class="direccion">Argentina, Santa Fe (Rosario) Pasaje Zavalla 3240 A</div>
         </section>
 </section>
 </footer>
