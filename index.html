@@ -31,15 +31,8 @@
         body {
             background-color: var(--black);
         }
+        
         /* portada */
-        .portada {
-            height: 30rem;
-        }
-        .imagen-portada figure img{
-            width: 100vw;
-            height: 30rem;
-            object-fit: cover;
-        }
         .nombre-empresa {
             display: flex;
             justify-content: center;
@@ -55,6 +48,36 @@
             left: 0;
             padding: 0 50px;
         }
+        .portada {
+            width: 100%;
+            height: 80vh;
+        }
+        .imagen-portada figure img{
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+        }
+        .titulo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 2rem;
+            font-family: var(--font);
+            font-size: 1.6rem;
+            color: var(--white);
+            position: absolute;
+            top: 47%;
+            left: 0;
+            padding: 0 50px;
+        }
+        h2 {
+            font-family: var(--font);
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        /* Navbar */
         .menu {
             position: fixed;
             display: flex;
@@ -90,34 +113,8 @@
             background-color: none;
             color: var(--verde-claro);
         }
-        .portada {
-            width: 100%;
-            height: 80vh;
-        }
-        .imagen-portada figure img{
-            width: 100vw;
-            height: 100%;
-            object-fit: cover;
-        }
-        .titulo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 2rem;
-            font-family: var(--font);
-            font-size: 1.6rem;
-            color: var(--white);
-            position: absolute;
-            top: 47%;
-            left: 0;
-            padding: 0 50px;
-        }
-        h2 {
-            font-family: var(--font);
-            font-size: 2rem;
-            color: var(--white);
-        }
+        
+        /* Contenido */
         .subtitulo {
             display: flex;
             justify-content: center;
@@ -125,6 +122,8 @@
             font-size: 1.5rem;
             color: var(--verde-claro);
         }
+
+        /* Footer */
         .redes {
             width: 187px;
             display: grid;
