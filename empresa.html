@@ -279,6 +279,23 @@
             margin-top: 20px;
         }
         
+        .gradient-background {
+        background: linear-gradient(91deg,#61764b,#9ba17b,#000000);
+        background-size: 180% 180%;
+        animation: gradient-animation 9s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+        background-position: 0% 50%;
+        }
+        }
     </style>
 </head>
 <body>

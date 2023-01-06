@@ -30,8 +30,8 @@
             font-size: 62.5%;
         }
         body {
-            background: rgb(97,118,75);
-            background: linear-gradient(0deg, rgba(97,118,75,1) 11%, rgba(155,161,123,1) 43%, rgba(207,185,151,1) 62%, rgba(250,214,165,1) 83%);
+            background: rgb(164,190,123);
+        background: linear-gradient(96deg, rgba(164,190,123,1) 11%, rgba(40,84,48,1) 51%, rgba(0,0,0,1) 90%);
         }
         .flecha {
             width: 20px;
@@ -50,9 +50,9 @@
             display: grid;
             grid-template-rows: auto 1fr auto ;
             width: 320px;
-            background-color:none;
+            background-color:var(--negro);
             border-radius: 6px;
-            border: 1px solid var(--white);
+            border: 1px solid var(--verde-oscuro);
             padding: 30px 20px;
         }
         /* logo */
@@ -141,7 +141,24 @@
             margin-top: 14px;
             margin-bottom: 30px;
         }
-        
+        /* background */
+        .gradient-background {
+        background: linear-gradient(91deg,#61764b,#9ba17b,#000000);
+        background-size: 180% 180%;
+        animation: gradient-animation 15s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+        background-position: 0% 50%;
+        }
+        }
         /* animation1 */
 
         @-webkit-keyframes hvr-wobble-to-bottom-right {
@@ -216,7 +233,7 @@
     </style>
 </head>
 <body>
-    <div class="contact">
+    <div class="contact gradient-background">
         <section class="body-contact">
             <figure><img src="./iconos/arrow-doblee.png" class="flecha" alt="flecha para volver"></figure>
 
