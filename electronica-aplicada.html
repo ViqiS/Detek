@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
     <title>Electronica apliacada</title>
     <style>
@@ -58,39 +59,48 @@
             padding: 0 50px;
         }
 
-        /* navvar */
+        /* navbar */
+        .seccion-navbar {
+        display: flex;
+        justify-content: end;
+        }
         .contenedor-navbar {
             width: 100%;
             height: 6.5rem;        
+        }
+        .seccion-logo {
+            margin-left: 1rem;
         }
         .logo {
             height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid var(--white);
+            border: 3px solid var(--white);
             border-radius: 50%;
             padding: 4px;
-            margin-left: 1rem;
         }
         .logo p {
             color: var(--white);
             height: 55px;
             font-size: 30px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'M PLUS 1p', sans-serif;
             align-items: center;
             display: flex;
+            letter-spacing: -0.1rem;
         }
         p .k {
             width: 100%;
             height: 100%;
+        }
+        .k {
+            transform: rotateY(180deg);
         }
         .line1, .line2 {
             height: 3px;
             width: 16px;
             background-color: var(--white);
         }
-
         .menu {
             position: fixed;
             display: flex;
@@ -106,7 +116,7 @@
             justify-content: flex-end;
             align-items: center;
             background-color: var(--black);
-            width: 80%;
+            width: auto;
             height: 6.5rem;
             font-family: var(--font);
             font-size: var(--sm);
@@ -151,50 +161,38 @@
             justify-content: space-around;
             margin-bottom: 5rem;
         }
-        /* .card-rubros .pesaje:hover { 1er intento
-            -webkit-transition: all 2.4s 0.3s ease-in;
-            -moz-transition: all 2.4s 0.3s ease-in;
-            -o-transition: all 2.4s 0.3s ease-in;
-            transition: all 2.4s 0.3s ease-in;
-        } */
         .card-rubros {
             width: 240px;
-            height: 100px;
-            border: 1px solid var(--white);
+            height: 150px;
+            border: 1px solid gray;
             border-radius: 8px;
             display: flex;
             justify-content: center;
+            align-items: center;
+            transition: box-shadow 620ms ease-out;
         }
         .card-rubros img { 
-            max-width: 120px;
-            height: 120px;
+            max-width: 134px;
+            height: 86px;
             object-fit: cover;
-            align-items: center;
-        }
-        .card-rubros .iconpesaje {
-            width: 20px;
-            height: 222px;
-        }
-        .card-rubros .iconplaca {
-            width: 100px;
-            height: 20px;
-        }
-        .card-rubros .iconcontrol {
-            width: 100px;
-            height: 20px;
         }
         .texto2 {
             font-size: 25px;
-            color: #285430;
+            color: var(--verde-oscuro);
             font-family:  var(--font);
             font-weight: bold;
-            display: grid;
-            justify-content: center;
             text-decoration-line: none;
         }
-        a {
+        .card-rubros a {
+            width: 100%;
             text-decoration: none;
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-rubros:hover {
+            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
         }
         
         /* FOOTER */
@@ -251,33 +249,6 @@
         /* 6EDF44 codigo de color de los iconos */
 
         /* Derechos */
-        .logo .logo-footer {
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid var(--white);
-            border-radius: 50%;
-            padding: 4px;
-            margin-bottom: 1rem;
-        }
-        .logo-footer p {
-            color: var(--white);
-            height: 55px;
-            font-size: 30px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            align-items: center;
-            display: flex;
-        }
-        p .k-footer {
-            width: 100%;
-            height: 100%;
-        }
-        .line1-footer, .line2-footer {
-            height: 3px;
-            width: 16px;
-            background-color: var(--white);
-        }
         .derechos {
             background-color: var(--black);
             display: flex;
@@ -336,12 +307,16 @@
     <section>
         
         <nav class="menu">
+            <section class="seccion-logo">
             <div class="logo">
                 <div class="line1"></div>
                 <p>D</p>
                 <p class="k">K</p>
                 <div class="line2"></div>
             </div>
+            </section>
+
+            <section class="seccion-navbar">
             <ul>
                 <li class="navbar-menu"><a href="/">HOME</a></li>
                 <li class="navbar-menu"><a href="/">EMPRESA</a></li>
@@ -349,6 +324,7 @@
                 <li class="navbar-menu"><a href="/">DEPORTES</a></li>
                 <li class="navbar-menu"><a href="/">CONTACTO</a></li>
             </ul>
+            </section>
         </nav>
         <h2 class="titulo">Electronica Aplicada</h2>
         <div class="imagen-portada">
@@ -365,11 +341,11 @@
     <div class="cards-rubros">
 
         <div class="card-rubros pesaje">
-            <a href="/"><img src="./iconos/pesaje1.png" class="iconpesaje" alt="pesaje">
-                <img src="./iconos/pesaje2.png" class="iconpesaje" alt="">
+            <a href="/">
+                <img src="./iconos/pesaje1.png" class="iconpesaje" alt="pesaje">
                 <div class="product-info">
                 <p class="texto2">Pesaje</p>
-            </div>
+                </div>
             </a>
             
         </div>
@@ -377,7 +353,6 @@
         <div class="card-rubros control">
             
             <a href="/"><img src="./iconos/control1.png" class="iconcontrol" alt="control">
-                <img src="./iconos/control2.png" class="iconcontrol" alt="">
             <div class="product-info">
                 <p class="texto2">Control</p>
             </div>
@@ -386,9 +361,7 @@
 
         <div class="card-rubros placas">
             
-            <a href="/"><img src="./iconos/placa1.png" class="iconplaca" alt="placas">
-                <img src="./iconos/placa2.png" class="iconplaca" alt="" >
-                <img src="./iconos/placa3.png" class="iconplaca" alt="" >
+            <a href="/"><img src="./iconos/placa1.png" class="iconplaca" alt="placas">              
             <div class="product-info">
                 <p class="texto2">Placas</p>
             </div>
@@ -425,11 +398,11 @@
         </section>
 
         <section class="derechos">
-            <div class="logo logo-footer">
-                <div class="line1 line1-footer"></div>
+            <div class="logo">
+                <div class="line1 "></div>
                 <p>D</p>
-                <p class="k k-footer">K</p>
-                <div class="line2 line2-footer"></div>
+                <p class="k">K</p>
+                <div class="line2"></div>
             </div>
             <div class="copyright">
                 <p>Copyright © DETEK-IER 2023 - Todos los Derechos Reservados</p>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
     <title>Deportes</title>
     <style>
@@ -58,32 +59,43 @@
             padding: 0 50px;
         }
 
-        /* navvar */
+        /* navbar */
+        .seccion-navbar {
+        display: flex;
+        justify-content: end;
+        }
+
         .contenedor-navbar {
             width: 100%;
             height: 6.5rem;        
+        }
+        .seccion-logo {
+            margin-left: 1rem;
         }
         .logo {
             height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid var(--white);
+            border: 3px solid var(--white);
             border-radius: 50%;
             padding: 4px;
-            margin-left: 1rem;
         }
         .logo p {
             color: var(--white);
             height: 55px;
             font-size: 30px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'M PLUS 1p', sans-serif;
             align-items: center;
             display: flex;
+            letter-spacing: -0.1rem;
         }
         p .k {
             width: 100%;
             height: 100%;
+        }
+        .k {
+            transform: rotateY(180deg);
         }
         .line1, .line2 {
             height: 3px;
@@ -106,7 +118,7 @@
             justify-content: flex-end;
             align-items: center;
             background-color: var(--black);
-            width: 80%;
+            width: auto;
             height: 6.5rem;
             font-family: var(--font);
             font-size: var(--sm);
@@ -139,13 +151,13 @@
             display: flex;
             justify-content: center;
             font-size: var(--md);
-            color: var(--white);
+            color: var(--verde-agua);
             font-family: var(--font);
             height: 60px;
             margin-top: 5rem;
             align-items: center;
         }
-        .cards-rubros {
+        .cards-deportes {
             display: grid;
             gap: 26px;/* separacion entre cards */
             grid-template-columns: repeat(3, 240px);
@@ -153,33 +165,40 @@
             justify-content: space-around;
             margin-bottom: 5rem;
         }
-        .card-rubros {
+        .card-deportes {
             width: 240px;
-            border: 1px solid var(--white);
+            height: 150px;
+            border: 1px solid gray;
             border-radius: 8px;
             display: flex;
             justify-content: center;
-        }
-        .card-rubros img { 
-            max-width: 220px;
-            height: 220px;
-            object-fit: cover;
             align-items: center;
+            transition: box-shadow 620ms ease-out;
+        }
+        .card-deportes img { 
+            max-width: 134px;
+            height: 86px;
+            object-fit: cover;
         }
         .texto2 {
-            font-size: 2.5rem;
-            color: #285430;
+            font-size: 1.5rem;
+            color: var(--verde-claro);
             font-family:  var(--font);
             font-weight: bold;
-            display: grid;
-            justify-content: center;
             text-decoration-line: none;
+            margin-top: 1rem;
         }
-        a {
+        .card-deportes a {
+            width: 100%;
             text-decoration: none;
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
+        .card-deportes:hover {
+            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
+        }
         /* FOOTER */
         .container-footer {
             display: grid;
@@ -234,33 +253,6 @@
         /* 6EDF44 codigo de color de los iconos */
 
         /* Derechos */
-        .logo .logo-footer {
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid var(--white);
-            border-radius: 50%;
-            padding: 4px;
-            margin-bottom: 1rem;
-        }
-        .logo-footer p {
-            color: var(--white);
-            height: 55px;
-            font-size: 30px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            align-items: center;
-            display: flex;
-        }
-        p .k-footer {
-            width: 100%;
-            height: 100%;
-        }
-        .line1-footer, .line2-footer {
-            height: 3px;
-            width: 16px;
-            background-color: var(--white);
-        }
         .derechos {
             background-color: var(--black);
             display: flex;
@@ -318,12 +310,16 @@
     <section>
         
         <nav class="menu">
+            <section class="seccion-logo">
             <div class="logo">
                 <div class="line1"></div>
                 <p>D</p>
                 <p class="k">K</p>
                 <div class="line2"></div>
             </div>
+            </section>
+
+            <section class="seccion-navbar">
             <ul>
                 <li class="navbar-menu"><a href="/">HOME</a></li>
                 <li class="navbar-menu"><a href="/">EMPRESA</a></li>
@@ -331,8 +327,9 @@
                 <li class="navbar-menu"><a href="/">DEPORTES</a></li>
                 <li class="navbar-menu"><a href="/">CONTACTO</a></li>
             </ul>
+            </section>
         </nav>
-        <h2 class="titulo">Nuestros Productos</h2>
+        <h2 class="titulo">DEPORTES</h2>
         <div class="imagen-portada">
             <figure class="portada">
                 <img src="https://img.freepik.com/foto-gratis/primer-plano-placa-circuito-electronico-cpu-microchip-componentes-electronicos-fondo_1387-743.jpg?w=360" alt="Foto portada">
@@ -342,37 +339,90 @@
     </header>
     <p class="texto1">Contamos con productos para todos los rubros</p> 
 
-    <section class="main-categorias">
+    <section class="main-deportes">
         
-    <div class="cards-rubros">
+        <div class="cards-deportes">
+    
+            <div class="card-deportes basquet ">
+                <a href="/">
+                    <img src="./iconos/pesaje1.png" class="iconbasquet" alt="basquet">
+                    <div class="product-info">
+                    <p class="texto2">BASQUET</p>
+                    </div>
+                </a>
+                
+            </div>
+    
+            <div class="card-deportes futbol">
+                
+                <a href="/"><img src="./iconos/control1.png" class="iconfutbol" alt="futbol">
+                <div class="product-info">
+                    <p class="texto2">FUTBOL</p>
+                </div>
+                </a>
+            </div>
+    
+            <div class="card-deportes voley">
+                
+                <a href="/"><img src="./iconos/placa1.png" class="iconvoley" alt="voley">              
+                <div class="product-info">
+                    <p class="texto2">VOLEY</p>
+                </div>
+                </a>
+            </div>
 
-        <div class="card-rubros señalizacion-visual">
+            <div class="card-deportes arqueria ">
+                <a href="/">
+                    <img src="./iconos/pesaje1.png" class="iconarqueria" alt="arqueria">
+                    <div class="product-info">
+                    <p class="texto2">ARQUERIA</p>
+                    </div>
+                </a>
+                
+            </div>
+    
+            <div class="card-deportes waterpolo">
+                
+                <a href="/"><img src="./iconos/control1.png" class="iconwaterpolo" alt="waterpolo">
+                <div class="product-info">
+                    <p class="texto2">WATERPOLO</p>
+                </div>
+                </a>
+            </div>
+    
+            <div class="card-deportes hockey">                
+                <a href="/"><img src="./iconos/placa1.png" class="iconhockey" alt="hockey">              
+                <div class="product-info">
+                    <p class="texto2">HOCKEY</p>
+                </div>
+                </a>
+            </div>
+
+            <div class="card-deportes rugby">               
+                <a href="/"><img src="./iconos/control1.png" class="iconrugby" alt="rugby">
+                <div class="product-info">
+                    <p class="texto2">RUGBY</p>
+                </div>
+                </a>
+            </div>
+    
+            <div class="card-deportes runners">  
+                <a href="/"><img src="./iconos/placa1.png" class="iconrunners" alt="runners">              
+                <div class="product-info">
+                    <p class="texto2">RUNNERS</p>
+                </div>
+                </a>
+            </div>
             
-            <a href="/"><img src="http://indelros.com.ar/letrero/farmacia.jpg" alt="Señalizacion visual">
-            <div class="product-info">
-                <p class="texto2">Señalizacion visual</p>
+            <div class="card-deportes manual">  
+                <a href="/"><img src="./iconos/placa1.png" class="iconmanual" alt="manual">              
+                <div class="product-info">
+                    <p class="texto2">MANUALES</p>
+                </div>
+                </a>
             </div>
-            </a>
-        </div>
-
-        <div class="card-rubros deportes">
-            <a href="/"><img src="http://indelros.com.ar/deporte/water_polo.jpg" alt="Deportes">
-            <div class="product-info">
-                <p class="texto2">Deportes</p>
-            </div>
-            </a>
-        </div>
-
-        <div class="card-rubros automatizacion">
-            <a href="/"><img src="http://indelros.com.ar/industria/panty.jpg" alt="Automatizacion">
-            <div class="product-info">
-                <p class="texto2">Automatizacion</p>
-            </div>
-            </a>
-        </div>
-
-    </div>
-    </section>
+        </section>
+    
 
     <footer>
         <section class="container-footer"> 
@@ -403,11 +453,11 @@
         </section>
 
         <section class="derechos">
-            <div class="logo logo-footer">
-                <div class="line1 line1-footer"></div>
+            <div class="logo ">
+                <div class="line1 "></div>
                 <p>D</p>
-                <p class="k k-footer">K</p>
-                <div class="line2 line2-footer"></div>
+                <p class="k ">K</p>
+                <div class="line2 "></div>
             </div>
             <div class="copyright">
                 <p>Copyright © DETEK-IER 2023 - Todos los Derechos Reservados</p>
