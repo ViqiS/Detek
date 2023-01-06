@@ -197,26 +197,29 @@
         /* Footer */
         .container-footer {
             display: grid;
-            grid-template-columns: repeat(3, 426px);
+            grid-template-columns: repeat(3, 1fr);
             height: 20rem;
-            justify-content: space-between;     
+            justify-content: space-between;   
+            margin-bottom: 0.5rem;
         }
         footer {
             border-top: 1px solid rgb(100, 98, 98);
         }
+
         /* Redes */
         .redes {
-            width: 250px;
-            display: grid;
-            justify-items: center; 
+            width: 100%;
+            display: flex;
+            justify-items: center;
             margin-top: 2.5rem;
-            height: 20px;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
         }
         .span-seguinos {
             font-family: var(--font);
-            font-size: var(--sm);
+            font-size: 1.2rem;
             color: var(--white);
-            margin-left: 10px;
         }
         .redes .social-icons {
             display: flex;
@@ -242,16 +245,47 @@
         ul li img{
             border-radius: 50%;
         }
+
         /* 6EDF44 codigo de color de los iconos */
+        
         /* Derechos */
+        .logo .logo-footer {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            padding: 4px;
+            margin-bottom: 1rem;
+        }
+        .logo-footer p {
+            color: var(--white);
+            height: 55px;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            align-items: center;
+            display: flex;
+        }
+        p .k-footer {
+            width: 100%;
+            height: 100%;
+        }
+        .line1-footer, .line2-footer {
+            height: 3px;
+            width: 16px;
+            background-color: var(--white);
+        }
         .derechos {
             background-color: var(--black);
             display: flex;
-            align-items: flex-end;
-            font-size: 1.3rem;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.2rem;
             color: var(--white);
             font-family: var(--font);
             width: 100%;
+            justify-content: space-around;
         }
         .copyright {
             height: 6rem;
@@ -269,17 +303,15 @@
             display: flex;
             flex-direction: column;
             color: var(--white);
-            font-size: 15px;
+            font-size: 1.2rem;
             font-family: var(--font);
             margin-top: 20px;
+            width: 100%;
+            padding-left: 3rem;
         }
         .telefonos p {
-            margin-top: 20px;
+            margin-top: 1rem;
         }
-        .direccion {
-            margin-top: 20px;
-        }
-
     </style>
 </head>
 <body>
@@ -373,6 +405,12 @@
         </section>
 
         <section class="derechos">
+            <div class="logo logo-footer">
+                <div class="line1 line1-footer"></div>
+                <p>D</p>
+                <p class="k k-footer">K</p>
+                <div class="line2 line2-footer"></div>
+            </div>
             <div class="copyright">
                 <p>Copyright © DETEK-IER 2023 - Todos los Derechos Reservados</p>
                 <p class="diseñadores">Diseñado por Pablo Re & Victoria Escalada</p>
@@ -381,10 +419,13 @@
 
         <section class="contact">
             <div class="telefonos">
-                <p>Ventas: 341 653-5347 ventas@detek.com.ar</p>
-                <p>At. al cliente: 341 541-7731 consultas@detek.com.ar</p>
+                <p>Ventas: </p>
+                <p>341 653-5347 ventas@detek.com.ar</p>
+                <p>At. al cliente: </p>
+                <p>341 541-7731 consultas@detek.com.ar</p>
+                <p>Ubicación: </p>
+                <p>Argentina, Santa Fe (Rosario) Pasaje Zavalla 3240 A</p>
             </div>
-            <div class="direccion">Argentina, Santa Fe (Rosario) Pasaje Zavalla 3240 A</div>
         </section>
 </section>
 </footer>

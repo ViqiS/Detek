@@ -59,44 +59,9 @@
         }
 
         /* navvar */
-        .menu {
-            position: fixed;
-            display: flex;
+        .contenedor-navbar {
             width: 100%;
-            z-index: 2;
-            background-color: var(--black);
-            justify-content: end;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav ul{
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            background-color: var(--black);
-            width: 100%;
-            height: 6rem;
-            font-family: var(--font);
-            font-size: var(--sm);
-            letter-spacing: 3px;
-            font-weight: bold;
-        }
-        .navbar-menu {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 2rem;
-            margin-right: 1.5rem;
-        }
-        .navbar-menu a{
-            list-style: none;
-            text-decoration: none;
-            border-right: 1px solid var(--verde-claro);
-            padding-right: 0.5rem;
-            color: var(--verde-oscuro);
-        }
-        .menu .navbar-menu a:hover {
-            background-color: none;
-            color: var(--verde-claro);
+            height: 6.5rem;        
         }
         .logo {
             height: 60px;
@@ -106,6 +71,7 @@
             border: 2px solid var(--white);
             border-radius: 50%;
             padding: 4px;
+            margin-left: 1rem;
         }
         .logo p {
             color: var(--white);
@@ -123,6 +89,47 @@
             height: 3px;
             width: 16px;
             background-color: var(--white);
+        }
+
+        .menu {
+            position: fixed;
+            display: flex;
+            width: 100%;
+            z-index: 2;
+            background-color: var(--black);
+            justify-content: end;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: var(--black);
+            width: 80%;
+            height: 6.5rem;
+            font-family: var(--font);
+            font-size: var(--sm);
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+        .navbar-menu {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 2rem;
+            margin-right: 1.5rem;
+        }
+        .navbar-menu a{
+            list-style: none;
+            text-decoration: none;
+            border-right: 1px solid var(--verde-claro);
+            padding-right: 0.5rem;
+            color: var(--verde-oscuro);
+
+        }
+        .menu .navbar-menu a:hover {
+            background-color: none;
+            color: var(--verde-claro);
         }
         
         /* productos */
@@ -152,16 +159,29 @@
         } */
         .card-rubros {
             width: 240px;
+            height: 100px;
             border: 1px solid var(--white);
             border-radius: 8px;
             display: flex;
             justify-content: center;
         }
         .card-rubros img { 
-            max-width: 220px;
-            height: 220px;
+            max-width: 120px;
+            height: 120px;
             object-fit: cover;
             align-items: center;
+        }
+        .card-rubros .iconpesaje {
+            width: 20px;
+            height: 222px;
+        }
+        .card-rubros .iconplaca {
+            width: 100px;
+            height: 20px;
+        }
+        .card-rubros .iconcontrol {
+            width: 100px;
+            height: 20px;
         }
         .texto2 {
             font-size: 25px;
@@ -180,26 +200,29 @@
         /* FOOTER */
         .container-footer {
             display: grid;
-            grid-template-columns: repeat(3, 426px);
+            grid-template-columns: repeat(3, 1fr);
             height: 20rem;
-            justify-content: space-between;     
+            justify-content: space-between;   
+            margin-bottom: 0.5rem;
         }
         footer {
             border-top: 1px solid rgb(100, 98, 98);
         }
+
         /* Redes */
         .redes {
-            width: 250px;
-            display: grid;
-            justify-items: center; 
+            width: 100%;
+            display: flex;
+            justify-items: center;
             margin-top: 2.5rem;
-            height: 20px;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
         }
         .span-seguinos {
             font-family: var(--font);
-            font-size: var(--sm);
+            font-size: 1.2rem;
             color: var(--white);
-            margin-left: 10px;
         }
         .redes .social-icons {
             display: flex;
@@ -226,15 +249,45 @@
             border-radius: 50%;
         }
         /* 6EDF44 codigo de color de los iconos */
+
         /* Derechos */
+        .logo .logo-footer {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            padding: 4px;
+            margin-bottom: 1rem;
+        }
+        .logo-footer p {
+            color: var(--white);
+            height: 55px;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            align-items: center;
+            display: flex;
+        }
+        p .k-footer {
+            width: 100%;
+            height: 100%;
+        }
+        .line1-footer, .line2-footer {
+            height: 3px;
+            width: 16px;
+            background-color: var(--white);
+        }
         .derechos {
             background-color: var(--black);
             display: flex;
-            align-items: flex-end;
-            font-size: 1.3rem;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.2rem;
             color: var(--white);
             font-family: var(--font);
             width: 100%;
+            justify-content: space-around;
         }
         .copyright {
             height: 6rem;
@@ -247,20 +300,20 @@
             width: 100%;
             text-align: center;
         }
+
         /* contacto-footer */
         .contact {
             display: flex;
             flex-direction: column;
             color: var(--white);
-            font-size: 15px;
+            font-size: 1.2rem;
             font-family: var(--font);
             margin-top: 20px;
+            width: 100%;
+            padding-left: 3rem;
         }
         .telefonos p {
-            margin-top: 20px;
-        }
-        .direccion {
-            margin-top: 20px;
+            margin-top: 1rem;
         }
 
         /* mediaqueri640 */
@@ -312,7 +365,8 @@
     <div class="cards-rubros">
 
         <div class="card-rubros pesaje">
-            <a href="/"><img src="http://detek.com.ar/img/p300_sf.png" alt="pesaje">
+            <a href="/"><img src="./iconos/pesaje1.png" class="iconpesaje" alt="pesaje">
+                <img src="./iconos/pesaje2.png" class="iconpesaje" alt="">
                 <div class="product-info">
                 <p class="texto2">Pesaje</p>
             </div>
@@ -322,7 +376,8 @@
 
         <div class="card-rubros control">
             
-            <a href="/"><img src="http://detek.com.ar/img/C126.png" alt="control">
+            <a href="/"><img src="./iconos/control1.png" class="iconcontrol" alt="control">
+                <img src="./iconos/control2.png" class="iconcontrol" alt="">
             <div class="product-info">
                 <p class="texto2">Control</p>
             </div>
@@ -331,7 +386,9 @@
 
         <div class="card-rubros placas">
             
-            <a href="/"><img src="http://detek.com.ar/img/I-1101.png" alt="placas">
+            <a href="/"><img src="./iconos/placa1.png" class="iconplaca" alt="placas">
+                <img src="./iconos/placa2.png" class="iconplaca" alt="" >
+                <img src="./iconos/placa3.png" class="iconplaca" alt="" >
             <div class="product-info">
                 <p class="texto2">Placas</p>
             </div>
@@ -368,6 +425,12 @@
         </section>
 
         <section class="derechos">
+            <div class="logo logo-footer">
+                <div class="line1 line1-footer"></div>
+                <p>D</p>
+                <p class="k k-footer">K</p>
+                <div class="line2 line2-footer"></div>
+            </div>
             <div class="copyright">
                 <p>Copyright © DETEK-IER 2023 - Todos los Derechos Reservados</p>
                 <p class="diseñadores">Diseñado por Pablo Re & Victoria Escalada</p>
@@ -376,10 +439,13 @@
 
         <section class="contact">
             <div class="telefonos">
-                <p>Ventas: 341 653-5347 ventas@detek.com.ar</p>
-                <p>At. al cliente: 341 541-7731 consultas@detek.com.ar</p>
+                <p>Ventas: </p>
+                <p>341 653-5347 ventas@detek.com.ar</p>
+                <p>At. al cliente: </p>
+                <p>341 541-7731 consultas@detek.com.ar</p>
+                <p>Ubicación: </p>
+                <p>Argentina, Santa Fe (Rosario) Pasaje Zavalla 3240 A</p>
             </div>
-            <div class="direccion">Argentina, Santa Fe (Rosario) Pasaje Zavalla 3240 A</div>
         </section>
 </section>
 </footer>
