@@ -64,6 +64,10 @@
             display: flex;
             width: 100%;
             z-index: 2;
+            background-color: var(--black);
+            justify-content: end;
+            justify-content: space-between;
+            align-items: center;
         }
         nav ul{
             display: flex;
@@ -94,6 +98,32 @@
             background-color: none;
             color: var(--verde-claro);
         }
+        .logo {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            padding: 4px;
+        }
+        .logo p {
+            color: var(--white);
+            height: 55px;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            align-items: center;
+            display: flex;
+        }
+        p .k {
+            width: 100%;
+            height: 100%;
+        }
+        .line1, .line2 {
+            height: 3px;
+            width: 16px;
+            background-color: var(--white);
+        }
         
         /* productos */
         .texto1 {
@@ -114,6 +144,12 @@
             justify-content: space-around;
             margin-bottom: 5rem;
         }
+        /* .card-rubros .pesaje:hover { 1er intento
+            -webkit-transition: all 2.4s 0.3s ease-in;
+            -moz-transition: all 2.4s 0.3s ease-in;
+            -o-transition: all 2.4s 0.3s ease-in;
+            transition: all 2.4s 0.3s ease-in;
+        } */
         .card-rubros {
             width: 240px;
             border: 1px solid var(--white);
@@ -247,6 +283,12 @@
     <section>
         
         <nav class="menu">
+            <div class="logo">
+                <div class="line1"></div>
+                <p>D</p>
+                <p class="k">K</p>
+                <div class="line2"></div>
+            </div>
             <ul>
                 <li class="navbar-menu"><a href="/">HOME</a></li>
                 <li class="navbar-menu"><a href="/">EMPRESA</a></li>
