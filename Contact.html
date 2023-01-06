@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
     <title>Contacto</title>
     <style>
@@ -29,16 +30,14 @@
         html {
             font-size: 62.5%;
         }
-        body {
-            background: rgb(164,190,123);
-        background: linear-gradient(96deg, rgba(164,190,123,1) 11%, rgba(40,84,48,1) 51%, rgba(0,0,0,1) 90%);
-        }
-        .flecha {
-            width: 20px;
-            height: 20px;
-            transform: rotate(-180deg);
-        }
+        
         /* Container */
+        .contenedor {
+            width: 320px;
+            height: 600px;
+            display: flex;
+            align-items: center;
+        }
         .contact {
             width: 100%;
             height: 100vh;
@@ -46,57 +45,70 @@
             place-items: center;
         }
         .form-container {
+            height: 55rem;
             font-family: var(--font);
             display: grid;
-            grid-template-rows: auto 1fr auto ;
+            grid-template-rows: auto 1fr auto;
             width: 320px;
-            background-color:var(--negro);
+            background-color: var(--negro);
             border-radius: 6px;
             border: 1px solid var(--verde-oscuro);
-            padding: 30px 20px;
+            padding: 20px 20px
         }
-        /* logo */
-        .logo {
-            margin-bottom: 48px;
-            justify-self: center;
-            color: var(--verde-agua);
-            display: flex;
-            align-content: center;
-        }
-        h1 {
-            font-family: 'Inter', sans-serif;
-            height: 58px;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            font-size: 80px;
-        }
-        .k {
+
+        /* Flecha */
+        .flecha {
+            width: 20px;
+            height: 20px;
             transform: rotate(-180deg);
         }
-        .line1 {
-            height: 8px;
-            width: 43px;
-            background-color: var(--verde-agua);
-        }
-        .line2 {
-            height: 8px;
-            width: 43px;
-            background-color: var(--verde-agua);
-        }
-        /* Pregunta */
-        h2 {
-            color: var(--verde-claro);
-            margin-left: 5px;
-            font-size: 18px;
-            margin-top: -30px;
-            width: 100%;
-        }
-        p {
+
+        /* logo */
+        .seccion-logo {
             display: flex;
-            align-items: flex-start;
+            justify-content: center;
         }
-        /* input */
+        .logo {
+            height: 103px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            padding: 4px;
+            width: 110px;
+            letter-spacing: -0.2rem;
+        }
+        .logo p {
+            color: var(--white);
+            height: 5.5rem;
+            font-size: 5rem;
+            font-family: 'M PLUS 1p', sans-serif;
+            align-items: center;
+            display: flex;
+        }
+        p .k{
+            width: 100%;
+            height: 10%;
+        }
+        .k {
+            transform: rotateY(180deg);
+        }
+        .line1, .line2 {
+            height: 0.5rem;
+            width: 16px;
+            background-color: var(--white);
+        }
+
+        /* Pregunta */
+        .title-pregunta {
+            color: var(--verde-claro);
+            font-size: 18px;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        /* Formulario*/
         .form div {
             display: flex;
             flex-direction: column;
@@ -141,14 +153,12 @@
             margin-top: 14px;
             margin-bottom: 30px;
         }
-        
-        /* background */
+         /* background */
         .gradient-background {
         background: linear-gradient(91deg,#61764b,#9ba17b,#000000);
         background-size: 180% 180%;
         animation: gradient-animation 15s ease infinite;
         }
-
         @keyframes gradient-animation {
             0% {
             background-position: 0% 50%;
@@ -160,8 +170,8 @@
         background-position: 0% 50%;
         }
         }
-        /* animation1 */
 
+        /* animation1 */
         @-webkit-keyframes hvr-wobble-to-bottom-right {
         16.65% {
             -webkit-transform: translate(8px, 8px);
@@ -234,42 +244,49 @@
         
     </style>
 </head>
-<body>
-    <div class="contact gradient-background">
-        <section class="body-contact">
-            
-        <div class="form-container">
-            <figure><img src="./iconos/angulo-doble-blanco.png" class="flecha" alt="flecha para volver"></figure>
+<body class="contact gradient-background">
 
-            <h1 class="logo">
-                <div class="line2"></div>
-                <p>D</p>
-                <span class="k">K</span>
-                <div class="line1"></div>
-            </h1><!-- dar vuelta la K y Agrandar lineas -->
-                
-            <h2 class="title">¿Necesitas nuestros servicios?</h2>
-            <form action="https://formsubmit.co/your@email.com" method="POST" class="form">
-            <div>
-                <label for="nombre" class="etiqueta">Nombre</label>
-                <input type="text" id="nombre" placeholder="Tu nombre" class="input input-nombre">
+    <section class="contenedor form-container">
+        
+        <section class="seccion-flecha">
+        <figure class="icono-flecha">
+        <img src="./iconos/angulo-doble-blanco.png" class="flecha" alt="flecha para volver">
+        </figure>
+        </section>
 
-                <label for="email" class="etiqueta">Email</label>
-                <input type="text" id="email" placeholder="Ejemplo123@ejemplo.com" class="input input-email">
-
-                <label for="numero" class="etiqueta">Numero de telefono</label>
-                <input type="text" id="numero" placeholder="341999999" class="input input-numero">
-
-                <label for="Mensaje" class="etiqueta">Mensaje</label>
-                <input type="text" id="mensaje" placeholder="Envianos tu mensaje" class="input input-mensaje">
-
+        <section class="seccion-logo">
+            <div class="logo">
+            <div class="line1"></div>
+            <p class="d">D</p>
+            <p class="k">K</p>
+            <div class="line2"></div>
             </div>
-                <input type="submit" value="Enviar" class="boton-enviar send-button hvr-wobble-to-bottom-right">
-                <!-- boton-enviar añadir segunda clase? -->
-            </form>
-            
+        </section>
+
+        <div class="pregunta">
+        <h2 class="title-pregunta">¿Necesitas nuestros servicios?</h2>
         </div>
-    </div>
+
+        <section class="seccion-formulario">
+        <form action="https://formsubmit.co/your@email.com" method="POST" class="form">
+        <div>
+            <label for="nombre" class="etiqueta">Nombre</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" class="input input-nombre">
+
+            <label for="email" class="etiqueta">Email</label>
+            <input type="text" id="email" placeholder="Ejemplo123@ejemplo.com" class="input input-email">
+
+            <label for="numero" class="etiqueta">Numero de telefono</label>
+            <input type="text" id="numero" placeholder="341999999" class="input input-numero">
+
+            <label for="Mensaje" class="etiqueta">Mensaje</label>
+            <input type="text" id="mensaje" placeholder="Envianos tu mensaje" class="input input-mensaje">
+
+            <input type="submit" value="Enviar" class="boton-enviar send-button hvr-wobble-to-bottom-right">
+            <!-- boton-enviar añadir segunda clase? -->
+        </div>
+        </form>
+    </section>
     </section>
 </body>
 </html>
