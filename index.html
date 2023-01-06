@@ -12,9 +12,10 @@
         :root {
             --white: #ffffff;
             --black: #000;
-            --crema: #E5D9B6;
-            --verde-claro: #5F8D4E;
-            --verde-oscuro: #285430;
+            --crema: #FAD6A5;
+            --verde-claro: #9BA17B;
+            --verde-oscuro: #61764B;
+            --verde-agua: #CFB997;
             --font: 'Montserrat', sans-serif;
             --sm: 1.4rem;
             --md: 1.6rem;
@@ -123,18 +124,29 @@
             color: var(--verde-claro);
         }
 
-        /* Footer */
-        .redes {
-            width: 187px;
+         /* Footer */
+         .container-footer {
             display: grid;
-            justify-items: center;
-            margin-top: 2.5rem; 
+            grid-template-columns: repeat(3, 426px);
+            height: 20rem;
+            justify-content: space-between;     
+        }
+        footer {
+            border-top: 1px solid rgb(100, 98, 98);
+        }
+        /* Redes */
+        .redes {
+            width: 250px;
+            display: grid;
+            justify-items: center; 
+            margin-top: 2.5rem;
+            height: 20px;
         }
         .span-seguinos {
             font-family: var(--font);
             font-size: var(--sm);
             color: var(--white);
-            margin-left: 25px;
+            margin-left: 10px;
         }
         .redes .social-icons {
             display: flex;
@@ -160,8 +172,42 @@
         ul li img{
             border-radius: 50%;
         }
-        footer {
-            border-top: 1px solid rgb(100, 98, 98);
+        /* 6EDF44 codigo de color de los iconos */
+        /* Derechos */
+        .derechos {
+            background-color: var(--black);
+            display: flex;
+            align-items: flex-end;
+            font-size: 1.3rem;
+            color: var(--white);
+            font-family: var(--font);
+            width: 100%;
+        }
+        .copyright {
+            height: 6rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: first baseline;
+        }
+        .copyright p {
+            width: 100%;
+            text-align: center;
+        }
+        /* contacto-footer */
+        .contact {
+            display: flex;
+            flex-direction: column;
+            color: var(--white);
+            font-size: 15px;
+            font-family: var(--font);
+            margin-top: 20px;
+        }
+        .telefonos p {
+            margin-top: 20px;
+        }
+        .direccion {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -193,35 +239,48 @@
     </section>
 
     <footer>
+        <section class="container-footer"> 
+
         <section class="redes">
 
-            <span class="span-seguinos">Seguinos en nuestras redes</span>
+        <span class="span-seguinos">Seguinos en nuestras redes</span>
 
             <div class="orden-del-footer">
-
-                <ul class="social-icons">
-
-                    <li class="facebook">
-                        <a href="https://www.facebook.com/">
-                        <img src="./redes/facebook.png" alt="facebook">
-                        </a>
-                    </li>
-
-                    <li class="instagram">
-                        <a href="/">
-                        <img src="./redes/instagram.png" alt="instagram">
-                        </a>
-                    </li>
-
-                    <li class="whatsapp">
-                        <a href="/">
-                        <img src="./redes/whatsapp.png" alt="whatsapp">
-                        </a>
-                    </li>
-
-                </ul>
+            <ul class="social-icons">
+                <li class="facebook">
+                    <a href="https://www.facebook.com/">
+                    <img src="./redes/facebook.png" alt="facebook">
+                    </a>
+                </li>
+                <li class="instagram">
+                    <a href="/">
+                    <img src="./redes/instagram.png" alt="instagram">
+                    </a>
+                </li>
+                <li class="whatsapp">
+                    <a href="/">
+                    <img src="./redes/whatsapp.png" alt="whatsapp">
+                    </a>
+                </li>
+            </ul>
             </div>
         </section>
-    </footer>
+
+        <section class="derechos">
+            <div class="copyright">
+                <p>Copyright © DETEK-IER 2023 - Todos los Derechos Reservados</p>
+                <p class="diseñadores">Diseñado por Pablo Re & Victoria Escalada</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="telefonos">
+                <p>Ventas: 341 653-5347 ventas@detek.com.ar</p>
+                <p>At. al cliente: 341 541-7731 consultas@detek.com.ar</p>
+            </div>
+            <div class="direccion">Argentina, Santa Fe (Rosario) Pasaje Zavalla 3240 A</div>
+        </section>
+</section>
+</footer>
 </body>
 </html>
