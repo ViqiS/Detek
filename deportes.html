@@ -17,10 +17,12 @@
             --verde-claro: #9BA17B;
             --verde-oscuro: #61764B;
             --verde-agua: #CFB997;
+            --gris:#292929;
             --font: 'Montserrat', sans-serif;
             --sm: 1.4rem;
             --md: 1.6rem;
             --lg: 1.8rem;
+            --tt: 5rem;
         }
         * {
             box-sizing: border-box;
@@ -37,22 +39,23 @@
         /* portada */
         .portada {
             width: 100%;
-            height: 40vh;
+            height: 48vh;
         }
         .imagen-portada figure img{
             width: 100%;
             object-fit: cover;
-            height: 100%;
+            height: 100%;/* 
+            filter: grayscale(100); */
         }
         .titulo {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             width: 100%;
             font-family: var(--font);
-            font-size: 3rem;
+            font-size: var(--tt);
             font-weight: bold;
-            color: var(--white);
+            color: var(--black);
             position: absolute;
             top: 20%;
             left: 0;
@@ -144,11 +147,11 @@
 
 
         
-        /* productos */
+        /* Deportes */
         .texto1 {
             display: flex;
             justify-content: center;
-            font-size: var(--md);
+            font-size: 2.5rem;
             color: var(--verde-agua);
             font-family: var(--font);
             height: 60px;
@@ -196,6 +199,66 @@
         }
         .card-deportes:hover {
             box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
+        }
+        .clientes {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 1000px;
+            width: 100%;
+        }
+        .card-clientes {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+            grid-column-gap: 35px;
+            width: 1600px;
+            height:1000px;
+            justify-items: center;
+            align-items: center;
+            align-content: space-evenly;
+            justify-content: center;
+        }
+        .card-clientes img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 4px;
+        }
+
+        .espacio {
+            width: 100%;
+            height: 800px;
+            border-radius:35% 65% 26% 74% / 52% 50% 50% 48% ;
+            background-color:var(--gris);
+            display: flex;
+            justify-content: space-around;
+            border-top: 30px;
+            align-items: center;
+        }
+        
+        .espacio img {
+            width: 600px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7% 93% 45% 55% / 35% 48% 52% 65%  ;
+        }
+
+        .nuestro {
+            width: 100%;
+        }
+
+        .nuestros {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            font-family: var(--font);
+            color: var(--crema);
+            font-size: var(--tt);
         }
         /* FOOTER */
         .container-footer {
@@ -330,7 +393,7 @@
         <h2 class="titulo">DEPORTES</h2>
         <div class="imagen-portada">
             <figure class="portada">
-                <img src="https://img.freepik.com/foto-gratis/primer-plano-placa-circuito-electronico-cpu-microchip-componentes-electronicos-fondo_1387-743.jpg?w=360" alt="Foto portada">
+                <img src="fotos-detek/deportesportada.jpg"Foto portada">
             </figure>
         </div>
     </section>
@@ -420,7 +483,104 @@
                 </a>
             </div>
         </section>
-    
+
+        <section class="espacio">
+            <figure><img src="./fotos-detek/deportes.jpg" alt=""></figure>
+        </section>
+
+        <section class="nuestro">
+            <div class="nuestros">
+                <p>NUESTROS CLIENTES</p>
+            </div>
+        </section>
+
+    <section class="clientes">
+        <div class="card-clientes">
+            <img src="./iconos/iconosclientes/Arica-Chile-internacional.jpg" class="c1" alt="">
+            <img src="./iconos/iconosclientes/asoc-rosarina-de-atletismo.jpg" class="c2" alt="">
+            <img src="./iconos/iconosclientes/atalaya.jpg" class="c3" alt="">
+            <img src="./iconos/iconosclientes/automoto-club-san-clemente.jpg" class="c4" alt="">
+            <img src="./iconos/iconosclientes/banco-nacion-argentina.jpg" class="c5" alt="">
+            <img src="./iconos/iconosclientes/banco-sta-fe.jpg" class="c6" alt="">
+            <img src="./iconos/iconosclientes/cimomet.jpg" class="c7" alt="">
+            <img src="./iconos/iconosclientes/cindi.jpg" class="c8" alt="">
+            <img src="./iconos/iconosclientes/club-villa-constituc.jpg" class="c9" alt="">
+            <img src="./iconos/iconosclientes/club-centralcordoba-ros.jpg" class="c10" alt="">
+            <img src="./iconos/iconosclientes/colon.jpg" class="c11" alt="">
+            <img src="./iconos/iconosclientes/club-edison.jpg" class="c12" alt="">
+            <img src="./iconos/iconosclientes/club-fab-de-armas.jpg" class="c13" alt="">
+            <img src="./iconos/iconosclientes/club-universitario.jpg" class="c14" alt="">
+            <img src="./iconos/iconosclientes/club-villa-constituc.jpg" class="c15" alt="">
+            <img src="./iconos/iconosclientes/crai.jpg" class="c16" alt="">
+            <img src="./iconos/iconosclientes/duendes.jpg" class="c17" alt="">
+            <img src="./iconos/iconosclientes/estudiantes-de-parana.jpg" class="c18" alt="">
+            <img src="./iconos/iconosclientes/ger.jpg" class="c19" alt="">
+            <img src="./iconos/iconosclientes/hospital-centenario-logo.jpg" class="c20" alt="">
+            <img src="./iconos/iconosclientes/hospital-italiano.png" class="c21" alt="">
+            <img src="./iconos/iconosclientes/independiente-oliva.jpg" class="c22" alt="">
+            <img src="./iconos/iconosclientes/independiente-ricardone.jpg" class="c23" alt="">
+            <img src="./iconos/iconosclientes/jockey-club.jpg" class="c24" alt="">
+            <img src="./iconos/iconosclientes/kimberly-clark.jpg" class="c25" alt="">
+            <img src="./iconos/iconosclientes/los-rosarinos-estudiantil.jpg" class="c26" alt="">
+            <img src="./iconos/iconosclientes/muni-baigorria.jpg" class="c27" alt="">
+            <img src="./iconos/iconosclientes/muni-pergamino.jpg" class="c28" alt="">
+            <img src="./iconos/iconosclientes/muni-santo-tome.jpg" class="c29" alt="">
+            <img src="./iconos/iconosclientes/muni-trenque-lauquen.jpg" class="c30" alt="">
+            <img src="./iconos/iconosclientes/muni-tres-lomas.jpg" class="c31" alt="">
+            <img src="./iconos/iconosclientes/municipalidad-gob-crespo.jpg" class="c32" alt="">
+            <img src="./iconos/iconosclientes/municipalidad-sta-fe.jpg" class="c33" alt="">
+            <img src="./iconos/iconosclientes/natalio-automotores.jpg" class="c34" alt="">
+            <img src="./iconos/iconosclientes/nueva-aurora.jpg" class="c35" alt="">
+            <img src="./iconos/iconosclientes/old-resian-club.jpg" class="c36" alt="">
+            <img src="./iconos/iconosclientes/ospat-generica-1.jpg" class="c37" alt="">
+            <img src="./iconos/iconosclientes/pergamino.jpg" class="c38" alt="">
+            <img src="./iconos/iconosclientes/petrolero-argentino.jpg" class="c39" alt="">
+            <img src="./iconos/iconosclientes/plaza.jpg" class="c40" alt="">
+            <img src="./iconos/iconosclientes/quickfood.jpg" class="c41" alt="">
+            <img src="./iconos/iconosclientes/red-star-san-lorenzo.jpg" class="c42" alt="">
+            <img src="./iconos/iconosclientes/regatas-chaco.jpg" class="c43" alt="">
+            <img src="./iconos/iconosclientes/regatas-san-nicolas.jpg" class="c44" alt="">
+            <img src="./iconos/iconosclientes/rowing.jpg" class="c45" alt="">
+            <img src="./iconos/iconosclientes/sanatorio-americano.jpg" class="c46" alt="">
+            <img src="./iconos/iconosclientes/sanatorio-de-lamujer.jpg" class="c47" alt="">
+            <img src="./iconos/iconosclientes/sancor-seguros.jpg" class="c48" alt="">
+            <img src="./iconos/iconosclientes/seedmech.jpg" class="c49" alt="">
+            <img src="./iconos/iconosclientes/Sportivo-Atlético-Club-las-Parejas..jpg" class="c50" alt="">
+            <img src="./iconos/iconosclientes/sports-perga.jpg" class="c51" alt="">
+            <img src="./iconos/iconosclientes/sportsmen.jpg" class="c52" alt="">
+            <img src="./iconos/iconosclientes/syngenta.jpg" class="c53" alt="">
+            <img src="./iconos/iconosclientes/talleres-vgg.jpg" class="c54" alt="">
+            <img src="./iconos/iconosclientes/temperley.jpg" class="c55" alt="">
+            <img src="./iconos/iconosclientes/Timbuense@4x.jpg" class="c56" alt="">
+            <img src="./iconos/iconosclientes/tucci.jpg" class="c57" alt="">
+            <img src="./iconos/iconosclientes/turismo-carey.jpg" class="c58" alt="">
+            <img src="./iconos/iconosclientes/union-arg-de-rugby.jpg" class="c59" alt="">
+            <img src="./iconos/iconosclientes/union-sionista.jpg" class="c60" alt="">
+            <img src="./iconos/iconosclientes/union-y-progreso.jpg" class="c61" alt="">
+            <img src="./iconos/iconosclientes/ahl.jpg" class="c62" alt="">
+            <img src="./iconos/iconosclientes/Carcaraña.jpg" class="c63" alt="">
+            <img src="./iconos/iconosclientes/cb.jpg" class="c64" alt="">
+            <img src="./iconos/iconosclientes/circulo-italiano.jpg" class="c65" alt="">
+            <img src="./iconos/iconosclientes/club-alianza.jpg" class="c66" alt="">
+            <img src="./iconos/iconosclientes/club-atletico-provincial.jpg" class="c67" alt="">
+            <img src="./iconos/iconosclientes/club-atl-paganini-alumni.jpg" class="c68" alt="">
+            <img src="./iconos/iconosclientes/Club-Centenario-Venado-Tuerto.jpg" class="c69" alt="">
+            <img src="./iconos/iconosclientes/club-fisherton.jpg" class="c70" alt="">
+            <img src="./iconos/iconosclientes/club-maciel.jpg" class="c71" alt="">
+            <img src="./iconos/iconosclientes/club-nautico-sportivo-america.jpg" class="c72" alt="">
+            <img src="./iconos/iconosclientes/club-universitario-quilmes.jpg" class="c73" alt="">
+            <img src="./iconos/iconosclientes/echesortu-football-club.jpg" class="c74" alt="">
+            <img src="./iconos/iconosclientes/municipalidad-de-rosario.jpg" class="c75" alt="">
+            <img src="./iconos/iconosclientes/newells.jpg" class="c76" alt="">
+            <img src="./iconos/iconosclientes/riberasdel-parana.jpg" class="c77" alt="">
+            <img src="./iconos/iconosclientes/rivadavia-juniors-de-santo-tome.jpg" class="c78" alt="">
+            <img src="./iconos/iconosclientes/servando-bayo-club.jpg" class="c79" alt="">
+            <img src="./iconos/iconosclientes/sociedad-tiro-suizo.jpg" class="c80" alt="">
+            <img src="./iconos/iconosclientes/talleres-de-arroyo-seco.jpg" class="c81" alt="">
+        </div>
+
+    </section>
+
 
     <footer>
         <section class="container-footer"> 
@@ -433,17 +593,17 @@
             <ul class="social-icons">
                 <li class="facebook">
                     <a href="https://www.facebook.com/">
-                    <img src="./redes/facebook.png" alt="facebook">
+                    <img src="./redes/facebook.jpg" alt="facebook">
                     </a>
                 </li>
                 <li class="instagram">
                     <a href="/">
-                    <img src="./redes/instagram.png" alt="instagram">
+                    <img src="./redes/instagram.jpg" alt="instagram">
                     </a>
                 </li>
                 <li class="whatsapp">
                     <a href="/">
-                    <img src="./redes/whatsapp.png" alt="whatsapp">
+                    <img src="./redes/whatsapp.jpg" alt="whatsapp">
                     </a>
                 </li>
             </ul>
