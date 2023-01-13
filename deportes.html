@@ -204,23 +204,29 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            height: 1000px;
+            height: fit-content;
             width: 100%;
         }
         .card-clientes {
+            padding: 1rem;
+            margin-bottom: 2rem;
             display: grid;
-            grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-            grid-column-gap: 35px;
-            width: 1600px;
-            height:1000px;
+            grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+            grid-column-gap: 2rem;
+            width: fit-content;
+            height:100%;
             justify-items: center;
             align-items: center;
             align-content: space-evenly;
             justify-content: center;
+            border-radius: 8px;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
+            box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
         }
         .card-clientes img {
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
             object-fit: cover;
             object-position: center;
             border-radius: 4px;
@@ -228,7 +234,7 @@
 
         .espacio {
             width: 100%;
-            height: 800px;
+            height: 600px;
             border-radius:35% 65% 26% 74% / 52% 50% 50% 48% ;
             background-color:var(--gris);
             display: flex;
@@ -238,8 +244,8 @@
         }
         
         .espacio img {
-            width: 600px;
-            height: 600px;
+            width: 500px;
+            height: 500px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -496,93 +502,92 @@
 
     <section class="clientes">
         <div class="card-clientes">
-            <img src="./iconos/iconosclientes/Arica-Chile-internacional.jpg" class="c1" alt="">
-            <img src="./iconos/iconosclientes/asoc-rosarina-de-atletismo.jpg" class="c2" alt="">
-            <img src="./iconos/iconosclientes/atalaya.jpg" class="c3" alt="">
+            <img src="./iconos/iconosclientes/Arica-Chile-internacional.jpg" class="c1" alt="Arica chile">
+            <img src="./iconos/iconosclientes/asoc-rosarina-de-atletismo.jpg" class="c2" alt="Asociacion rosarina de atletismo">
+            <img src="./iconos/iconosclientes/atalaya.jpg" class="c3" alt="Atalaya">
             
-            <img src="./iconos/iconosclientes/cindi.jpg" class="c8" alt="">
-            <img src="./iconos/iconosclientes/club-villa-constituc.jpg" class="c9" alt="">
-            <img src="./iconos/iconosclientes/club-centralcordoba-ros.jpg" class="c10" alt="">
-            <img src="./iconos/iconosclientes/colon.jpg" class="c11" alt="">
-            <img src="./iconos/iconosclientes/club-edison.jpg" class="c12" alt="">
-            <img src="./iconos/iconosclientes/club-fab-de-armas.jpg" class="c13" alt="">
-            <img src="./iconos/iconosclientes/club-universitario.jpg" class="c14" alt="">
-            <img src="./iconos/iconosclientes/club-villa-constituc.jpg" class="c15" alt="">
-            <img src="./iconos/iconosclientes/crai.jpg" class="c16" alt="">
-            <img src="./iconos/iconosclientes/duendes.jpg" class="c17" alt="">
-            <img src="./iconos/iconosclientes/estudiantes-de-parana.jpg" class="c18" alt="">
-            <img src="./iconos/iconosclientes/ger.jpg" class="c19" alt="">
+            <img src="./iconos/iconosclientes/cindi.jpg" class="c8" alt="Cindi">
+            <img src="./iconos/iconosclientes/club-villa-constituc.jpg" class="c9" alt="Club villa constitución">
+            <img src="./iconos/iconosclientes/club-centralcordoba-ros.jpg" class="c10" alt="Club central córdoba rosario">
+            <img src="./iconos/iconosclientes/colon.jpg" class="c11" alt="Colón">
+            <img src="./iconos/iconosclientes/club-edison.jpg" class="c12" alt="Club edison">
+            <img src="./iconos/iconosclientes/club-fab-de-armas.jpg" class="c13" alt="Club fabrica de armas">
+            <img src="./iconos/iconosclientes/club-universitario.jpg" class="c14" alt="Club universitario">
+            <img src="./iconos/iconosclientes/crai.jpg" class="c16" alt="Club rai">
+            <img src="./iconos/iconosclientes/duendes.jpg" class="c17" alt="Duendes">
+            <img src="./iconos/iconosclientes/estudiantes-de-parana.jpg" class="c18" alt="Estudiantes de Paraná">
+            <img src="./iconos/iconosclientes/ger.jpg" class="c19" alt="Gimnasia y esgrima">
             
-            <img src="./iconos/iconosclientes/independiente-oliva.jpg" class="c22" alt="">
-            <img src="./iconos/iconosclientes/independiente-ricardone.jpg" class="c23" alt="">
-            <img src="./iconos/iconosclientes/jockey-club.jpg" class="c24" alt="">
-            <img src="./iconos/iconosclientes/kimberly-clark.jpg" class="c25" alt="">
-            <img src="./iconos/iconosclientes/los-rosarinos-estudiantil.jpg" class="c26" alt="">
-            <img src="./iconos/iconosclientes/nueva-aurora.jpg" class="c35" alt="">
-            <img src="./iconos/iconosclientes/old-resian-club.jpg" class="c36" alt="">
-            <img src="./iconos/iconosclientes/pergamino.jpg" class="c38" alt="">
-            <img src="./iconos/iconosclientes/petrolero-argentino.jpg" class="c39" alt="">
-            <img src="./iconos/iconosclientes/plaza.jpg" class="c40" alt="">
-            <img src="./iconos/iconosclientes/red-star-san-lorenzo.jpg" class="c42" alt="">
-            <img src="./iconos/iconosclientes/regatas-chaco.jpg" class="c43" alt="">
-            <img src="./iconos/iconosclientes/regatas-san-nicolas.jpg" class="c44" alt="">
-            <img src="./iconos/iconosclientes/rowing.jpg" class="c45" alt="">
-            <img src="./iconos/iconosclientes/Sportivo-Atlético-Club-las-Parejas..jpg" class="c50" alt="">
-            <img src="./iconos/iconosclientes/sports-perga.jpg" class="c51" alt="">
-            <img src="./iconos/iconosclientes/sportsmen.jpg" class="c52" alt="">
-            <img src="./iconos/iconosclientes/talleres-vgg.jpg" class="c54" alt="">
-            <img src="./iconos/iconosclientes/temperley.jpg" class="c55" alt="">
-            <img src="./iconos/iconosclientes/Timbuense@4x.jpg" class="c56" alt="">
-            <img src="./iconos/iconosclientes/union-arg-de-rugby.jpg" class="c59" alt="">
-            <img src="./iconos/iconosclientes/union-y-progreso.jpg" class="c61" alt="">
+            <img src="./iconos/iconosclientes/independiente-oliva.jpg" class="c22" alt="Independiente de oliva">
+            <img src="./iconos/iconosclientes/independiente-ricardone.jpg" class="c23" alt="Independiente ricardone">
+            <img src="./iconos/iconosclientes/jockey-club.jpg" class="c24" alt="Jockey club">
+            <img src="./iconos/iconosclientes/kimberly-clark.jpg" class="c25" alt="Kimberly clark">
+            <img src="./iconos/iconosclientes/los-rosarinos-estudiantil.jpg" class="c26" alt="Los rosarinos estudiantil">
+            <img src="./iconos/iconosclientes/nueva-aurora.jpg" class="c35" alt="Nueva aurora">
+            <img src="./iconos/iconosclientes/old-resian-club.jpg" class="c36" alt="Old resian club">
+            <img src="./iconos/iconosclientes/pergamino.jpg" class="c38" alt="Pergamino">
+            <img src="./iconos/iconosclientes/petrolero-argentino.jpg" class="c39" alt="Petrolero argentino">
+            <img src="./iconos/iconosclientes/plaza.jpg" class="c40" alt="Plaza">
+            <img src="./iconos/iconosclientes/red-star-san-lorenzo.jpg" class="c42" alt="Red star San Lorenzo">
+            <img src="./iconos/iconosclientes/regatas-chaco.jpg" class="c43" alt="Regatas Chaco">
+            <img src="./iconos/iconosclientes/regatas-san-nicolas.jpg" class="c44" alt="Regatas San Nicolás">
+            <img src="./iconos/iconosclientes/rowing.jpg" class="c45" alt="Rowing">
+            <img src="./iconos/iconosclientes/Sportivo-Atlético-Club-las-Parejas..jpg" class="c50" alt="Sportivo atletico Club las parejas">
+            <img src="./iconos/iconosclientes/sports-perga.jpg" class="c51" alt="Sport perga">
+            <img src="./iconos/iconosclientes/sportsmen.jpg" class="c52" alt="Sportsmen">
+            <img src="./iconos/iconosclientes/talleres-vgg.jpg" class="c54" alt="Talleres VGG">
+            <img src="./iconos/iconosclientes/temperley.jpg" class="c55" alt="Temperley">
+            <img src="./iconos/iconosclientes/Timbuense@4x.jpg" class="c56" alt="Timbues">
+            <img src="./iconos/iconosclientes/union-arg-de-rugby.jpg" class="c59" alt="Union argentina de rugby">
+            <img src="./iconos/iconosclientes/union-y-progreso.jpg" class="c61" alt="Union y progreso">
             <img src="./iconos/iconosclientes/ahl.jpg" class="c62" alt="">
-            <img src="./iconos/iconosclientes/Carcaraña.jpg" class="c63" alt="">
+            <img src="./iconos/iconosclientes/Carcaraña.jpg" class="c63" alt="Carcaraña">
             <img src="./iconos/iconosclientes/cb.jpg" class="c64" alt="">
-            <img src="./iconos/iconosclientes/circulo-italiano.jpg" class="c65" alt="">
-            <img src="./iconos/iconosclientes/club-alianza.jpg" class="c66" alt="">
-            <img src="./iconos/iconosclientes/club-atletico-provincial.jpg" class="c67" alt="">
-            <img src="./iconos/iconosclientes/club-atl-paganini-alumni.jpg" class="c68" alt="">
-            <img src="./iconos/iconosclientes/Club-Centenario-Venado-Tuerto.jpg" class="c69" alt="">
-            <img src="./iconos/iconosclientes/club-fisherton.jpg" class="c70" alt="">
-            <img src="./iconos/iconosclientes/club-maciel.jpg" class="c71" alt="">
-            <img src="./iconos/iconosclientes/club-universitario-quilmes.jpg" class="c73" alt="">
-            <img src="./iconos/iconosclientes/echesortu-football-club.jpg" class="c74" alt="">
-            <img src="./iconos/iconosclientes/newells.jpg" class="c76" alt="">
-            <img src="./iconos/iconosclientes/riberasdel-parana.jpg" class="c77" alt="">
-            <img src="./iconos/iconosclientes/rivadavia-juniors-de-santo-tome.jpg" class="c78" alt="">
-            <img src="./iconos/iconosclientes/servando-bayo-club.jpg" class="c79" alt="">
-            <img src="./iconos/iconosclientes/sociedad-tiro-suizo.jpg" class="c80" alt="">
-            <img src="./iconos/iconosclientes/talleres-de-arroyo-seco.jpg" class="c81" alt="">
+            <img src="./iconos/iconosclientes/circulo-italiano.jpg" class="c65" alt="Circulo italiano">
+            <img src="./iconos/iconosclientes/club-alianza.jpg" class="c66" alt="Club alianza">
+            <img src="./iconos/iconosclientes/club-atletico-provincial.jpg" class="c67" alt="Club atletico provincial">
+            <img src="./iconos/iconosclientes/club-atl-paganini-alumni.jpg" class="c68" alt="Club atletico paganini alumni">
+            <img src="./iconos/iconosclientes/Club-Centenario-Venado-Tuerto.jpg" class="c69" alt="Club centenario venado tuerto">
+            <img src="./iconos/iconosclientes/club-fisherton.jpg" class="c70" alt="Club fisherton">
+            <img src="./iconos/iconosclientes/club-maciel.jpg" class="c71" alt="Club maciel">
+            <img src="./iconos/iconosclientes/club-universitario-quilmes.jpg" class="c73" alt="Club universitario quilmes">
+            <img src="./iconos/iconosclientes/echesortu-football-club.jpg" class="c74" alt="Echesortu football club">
+            <img src="./iconos/iconosclientes/newells.jpg" class="c76" alt="Newells old boys">
+            <img src="./iconos/iconosclientes/riberasdel-parana.jpg" class="c77" alt="Riberas del parana">
+            <img src="./iconos/iconosclientes/rivadavia-juniors-de-santo-tome.jpg" class="c78" alt="Rivadavia juniors de santo tomé">
+            <img src="./iconos/iconosclientes/servando-bayo-club.jpg" class="c79" alt="Servando bayo club">
+            <img src="./iconos/iconosclientes/sociedad-tiro-suizo.jpg" class="c80" alt="Sociedad tiro suizo">
+            <img src="./iconos/iconosclientes/talleres-de-arroyo-seco.jpg" class="c81" alt="Talleres de arroyo seco">
 
-            <img src="./iconos/iconosclientes/union-sionista.jpg" class="c60" alt="">
-            <img src="./iconos/iconosclientes/club-nautico-sportivo-america.jpg" class="c72" alt="">
-            <img src="./iconos/iconosclientes/turismo-carey.jpg" class="c58" alt="">
-            <img src="./iconos/iconosclientes/hospital-italiano.png" class="c21" alt=""><!-- arreglar -->
+            <img src="./iconos/iconosclientes/union-sionista.jpg" class="c60" alt="Union sionista">
+            <img src="./iconos/iconosclientes/club-nautico-sportivo-america.jpg" class="c72" alt="Club nautico sportivo america">
+            <img src="./iconos/iconosclientes/turismo-carey.jpg" class="c58" alt="Turismo carey">
+            <img src="./iconos/iconosclientes/hospital-italiano.png" class="c21" alt="Hospital italiano"><!-- arreglar -->
 
             
-            <img src="./iconos/iconosclientes/muni-tres-lomas.jpg" class="c31" alt="">
-            <img src="./iconos/iconosclientes/muni-trenque-lauquen.jpg" class="c30" alt="">
-            <img src="./iconos/iconosclientes/muni-santo-tome.jpg" class="c29" alt="">
-            <img src="./iconos/iconosclientes/muni-pergamino.jpg" class="c28" alt="">
+            <img src="./iconos/iconosclientes/muni-tres-lomas.jpg" class="c31" alt="Municipalidad tres lomas">
+            <img src="./iconos/iconosclientes/muni-trenque-lauquen.jpg" class="c30" alt="Municipalidad trenque lauquen">
+            <img src="./iconos/iconosclientes/muni-santo-tome.jpg" class="c29" alt="Municipalidad Santo Tome">
+            <img src="./iconos/iconosclientes/muni-pergamino.jpg" class="c28" alt="Municipalidad Pergamino">
             
-            <img src="./iconos/iconosclientes/municipalidad-de-rosario.jpg" class="c75" alt="">
-            <img src="./iconos/iconosclientes/tucci.jpg" class="c57" alt="">
-            <img src="./iconos/iconosclientes/syngenta.jpg" class="c53" alt="">
-            <img src="./iconos/iconosclientes/sancor-seguros.jpg" class="c48" alt="">
-            <img src="./iconos/iconosclientes/seedmech.jpg" class="c49" alt="">
-            <img src="./iconos/iconosclientes/sanatorio-de-lamujer.jpg" class="c47" alt="">
-            <img src="./iconos/iconosclientes/sanatorio-americano.jpg" class="c46" alt="">
-            <img src="./iconos/iconosclientes/quickfood.jpg" class="c41" alt="">
-            <img src="./iconos/iconosclientes/ospat-generica-1.jpg" class="c37" alt="">
-            <img src="./iconos/iconosclientes/natalio-automotores.jpg" class="c34" alt="">
-            <img src="./iconos/iconosclientes/municipalidad-sta-fe.jpg" class="c33" alt="">
-            <img src="./iconos/iconosclientes/municipalidad-gob-crespo.jpg" class="c32" alt="">
-            <img src="./iconos/iconosclientes/automoto-club-san-clemente.jpg" class="c4" alt="">
-            <img src="./iconos/iconosclientes/banco-nacion-argentina.jpg" class="c5" alt="">
-            <img src="./iconos/iconosclientes/banco-sta-fe.jpg" class="c6" alt="">
-            <img src="./iconos/iconosclientes/cimomet.jpg" class="c7" alt="">
-            <img src="./iconos/iconosclientes/hospital-centenario-logo.jpg" class="c20" alt="">
-            <img src="./iconos/iconosclientes/muni-baigorria.jpg" class="c27" alt="">
+            <img src="./iconos/iconosclientes/municipalidad-de-rosario.jpg" class="c75" alt="Municipalidad de rosario">
+            <img src="./iconos/iconosclientes/tucci.jpg" class="c57" alt="Tucci">
+            <img src="./iconos/iconosclientes/syngenta.jpg" class="c53" alt="Syngenta">
+            <img src="./iconos/iconosclientes/sancor-seguros.jpg" class="c48" alt="Sancor seguros">
+            <img src="./iconos/iconosclientes/seedmech.jpg" class="c49" alt="Seedmech">
+            <img src="./iconos/iconosclientes/sanatorio-de-lamujer.jpg" class="c47" alt="Sanatorio de la mujer">
+            <img src="./iconos/iconosclientes/sanatorio-americano.jpg" class="c46" alt="Sanatorio americano">
+            <img src="./iconos/iconosclientes/quickfood.jpg" class="c41" alt="Quick food">
+            <img src="./iconos/iconosclientes/ospat-generica-1.jpg" class="c37" alt="Ospat generica">
+            <img src="./iconos/iconosclientes/natalio-automotores.jpg" class="c34" alt="Natalio automotores">
+            <img src="./iconos/iconosclientes/municipalidad-sta-fe.jpg" class="c33" alt="Municipalidad de santa fe">
+            <img src="./iconos/iconosclientes/municipalidad-gob-crespo.jpg" class="c32" alt="Municipalidad gobierno crespo">
+            <img src="./iconos/iconosclientes/automoto-club-san-clemente.jpg" class="c4" alt="Automoto club San Clemente">
+            <img src="./iconos/iconosclientes/banco-nacion-argentina.jpg" class="c5" alt="Banco Nacion Argentina">
+            <img src="./iconos/iconosclientes/banco-sta-fe.jpg" class="c6" alt="Banco Santa Fe">
+            <img src="./iconos/iconosclientes/cimomet.jpg" class="c7" alt="Cimomet">
+            <img src="./iconos/iconosclientes/hospital-centenario-logo.jpg" class="c20" alt="Hospital Provincial del Centenario">
+            <img src="./iconos/iconosclientes/muni-baigorria.jpg" class="c27" alt="Municipalidad de baigorria">
             
         </div>
 
