@@ -35,6 +35,10 @@
         }
         
         /* portada */
+        .section-portada {
+            height: 80vh;
+            width: 100%;
+        }
         .nombre-empresa {
             display: flex;
             justify-content: center;
@@ -53,11 +57,13 @@
         .portada {
             width: 100%;
             height: 80vh;
+            overflow: hidden;
         }
         .imagen-portada figure img{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: bottom right;
         }
         .titulo {
             display: flex;
@@ -73,9 +79,15 @@
             left: 0;
             padding: 0 50px;
         }
+        .detek {
+            display: flex;
+            justify-content: flex-start;
+            height: 6.5rem;
+            align-items: center
+        }
         h2 {
             font-family: var(--font);
-            font-size: 2rem;
+            font-size: 3rem;
             color: var(--white);
         }
 
@@ -89,15 +101,18 @@
             width: 100%;
             height: 6.5rem;        
         }
+        .menu .seccion-logo p {
+            font-size: 3rem;
+        }
         .seccion-logo {
             margin-left: 1rem;
+            display: flex;
         }
         .logo {
-            height: 60px;
+            height: 65px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 50%;
             padding: 4px;
         }
         .logo p {
@@ -114,6 +129,10 @@
         }
         .k {
             transform: rotateY(180deg);
+        }
+        .seccion-logo .line1, 
+        .seccion-logo .line2 {
+            height: 0.3rem;
         }
         .line1, .line2 {
             height: 0.5rem;
@@ -164,13 +183,87 @@
         
         /* Contenido */
         .subtitulo {
+            margin-top: 5rem;
             display: flex;
             justify-content: center;
             font-family: var(--font);
-            font-size: 1.5rem;
+            font-size: 3rem;
             color: var(--verde-claro);
         }
+        /* Presentacion */
+        .presentacion {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 5rem;
+            background-color: rgb(29, 29, 29);
+            border-radius: 82% 18% 49% 51% / 43% 79% 21% 57% ;
+            
+            justify-content: space-around;
+        }
+        .imagen-presentacion {
+            width: 600px;
+            height: 500px;
+            display: flex;
+        }
+        .imagen-presentacion img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20% 100% 49% 51% / 100% 22% 78% 0% ;
 
+        }
+        .presentacion p{
+            height: 500px;
+            padding: 2rem;
+            font-size: var(--sm);
+            font-family: var(--font);
+            color: var(--white);
+            border-right: 1px solid var(--verde-claro);
+        }
+        .empresa-info {
+            width: 300px;
+            height: 500px;
+        }
+        /* Contactanos */
+        .contactanos {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .contactanos img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0.6;
+            
+        }
+        .contactanos p {
+            font-size: 6rem;
+            font-weight: bolder;
+            color: var(--white); 
+            position: relative;
+            z-index: 1;
+            width: fit-content;
+            top: 40%;
+            margin-left: 30%;
+            background: rgb(255,255,255);
+            background: linear-gradient(0deg, rgba(255,255,255,0.5472008627669818) 0%, rgba(97,118,75,0.5275930196297269) 100%);
+            font-family: var(--font);
+            border-radius: 8px;
+            transition: background-color 1s ease 0s;
+        }
+
+        .contactanos p:hover {
+            background: rgb(0,0,0);
+            background: linear-gradient(0deg, rgba(0,0,0,0.5892176694896709) 46%, rgba(97,118,75,0.7712904986213236) 100%);
+            cursor: pointer;
+            box-shadow: inset 100vw linear-gradient(0deg, rgba(0,0,0,0.5892176694896709) 46%, rgba(97,118,75,0.7712904986213236) 100%); ;
+        }
          /* Footer */
         .container-footer {
             display: grid;
@@ -267,7 +360,6 @@
 <body>
     <header>
         <section>
-            
             <nav class="menu">
                 <section class="seccion-logo">
                 <div class="logo">
@@ -276,8 +368,11 @@
                     <p class="k">K</p>
                     <div class="line2"></div>
                 </div>
+                <div class="detek">
+                    <h2>DETEK</h2>
+                    </div>  
                 </section>
-    
+                
                 <section class="seccion-navbar">
                 <ul>
                     <li class="navbar-menu"><a href="/">HOME</a></li>
@@ -288,19 +383,38 @@
                 </ul>
                 </section>
             </nav>
-            <h2 class="titulo">DETEK</h2>
+
+        <section class="section-portada">
             <div class="imagen-portada">
                 <figure class="portada">
-                    <img src="https://img.freepik.com/foto-gratis/primer-plano-placa-circuito-electronico-cpu-microchip-componentes-electronicos-fondo_1387-743.jpg?w=360" alt="Foto portada">
+                    <img src="./fotos-detek/detek-plaqueta-recortada.jpg" alt="Foto de una plaqueta">
                 </figure>
             </div>
         </section>
+        </section>
         </header>
 
-    <section>
-        <span class="subtitulo">Productos a medida</span>
-    </section>
+        <h2 class="subtitulo">PRODUCTOS A MEDIDA</h2>
 
+        <section class="presentacion">
+
+        <figure class="imagen-presentacion">
+        <img src="./fotos-detek/foto-presentacion.jpg" alt="work">
+        </figure>
+        <div class="empresa-info">
+        <p>En nuestra empresa realizamos la produccion de todos nuestros materiales 
+            Lorem ipsum dolor sit amet. Qui repudiandae laboriosam quo minima blanditiis a illo maiores ut impedit alias est repudiandae quidem est officia vero. Ut libero dolores cum deleniti dolore nam totam necessitatibus et quod tenetur et maiores vitae ea autem vero. Sit repellendus deserunt et sunt sint qui accusamus officia eos suscipit perferendis et quae odio qui cumque quia id eaque nobis.
+
+            Aut repellat reiciendis 33 sint asperiores sed fuga quia ea minima architecto! Ex aperiam labore aut facere aperiam rem iste nesciunt 33 sunt galisum qui nesciunt eaque.</p>
+        </div>
+        </section>
+
+        <section class="contactanos">
+            <img src="./fotos-detek/contactanos-grupo.jpg" alt="">
+            <p class="contacto-home">CONTACTANOS</p>
+        </section>
+
+    
     <footer>
         <section class="container-footer"> 
 
