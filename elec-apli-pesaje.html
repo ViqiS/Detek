@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
-    <title>Electronica apliacada</title>
+    <title>Pesaje</title>
     <style>
         :root {
             --white: #ffffff;
@@ -145,54 +145,80 @@
         .texto1 {
             display: flex;
             justify-content: center;
-            font-size: var(--md);
+            font-size: var(--tt);
+            font-weight: bold;
             color: var(--white);
             font-family: var(--font);
             height: 60px;
             margin-top: 5rem;
             align-items: center;
         }
-        .cards-rubros {
+        .contenedor-pesaje {
+            width: 100%;
+            margin: 50px;
+            font-family: var(--font);
+            position: relative;
+            overflow: hidden;
             display: grid;
-            gap: 26px;/* separacion entre cards */
-            grid-template-columns: repeat(3, 240px);
+            gap: 26px;
+            grid-template-columns: repeat(2, 550px);
             place-content: center;
             justify-content: space-around;
-            margin-bottom: 5rem;
+            margin-bottom: 5rem
+            }
+        .cards-pesaje img{
+            max-width: 500px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: all .5s;
         }
-        .card-rubros {
-            width: 240px;
-            height: 150px;
-            border: 1px solid gray;
+        .product-info p {
+            text-align: center;
+            font-size: var(--lg);
+            border-bottom: 1px solid #808080;
+            padding: 0 10px 20px 10px;
+        }
+        .cards-pesaje:hover img {
+            transform: scale(1.09);
+            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
+        }
+        .contenedor-pesaje p {
+            background: rgba(0,0,0,.7);
+            position: absolute;
+            top: -100%;
+            left: 0;
+            text-align: justify;
+            height: 100%;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+        .contenedor-pesaje:hover .product-info {
+            top: 0;
+        }
+        /* .card-rubros {
+            width: 600px;
+            height: 600px;
             border-radius: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
             transition: box-shadow 620ms ease-out;
-        }
-        .card-rubros img { 
-            max-width: 134px;
-            height: 86px;
-            object-fit: cover;
-        }
-        .texto2 {
-            font-size: 25px;
-            color: var(--verde-oscuro);
-            font-family:  var(--font);
-            font-weight: bold;
-            text-decoration-line: none;
-        }
-        .card-rubros a {
+        } */
+        
+        /* .card-rubros .pesaje {
             width: 100%;
             text-decoration: none;
             list-style: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        .card-rubros:hover {
-            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
-        }
+            position: relative;
+            overflow: hidden;
+        } */
+        
+        
+        
         
         /* FOOTER */
         .container-footer {
@@ -333,38 +359,19 @@
         </div>
     </section>
     </header>
-    <p class="texto1">Contamos con productos para todos los rubros</p> 
+    <p class="texto1">Pesaje</p> 
 
-    <section class="main-categorias">
+    <section class="contenedor-pesaje">
         
-    <div class="cards-rubros">
+    <div class="cards-pesaje">
+                <img src="./fotos-detek/pesaje.jpg" class="iconpesaje" alt="pesaje">
 
-        <div class="card-rubros pesaje">
-            <a href="/">
-                <img src="./iconos/pesaje1.png" class="iconpesaje" alt="pesaje">
                 <div class="product-info">
-                <p class="texto2">Pesaje</p>
+                    <p>Indicador digital de peso - Serie P300 - 
+                        Los indicadores Digitales de peso de la Serie P300 están orientados a cubrir múltiples aplicaciones industriales de control de procesos y son especialmente aptos para su uso en control de peso del ganado debido a la gran estabilidad, velocidad y repetitibilidad de indicación</p>
                 </div>
-            </a>
             
-        </div>
-
-        <div class="card-rubros control">
             
-            <a href="/"><img src="./iconos/control1.png" class="iconcontrol" alt="control">
-            <div class="product-info">
-                <p class="texto2">Control</p>
-            </div>
-            </a>
-        </div>
-
-        <div class="card-rubros placas">
-            
-            <a href="/"><img src="./iconos/placa1.png" class="iconplaca" alt="placas">              
-            <div class="product-info">
-                <p class="texto2">Placas</p>
-            </div>
-            </a>
         </div>
     </section>
 
