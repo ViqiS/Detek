@@ -36,8 +36,8 @@
         }
         
         /* portada */
-        .section-portada {
-            height: 80vh;
+        .seccion-portada {
+            height: 40vh;
             width: 100%;
         }
         .nombre-empresa {
@@ -57,7 +57,7 @@
         }
         .portada {
             width: 100%;
-            height: 80vh;
+            height: 43vh;/* 80vh en 1920*1080 */
             overflow: hidden;
         }
         .imagen-portada figure img{
@@ -355,12 +355,35 @@
         .telefonos p {
             margin-top: 1rem;
         }
+        .menu-hamburguesa {
+            display: none;
+        }
+        @media (max-width: 640px) {
+            .menu {
+                position: fixed;
+            }
+            .seccion-navbar ul{
+                display: none;
+            }
+            .menu .detek{
+                display: none;
+            }
+            .menu-hamburguesa {
+            display: block;
+            width: 4rem;
+            height: 3rem;
+            margin-right: 2rem;
+        }
+
+        }
     </style>
 </head>
 <body>
     <header>
         <section>
+            
             <nav class="menu">
+                
                 <section class="seccion-logo">
                 <div class="logo">
                     <div class="line1"></div>
@@ -374,6 +397,7 @@
                 </section>
                 
                 <section class="seccion-navbar">
+                    <img src="./iconos/menu-hamburguesa.png" alt="menu" class="menu-hamburguesa">
                 <ul>
                     <li class="navbar-menu"><a href="/">HOME</a></li>
                     <li class="navbar-menu"><a href="/">EMPRESA</a></li>
@@ -384,7 +408,7 @@
                 </section>
             </nav>
 
-        <section class="section-portada">
+        <section class="seccion-portada">
             <div class="imagen-portada">
                 <figure class="portada">
                     <img src="./fotos-detek/home-portada.jpg" alt="Foto de una plaqueta">
