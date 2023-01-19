@@ -37,28 +37,17 @@
         
         /* portada */
         .seccion-portada {
-            height: 40vh;
+            height: 43vh;
             width: 100%;
-        }
-        .nombre-empresa {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 5rem;
-            font-family: var(--font);
-            font-size: 5rem;
-            letter-spacing: 3px;
-            color: var(--crema);
-            position: absolute;
-            top: 40%;
-            left: 0;
-            padding: 0 50px;
         }
         .portada {
             width: 100%;
             height: 43vh;/* 80vh en 1920*1080 */
             overflow: hidden;
+        }
+        .imagen-portada {
+            width: 100%;
+            height: fit-content;
         }
         .imagen-portada figure img{
             width: 100%;
@@ -69,7 +58,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
+            width: 375px;
             height: 6rem;
             font-family: var(--font);
             font-size: 6rem;
@@ -79,30 +68,28 @@
             left: 0;
             padding: 0 50px;
         }
+        
         .detek {
             display: flex;
             justify-content: flex-start;
             height: 6.5rem;
-            align-items: center
-        }
-        h2 {
-            font-family: var(--font);
-            font-size: 3rem;
             color: var(--white);
+            align-items: center;
+            font-family:var(--font);
+            font-size: 2rem;
         }
+        
 
         /* Navbar */
-        .seccion-navbar {
-        display: flex;
-        justify-content: end;
-        }
-
-        .contenedor-navbar {
+        .menu {
+            position: fixed;
+            display: flex;
             width: 100%;
-            height: 6.5rem;        
-        }
-        .menu .seccion-logo p {
-            font-size: 3rem;
+            z-index: 2;
+            background-color: var(--black);
+            justify-content: end;
+            justify-content: space-between;
+            align-items: center;
         }
         .seccion-logo {
             margin-left: 1rem;
@@ -115,9 +102,24 @@
             align-items: center;
             padding: 4px;
         }
+        .line1, .line2 {
+            height: 0.3rem;
+            width: 1.6rem;
+            background-color: var(--white);
+        }
+        .seccion-navbar {
+            display: flex;/* flex */
+            justify-content: end;
+        }
+
+        .contenedor-navbar {
+            width: auto;
+            height: 6.5rem;        
+        }    
+        
         .logo p {
             color: var(--white);
-            font-size: 5rem;
+            font-size: 3rem;
             font-family: 'M PLUS 1p', sans-serif;
             align-items: center;
             display: flex;
@@ -130,32 +132,22 @@
         .k {
             transform: rotateY(180deg);
         }
-        .seccion-logo .line1, 
-        .seccion-logo .line2 {
-            height: 0.3rem;
-        }
-        .line1, .line2 {
-            height: 0.5rem;
-            width: 1.6rem;
-            background-color: var(--white);
+        
+
+        
+        .menu-hamburguesa {
+
+            display: flex;
+            width: 4rem;
+            height: 3rem;
+            margin-right: 2rem;
         }
 
-        .menu {
-            position: fixed;
-            display: flex;
-            width: 100%;
-            z-index: 2;
-            background-color: var(--black);
-            justify-content: end;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav ul{
+        .seccion-navbar ul{
             display: flex;
             justify-content: flex-end;
             align-items: center;
             background-color: var(--black);
-            width: auto;
             height: 6.5rem;
             font-family: var(--font);
             font-size: var(--sm);
@@ -166,7 +158,6 @@
             display: flex;
             justify-content: space-between;
             margin-right: 2rem;
-            margin-right: 1.5rem;
         }
         .navbar-menu a{
             list-style: none;
@@ -186,25 +177,24 @@
             margin-top: 5rem;
             display: flex;
             justify-content: center;
+            text-align: center;
             font-family: var(--font);
-            font-size: 3rem;
+            font-size: 2rem;
             color: var(--verde-claro);
         }
         /* Presentacion */
         .presentacion {
             width: 100%;
-            height: 600px;
-            display: flex;
-            flex-direction: row;
+            height: fit-content; /* 793px;/* estaba 600px */
+            
             margin-top: 5rem;
             background-color: rgb(29, 29, 29);
             border-radius: 82% 18% 49% 51% / 43% 79% 21% 57% ;
-            
             justify-content: space-around;
         }
         .imagen-presentacion {
-            width: 600px;
-            height: 500px;
+            width: 100%;/*530px;/* 600px */
+            height: fit-content;
             display: flex;
         }
         .imagen-presentacion img{
@@ -215,23 +205,27 @@
 
         }
         .presentacion p{
-            height: 500px;
-            padding: 2rem;
+            height: fit-content;
+            width: 90%;/* 500px; */
+            padding: 1rem 2rem;
             font-size: var(--sm);
             font-family: var(--font);
             color: var(--white);
             border-right: 1px solid var(--verde-claro);
         }
         .empresa-info {
-            width: 400px;
+            width: 100%;
             height: fit-content;
         }
         /* Contactanos */
         .contactanos {
             width: 100%;
-            height: 500px;
+            height: 300px;/*395px; 500px */
             position: relative;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
 
         }
         .contactanos img {
@@ -243,14 +237,14 @@
             
         }
         .contactanos p {
-            font-size: 6rem;
+            font-size: 2rem;/* 3rem; 6rem */
             font-weight: bolder;
             color: var(--white); 
             position: relative;
             z-index: 1;
             width: fit-content;
+            height: fit-content;
             top: 40%;
-            margin-left: 30%;
             background: rgb(255,255,255);
             background: linear-gradient(0deg, rgba(255,255,255,0.5472008627669818) 0%, rgba(97,118,75,0.5275930196297269) 100%);
             font-family: var(--font);
@@ -266,23 +260,26 @@
         }
          /* Footer */
         .container-footer {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            height: 20rem;
-            justify-content: space-between;   
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 50rem;
             margin-bottom: 0.5rem;
+            
         }
         footer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
             border-top: 1px solid rgb(100, 98, 98);
         }
 
         /* Redes */
         .redes {
-            width: 100%;
+            width: 375px;
             display: flex;
             justify-items: center;
             margin-top: 2.5rem;
-            height: 100%;
             flex-direction: column;
             align-items: center;
         }
@@ -331,10 +328,10 @@
         }
         .copyright {
             height: 6rem;
-            width: 100%;
+            width: 58%;
             display: flex;
             flex-direction: column;
-            justify-content: first baseline;
+            justify-content: baseline;
         }
         .copyright p {
             width: 100%;
@@ -355,26 +352,71 @@
         .telefonos p {
             margin-top: 1rem;
         }
-        .menu-hamburguesa {
-            display: none;
+        
+        @media (max-width: 375px ) {/* hasta 375px pasa esto */
+            .detek {
+                display: none;
+            }
+            
         }
-        @media (max-width: 640px) {
-            .menu {
-                position: fixed;
+        @media (min-width: 376px ) {/* dwesde 375px pasa esto */
+            .subtitulo{ 
+                font-size:3rem;
             }
-            .seccion-navbar ul{
+            .contactanos {
+                height: 350px;
+            }
+            .copyright {
+                width: 100%;
+            }
+        }
+        @media (max-width: 781px) {/* hasta 781px pasa esto */
+            .seccion-navbar ul {
                 display: none;
             }
-            .menu .detek{
-                display: none;
-            }
+        }
+        @media (min-width: 781px) {/* desde 781px pasa esto */
             .menu-hamburguesa {
-            display: block;
-            width: 4rem;
-            height: 3rem;
-            margin-right: 2rem;
-        }
+                display: none;
+            }
+            .subtitulo{ 
+                font-size:var(--tt);
+            }
+            .presentacion p {
+                width: 90%;
+                padding: 2rem;
+                font-size: var(--lg);
+            }
+            .presentacion {
+                display: flex;
+            }
+            .imagen-presentacion {
+                width: 920px;
+                height: 600px;
+            }
+            .empresa-info {
+                width: 550px;
+                height: fit-content;
+            }
+            .contactanos {
+                height: 750px;
 
+            }
+            .contactanos p {
+                font-size: var(--tt);
+            }
+            .container-footer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: space-between;
+                height: 20rem;
+                width: 100%;
+            }
+            .redes {
+                height: 100%;
+                width: 100%;
+                justify-items: center;
+            }
         }
     </style>
 </head>
@@ -397,7 +439,11 @@
                 </section>
                 
                 <section class="seccion-navbar">
-                    <img src="./iconos/menu-hamburguesa.png" alt="menu" class="menu-hamburguesa">
+
+                    <figure class="menu-hamburguesa">
+                    <img src="./iconos/menu-hamburguesa.png" alt="menu">
+                    </figure>
+
                 <ul>
                     <li class="navbar-menu"><a href="/">HOME</a></li>
                     <li class="navbar-menu"><a href="/">EMPRESA</a></li>
