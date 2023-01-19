@@ -208,8 +208,8 @@
         }
         
         
-        /* FOOTER */
-        .container-footer {
+         /* Footer */
+         .container-footer {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             height: 20rem;
@@ -299,19 +299,26 @@
         .telefonos p {
             margin-top: 1rem;
         }
-
-        /* mediaqueri640 */
+        .menu-hamburguesa {
+            display: none;
+        }
         @media (max-width: 640px) {
-            .cards-rubros {
-                grid-template-columns: repeat(auto-fill, 140px);
+            .menu {
+                position: fixed;
             }
-            .card-rubros {
-                width: 140px;
+            .seccion-navbar ul{
+                display: none;
             }
-            .card-rubros img {
-                width: 140px;
-                height: 140px;
+            .menu .detek{
+                display: none;
             }
+            .menu-hamburguesa {
+            display: block;
+            width: 4rem;
+            height: 3rem;
+            margin-right: 2rem;
+        }
+
         }
     </style>
 </head>
