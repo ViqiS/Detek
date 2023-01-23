@@ -36,14 +36,26 @@
         }
 
         /* portada */
+        .seccion-portada-electronica { 
+            height: 43vh;
+            width: 100%;
+        }
         .portada {
             width: 100%;
-            height: 40vh;
+            height: 43vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .imagen-portada {
+            width: 100%;
+            height: fit-content;
         }
         .imagen-portada figure img{
             width: 100%;
             object-fit: cover;
-            height: 100%;
+            position: absolute;
+            height: 43vh;
         }
         .titulo {
             display: flex;
@@ -51,38 +63,62 @@
             align-items: center;
             width: 100%;
             font-family: var(--font);
-            font-size: var(--tt);
             font-weight: bold;
             color: var(--white);
-            position: absolute;
-            top: 20%;
+            position: relative;
             left: 0;
             padding: 0 15px;
         }
+        .detek {
+            display: flex;
+            justify-content: flex-start;
+            height: 6.5rem;
+            color: var(--white);
+            align-items: center;
+            font-family:var(--font);
+            font-size: 2rem;
+        }
 
         /* navbar */
-        .seccion-navbar {
-        display: flex;
-        justify-content: end;
-        }
-        .contenedor-navbar {
+        .menu {
+            position: fixed;
+            display: flex;
             width: 100%;
-            height: 6.5rem;        
+            z-index: 2;
+            background-color: var(--black);
+            justify-content: end;
+            justify-content: space-between;
+            align-items: center;
         }
         .seccion-logo {
             margin-left: 1rem;
+            display: flex;
         }
         .logo {
-            height: 60px;
+            height: 65px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 50%;
             padding: 4px;
         }
+        .line1, .line2 {
+            height: 0.3rem;
+            width: 1.6rem;
+            background-color: var(--white);
+        }
+        .seccion-navbar {
+            display: flex;/* flex */
+            justify-content: end;
+        }
+
+        .contenedor-navbar {
+            width: auto;
+            height: 6.5rem;        
+        }    
+        
         .logo p {
             color: var(--white);
-            font-size: 5rem;
+            font-size: 3rem;
             font-family: 'M PLUS 1p', sans-serif;
             align-items: center;
             display: flex;
@@ -95,27 +131,19 @@
         .k {
             transform: rotateY(180deg);
         }
-        .line1, .line2 {
-            height: 0.5rem;
-            width: 1.6rem;
-            background-color: var(--white);
-        }
-        .menu {
-            position: fixed;
+        
+        .menu-hamburguesa {
+
             display: flex;
-            width: 100%;
-            z-index: 2;
-            background-color: var(--black);
-            justify-content: end;
-            justify-content: space-between;
-            align-items: center;
+            width: 4rem;
+            height: 3rem;
+            margin-right: 2rem;
         }
-        nav ul{
+        .seccion-navbar ul{
             display: flex;
             justify-content: flex-end;
             align-items: center;
             background-color: var(--black);
-            width: auto;
             height: 6.5rem;
             font-family: var(--font);
             font-size: var(--sm);
@@ -126,7 +154,6 @@
             display: flex;
             justify-content: space-between;
             margin-right: 2rem;
-            margin-right: 1.5rem;
         }
         .navbar-menu a{
             list-style: none;
@@ -155,7 +182,6 @@
         .cards-rubros {
             display: grid;
             gap: 26px;/* separacion entre cards */
-            grid-template-columns: repeat(3, 240px);
             place-content: center;
             justify-content: space-around;
             margin-bottom: 5rem;
@@ -194,25 +220,28 @@
             box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
         }
         
-        /* FOOTER */
+        /* Footer */
         .container-footer {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            height: 20rem;
-            justify-content: space-between;   
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 50rem;
             margin-bottom: 0.5rem;
+            
         }
         footer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
             border-top: 1px solid rgb(100, 98, 98);
         }
 
         /* Redes */
         .redes {
-            width: 100%;
+            width: 375px;
             display: flex;
             justify-items: center;
             margin-top: 2.5rem;
-            height: 100%;
             flex-direction: column;
             align-items: center;
         }
@@ -261,10 +290,10 @@
         }
         .copyright {
             height: 6rem;
-            width: 100%;
+            width: 58%;
             display: flex;
             flex-direction: column;
-            justify-content: first baseline;
+            justify-content: baseline;
         }
         .copyright p {
             width: 100%;
@@ -285,18 +314,69 @@
         .telefonos p {
             margin-top: 1rem;
         }
-
-        /* mediaqueri640 */
-        @media (max-width: 640px) {
+        @media (max-width: 375px) {
+            .titulo {
+                font-size: 2rem;
+                width: 253px;
+            }
+            .texto1 {
+                font-size: var(--sm);
+            }
+            .detek {
+                display: none;
+            }
+        }
+        @media (min-width: 376px ) {/* desde 375px pasa esto */
+            .titulo {
+                font-size: 3rem;
+                width: 253px;
+            }
+            
+            .copyright {
+                width: 80%;
+            }
+        }
+        @media (min-width: 781px) {
+            .titulo {
+                font-size: var(--tt);
+                width: 100%;
+            }
             .cards-rubros {
-                grid-template-columns: repeat(auto-fill, 140px);
+                grid-template-columns: repeat(3, 240px);
             }
-            .card-rubros {
-                width: 140px;
+            .container-footer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: space-between;
+                height: 20rem;
+                width: 100%;
             }
-            .card-rubros img {
-                width: 140px;
-                height: 140px;
+            .redes {
+                height: 100%;
+                width: 100%;
+                justify-items: center;
+            }
+            .derechos .logo p {
+                font-size: var(--tt);
+            }
+            .derechos .line1,
+            .derechos .line2 {
+            height: 0.5rem
+            }
+        }
+        @media (min-width:959px) {
+            .menu-hamburguesa {
+                display: none;
+            }
+            .span-seguinos,
+            .copyright,
+            .telefonos {
+                font-size: var(--md);
+            }
+        }
+        @media (max-width: 960px) {
+            .seccion-navbar ul {
+                display: none;
             }
         }
     </style>
@@ -306,6 +386,7 @@
     <section>
         
         <nav class="menu">
+                
             <section class="seccion-logo">
             <div class="logo">
                 <div class="line1"></div>
@@ -313,9 +394,17 @@
                 <p class="k">K</p>
                 <div class="line2"></div>
             </div>
+            <div class="detek">
+                <h2>DETEK</h2>
+                </div>  
             </section>
-
+            
             <section class="seccion-navbar">
+
+                <figure class="menu-hamburguesa">
+                <img src="./iconos/menu-hamburguesa.png" alt="menu">
+                </figure>
+
             <ul>
                 <li class="navbar-menu"><a href="/">HOME</a></li>
                 <li class="navbar-menu"><a href="/">EMPRESA</a></li>
@@ -325,13 +414,17 @@
             </ul>
             </section>
         </nav>
-        <h2 class="titulo">ELECTRONICA APLICADA</h2>
+        </section>
+        
+        <section class="seccion-portada-electronica">
         <div class="imagen-portada">
             <figure class="portada">
                 <img src="./fotos-detek/electronica1.jpg" alt="Foto portada">
+            <p class="titulo">ELECTRONICA APLICADA</p>
             </figure>
         </div>
-    </section>
+        </section>
+    
     </header>
     <p class="texto1">Contamos con productos para todos los rubros</p> 
 
