@@ -136,13 +136,16 @@
             color: var(--verde-claro);
         }
         /* Portada */
-        .seccion-portada-empresa {
-            height: 50vh;
+        .seccion-portada-empresa { 
+            height: 43vh;
             width: 100%;
         }
         .portada {
             width: 100%;
-            height: 50vh;
+            height: 43vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
         }
         .imagen-portada {
             width: 100%;
@@ -150,22 +153,21 @@
         }
         .imagen-portada figure img{
             width: 100%;
-            height: 100%;
             object-fit: cover;
+            position: absolute;
+            height: 43vh;
         }
         .titulo-nuestra-empresa {
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-end;
             align-items: center;
             width: 100%;
-            height: 5rem;
             font-family: var(--font);
-            font-size: var(--tt);
+            font-weight: bold;
             color: var(--white);
-            position: absolute;
-            top: 25%;
+            position: relative;
             left: 0;
-            padding: 0 10px;
+            padding: 0 15px;
         }
 
         /* Contenido */
@@ -226,34 +228,56 @@
             justify-content: center;
             align-items: center;
         }
+        /* Soluciones */
+
         .soluciones {
-            width: 100%;
+            width: 95%;
             height: fit-content;
             display: flex;
             flex-direction: column;
             align-items: center;
             align-content: center;
             position: relative;
-            margin: 25px;
+            margin: auto;
+        }
+        .imagen-empresa {
+            width: 100%;
+            height: 350px;
+            display: flex;
+        }
+        .imagen-empresa img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20% 100% 49% 51% / 100% 22% 78% 0%;
+        }
+        .empresa-informacion {
+            width: 100%;
+            height: fit-content;
+
         }
         .soluciones p {
             color: var(--white);
             font-family: var(--font);
             font-size: var(--sm);
+            width: 100%;
         }
         .contenedor-listado {
             padding: 1rem;
             display: flex;
             flex-direction: row;
-            width: 520px;
-            height: 150px;
+            width: 100%;
+            height: fit-content;
             justify-content: space-around;
             border-radius: 8px;
             -webkit-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
             -moz-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
             box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
         }
-        .funcionalidad, .objetivo {
+        .funcionalidad {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 2rem;
             font-family: var(--font);
             font-size: var(--sm);
             color: var(--white);
@@ -473,11 +497,13 @@
             </nav>
         </section>
     <section class="seccion-portada-empresa">
-    <h1 class="titulo-nuestra-empresa">NUESTRA EMPRESA</h1>
     <div class="imagen-portada">
         <figure class="portada">
             <img src="./fotos-detek/empresa-portada.jpg" alt="imagen de portada">
+    
+            <h1 class="titulo-nuestra-empresa">NUESTRA EMPRESA</h1>
         </figure>
+        
     </div>
     </section>
     
@@ -517,36 +543,25 @@
     </section>
 
     <section class="soluciones">
-        <p class="info-listado">Hace 12 años proveemos al Mercado electrónica para las siguientes soluciones:</p>
-        
-        <div class="contenedor-listado">
-            
-            <div class="funcionalidad">
-                <p>Funcionalidad</p>
-                <p class="lista-funcionalidad">Pesaje electrónico</p>
-                <p class="lista-funcionalidad">Control y gestión de temperatura</p>
-                <p class="lista-funcionalidad">Cartelería led programable</p>
-                <p class="lista-funcionalidad">Contadores programables</p>
-                <p class="lista-funcionalidad">Relojes</p>
-                <p class="lista-funcionalidad">Tanteadores deportivos</p>
-            </div>
-            
-            <div class="objetivo">
-                <p>Mercado Objetivo</p>
-            <p class="lista-objetivo">Fábricas de Balanzas.</p>
-            <p class="lista-objetivo">Fábricas de Hornos y Cocinas.</p>
-            <p class="lista-objetivo">Vía Pública, control en Fábrica.</p>
-            <p class="lista-objetivo">Control de Procesos productivos.</p>
-            <p class="lista-objetivo">Fabricas de electrodomésticos.</p>
-            <p class="lista-objetivo">Instituciones Deportivas.</p>
-            </div>  
 
+        <figure class="imagen-empresa">
+        <img src="./fotos-detek/empresa-foto.jpg" alt="">
+        </figure>
+
+        <div class="empresa-informacion">
+            <p class="info-listado">Hace 12 años proveemos al Mercado electrónica para las siguientes soluciones:</p>
+        
+            <div class="contenedor-listado">
+            
+                <div class="funcionalidad">
+                    <p class="lista-funcionalidad">Fabricas de balanzas: Pesaje electrónico</p>
+                    <p class="lista-funcionalidad">Fábricas de Hornos y Cocinas: Control y gestión de temperatura</p>
+                    <p class="lista-funcionalidad">Vía Pública, control en Fábrica: Cartelería led programable</p>
+                    <p class="lista-funcionalidad">Control de Procesos productivos: Contadores programables</p>
+                    <p class="lista-funcionalidad">Fabricas de electrodomésticos: Relojes</p>
+                    <p class="lista-funcionalidad">Instituciones Deportivas: Tanteadores deportivos</p>
+                </div>
         </div>
-        <!-- <div class="custom-shape-divider-top-1673615515">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div> -->
     </section>
 
     <footer>
