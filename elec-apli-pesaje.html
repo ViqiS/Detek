@@ -190,7 +190,7 @@
             margin-bottom: 2rem;
             }
 
-        .cards-pesaje {
+        .cards-pesaje-contenedor {
             display: grid;
             gap: 2rem;      
             justify-items: center;
@@ -334,6 +334,9 @@
                 font-size: 1.5rem;
                 width: 147px;
             }
+            .titulo-pesaje {
+                font-size: 2rem;
+            }
             .detek {
                 display: none;
             }
@@ -343,7 +346,9 @@
                 font-size: 2.5rem;
                 width: 253px;
             }
-            
+            .titulo-pesaje {
+                font-size: 3rem
+            }
             .copyright {
                 width: 80%;
             }
@@ -352,6 +357,9 @@
             .titulo {
                 font-size: 3.3rem;
                 width: 300px;
+            }
+            .titulo-pesaje {
+                font-size: 4rem;
             }
             .container-footer {
                 display: grid;
@@ -378,8 +386,15 @@
                 font-size: var(--tt);
                 width: 100%;
             }
+            .titulo-pesaje {
+                font-size: var(--tt);
+            }
             .menu-hamburguesa {
                 display: none;
+            }
+            
+            .cards-pesaje-contenedor {
+                grid-template-columns: repeat(3, 370px);
             }
             .span-seguinos,
             .copyright,
@@ -395,6 +410,7 @@
     </style>
 </head>
 <body>
+    <header>
     <section>
         
         <nav class="menu">
@@ -443,7 +459,7 @@
         
     <p class="titulo-pesaje">Pesaje</p> 
 
-        <div class="cards-pesaje">
+        <div class="cards-pesaje-contenedor">
 
             <div class="producto">
                 <img src="./fotos-detek/pesaje.jpg" class="iconpesaje" alt="pesaje">
