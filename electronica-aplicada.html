@@ -69,6 +69,9 @@
             left: 0;
             padding: 0 15px;
         }
+        
+
+        /* navbar */
         .detek {
             display: flex;
             justify-content: flex-start;
@@ -78,8 +81,6 @@
             font-family:var(--font);
             font-size: 2rem;
         }
-
-        /* navbar */
         .menu {
             position: fixed;
             display: flex;
@@ -316,8 +317,8 @@
         }
         @media (max-width: 375px) {
             .titulo {
-                font-size: 2rem;
-                width: 253px;
+                font-size: 1.5rem;
+                width: 147px;
             }
             .texto1 {
                 font-size: var(--sm);
@@ -328,7 +329,7 @@
         }
         @media (min-width: 376px ) {/* desde 375px pasa esto */
             .titulo {
-                font-size: 3rem;
+                font-size: 2.5rem;
                 width: 253px;
             }
             
@@ -338,8 +339,8 @@
         }
         @media (min-width: 781px) {
             .titulo {
-                font-size: var(--tt);
-                width: 100%;
+                font-size: 3.3rem;
+                width: 300px;
             }
             .cards-rubros {
                 grid-template-columns: repeat(3, 240px);
@@ -365,6 +366,10 @@
             }
         }
         @media (min-width:959px) {
+            .titulo {
+                font-size: var(--tt);
+                width: 100%;
+            }
             .menu-hamburguesa {
                 display: none;
             }
