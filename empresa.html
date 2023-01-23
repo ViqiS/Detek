@@ -35,7 +35,16 @@
         body {
             background-color: var(--black);
         }
-        /* Navbar */
+         /* navbar */
+         .detek {
+            display: flex;
+            justify-content: flex-start;
+            height: 6.5rem;
+            color: var(--white);
+            align-items: center;
+            font-family:var(--font);
+            font-size: 2rem;
+        }
         .menu {
             position: fixed;
             display: flex;
@@ -87,17 +96,6 @@
         .k {
             transform: rotateY(180deg);
         }
-        .detek {
-            display: flex;
-            justify-content: flex-start;
-            height: 6.5rem;
-            color: var(--white);
-            align-items: center;
-            font-family:var(--font);
-            font-size: 2rem;
-        }
-        
-
         
         .menu-hamburguesa {
 
@@ -106,7 +104,6 @@
             height: 3rem;
             margin-right: 2rem;
         }
-
         .seccion-navbar ul{
             display: flex;
             justify-content: flex-end;
@@ -146,6 +143,7 @@
             overflow: hidden;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
         }
         .imagen-portada {
             width: 100%;
@@ -159,15 +157,16 @@
         }
         .titulo-nuestra-empresa {
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            justify-content: center;
             width: 100%;
             font-family: var(--font);
+            font-size: xx-large;
             font-weight: bold;
-            color: var(--white);
+            color: var(--black);
             position: relative;
             left: 0;
             padding: 0 15px;
+            text-align: center;
         }
 
         /* Contenido */
@@ -187,7 +186,7 @@
             text-align: center;
             width: 100%;
             height: fit-content;
-            font-size: var(--lg);
+            font-size: var(--md);
             color: var(--verde-claro);
             font-family: var(--font);
         }
@@ -243,20 +242,34 @@
         .imagen-empresa {
             width: 100%;
             height: 350px;
-            display: flex;
+            display: flex;      
+            background-color: var(--verde-oscuro);
+            border-radius: 20% 100% 49% 51% / 100% 22% 78% 0%;
         }
         .imagen-empresa img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: opacity(75%);
             border-radius: 20% 100% 49% 51% / 100% 22% 78% 0%;
         }
         .empresa-informacion {
             width: 100%;
             height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
 
         }
-        .soluciones p {
+        .info-listado {
+            font-family: var(--font);
+            font-size: var(--sm);
+            width: 100%;
+            text-align: center;
+        }
+        .funcionalidad p {
             color: var(--white);
             font-family: var(--font);
             font-size: var(--sm);
@@ -266,13 +279,13 @@
             padding: 1rem;
             display: flex;
             flex-direction: row;
-            width: 100%;
+            width: fit-content;
             height: fit-content;
             justify-content: space-around;
             border-radius: 8px;
-            -webkit-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
-            -moz-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
-            box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
+            -webkit-box-shadow: 0px 0px 10px 0px var(--verde-claro);
+            -moz-box-shadow: 0px 0px 10px 0px var(--verde-claro);
+            box-shadow: 0px 0px 10px 0px var(--verde-claro);
         }
         .funcionalidad {
             display: grid;
@@ -283,7 +296,7 @@
             color: var(--white);
         } 
         .info-listado {
-            color: var(--white);
+            color: var(--verde-claro);
             align-self: center;
             margin-bottom: 2rem;
         }
@@ -408,22 +421,6 @@
                 display: none;
             }  
         }
-
-        @media (min-width:959px) {
-            .menu-hamburguesa {
-                display: none;
-            }
-            .span-seguinos,
-            .copyright,
-            .telefonos {
-                font-size: var(--md);
-            }
-        }
-        @media (max-width: 960px) {
-            .seccion-navbar ul {
-                display: none;
-            }
-        }
         @media (min-width: 376px ) {/* dwesde 375px pasa esto */
             .subtitulo{ 
                 font-size:3rem;
@@ -444,7 +441,7 @@
             }
             .container-footer {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: eat(3, 1fr);
                 justify-content: space-between;
                 height: 20rem;
                 width: 100%;
@@ -462,6 +459,22 @@
             height: 0.5rem
             }
         }
+        @media (min-width:959px) {
+            .menu-hamburguesa {
+                display: none;
+            }
+            .span-seguinos,
+            .copyright,
+            .telefonos {
+                font-size: var(--md);
+            }
+        }
+        @media (max-width: 960px) {
+            .seccion-navbar ul {
+                display: none;
+            }
+        }    
+        
     </style>
 </head>
 <body>
