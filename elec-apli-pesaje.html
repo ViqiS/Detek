@@ -46,6 +46,7 @@
             overflow: hidden;
             display: flex;
             justify-content: flex-end;
+            align-items: flex-end;
         }
         .imagen-portada {
             width: 100%;
@@ -61,13 +62,15 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            width: 100%;
+            width: 200px;
             font-family: var(--font);
             font-weight: bold;
+            font-size: 2rem;
             color: var(--white);
             position: relative;
             left: 0;
             padding: 0 15px;
+            bottom: 3rem;
         }
 
         /* navbar */
@@ -192,34 +195,39 @@
 
         .cards-pesaje-contenedor {
             display: grid;
-            gap: 2rem;      
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            grid-auto-rows: 200px;      
             justify-items: center;
             align-items: center;
             justify-content: center;  
             border-radius: 8px;
+            margin-left: 2rem;
+            margin-right: 2rem;
         }  
         .producto {
-            width: 340px;
-            height: 340px;
+
+            width: 100%;
+            height: 100%;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             box-shadow: 3px 5px 5px rgb(61, 61, 61);
+            position: relative;
             
-        }  
-        .producto img{
-            width: 340px;
-            height: 340px;
-            position: absolute;
+        }   
+        .iconpesaje {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             border-radius: 8px;
         }
         .product-info {
-            width: 340px;
-            height: 340px;
-            position: relative;
+            width: 100%;
+            height: 100%;
+            position: absolute;
             font-family: var(--font);
             display: flex;
             align-items: center;
@@ -330,10 +338,6 @@
             margin-top: 1rem;
         }
         @media (max-width: 375px) {
-            .titulo {
-                font-size: 1.5rem;
-                width: 147px;
-            }
             .titulo-pesaje {
                 font-size: 2rem;
             }
@@ -344,7 +348,7 @@
         @media (min-width: 376px ) {/* desde 375px pasa esto */
             .titulo {
                 font-size: 2.5rem;
-                width: 253px;
+                width: 220px;
             }
             .titulo-pesaje {
                 font-size: 3rem
@@ -356,10 +360,13 @@
         @media (min-width: 781px) {
             .titulo {
                 font-size: 3.3rem;
-                width: 300px;
+                width: 280px;
             }
             .titulo-pesaje {
                 font-size: 4rem;
+            }
+            .cards-pesaje-contenedor {
+                grid-template-columns: 1fr 1fr;
             }
             .container-footer {
                 display: grid;
@@ -380,11 +387,12 @@
             .derechos .line2 {
             height: 0.5rem
             }
-        }
+        }  
         @media (min-width:959px) {
             .titulo {
                 font-size: var(--tt);
-                width: 100%;
+                width: 400px;
+                margin-bottom: 5rem;
             }
             .titulo-pesaje {
                 font-size: var(--tt);
@@ -392,9 +400,9 @@
             .menu-hamburguesa {
                 display: none;
             }
-            
             .cards-pesaje-contenedor {
-                grid-template-columns: repeat(3, 370px);
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-auto-rows: auto;
             }
             .span-seguinos,
             .copyright,
@@ -406,6 +414,12 @@
             .seccion-navbar ul {
                 display: none;
             }
+        }
+        @media (min-width: 1600px) {
+            .titulo {
+                width: 739px;
+            }
+            
         }
     </style>
 </head>
