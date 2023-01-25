@@ -60,9 +60,10 @@
         }
         .titulo-deportes {
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: center;
             width: 100%;
+            font-size: 3rem;
             font-family: var(--font);
             font-weight: bold;
             color: var(--white);
@@ -175,12 +176,13 @@
         .texto-deportes {
             display: flex;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: var(--sm);
             color: var(--verde-agua);
             font-family: var(--font);
             height: 60px;
-            margin-top: 5rem;
+            margin: 2rem;
             align-items: center;
+            text-align: center;
         }
         .cards-deportes {
             display: grid;
@@ -188,9 +190,11 @@
             place-content: center;
             justify-content: space-around;
             margin-bottom: 5rem;
+            grid-template-columns: repeat(1, 155px);/* 240px */
+            
         }
         .card-deportes {
-            width: 240px;
+            width: 155px;/* 240px; */
             height: 150px;
             border: 1px solid gray;
             border-radius: 8px;
@@ -234,7 +238,7 @@
             padding: 1rem;
             margin-bottom: 2rem;
             display: grid;
-            grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+            grid-template-columns: auto auto auto auto auto;
             grid-column-gap: 2rem;
             width: fit-content;
             height:100%;
@@ -248,16 +252,16 @@
             box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
         }
         .card-clientes img {
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             object-fit: cover;
             object-position: center;
             border-radius: 4px;
         }
 
         .espacio {
-            width: 100%;
-            height: 600px;
+            width: 100%;/* 100% */
+            height: 287px; /* 600px; */
             border-radius:35% 65% 26% 74% / 52% 50% 50% 48% ;
             background-color:var(--gris);
             display: flex;
@@ -267,12 +271,12 @@
         }
         
         .espacio img {
-            width: 500px;
-            height: 500px;
+            width: 250px;
+            height: 250px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 7% 93% 45% 55% / 35% 48% 52% 65%  ;
+            border-radius: 12% 88% 9% 91% / 78% 23% 77% 22% ;
         }
 
         .nuestro {
@@ -287,7 +291,7 @@
             height: 200px;
             font-family: var(--font);
             color: var(--crema);
-            font-size: var(--tt);
+            font-size: var(--lg);
         }
         /* FOOTER */
         .container-footer {
@@ -389,19 +393,57 @@
         }
         @media (min-width: 376px ) {/* desde 375px pasa esto */
             
+            
+            .cards-deportes {
+                grid-template-columns: repeat(2, 150px);
+            }
+            .card-deportes { 
+                width: 150px;
+            }
+            .texto-deportes {
+                font-size: var(--lg);
+            }
+            .titulo-deportes {
+                font-size: 4rem;
+                justify-content: flex-start;
+            }
             .copyright {
                 width: 80%;
             }
-            .cards-deportes {
-                grid-template-columns: repeat(3, 240px);
+        }
+        @media (min-width:525px) {
+            .titulo-deportes {
+                color: var(--black);
+            }
+            .texto-deportes {
+                font-size: 2.5rem;
             }
             .card-clientes {
-                grid-template-columns:  auto auto auto auto auto auto auto;
+                grid-template-columns: auto auto auto auto auto auto auto;
             }
-
+            .card-clientes img {
+            width: 50px;
+            height: 50px;
+            }
         }
         @media (min-width: 781px) {
             
+            .cards-deportes {
+                grid-template-columns: repeat(3, 240px);
+            }
+            .card-deportes { 
+                width: 240px;
+            }
+            .titulo-deportes {
+                font-size: var(--tt);
+            }
+            .card-clientes {
+                grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+            }
+            .card-clientes img {
+                width: 60px;
+                height: 60px;
+            }
             .container-footer {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -419,15 +461,10 @@
             }
             .derechos .line1,
             .derechos .line2 {
-            height: 0.5rem
+                height: 0.5rem
             }
+            
         }
-        /* @media (max-width: 781px) {
-            .card-clientes {
-                grid-template-columns:  auto auto auto auto auto auto auto;
-            }
-
-        } */
         @media (min-width:959px) {
             
             .menu-hamburguesa {
@@ -438,6 +475,7 @@
             .telefonos {
                 font-size: var(--md);
             }
+            
         }
         @media (max-width: 960px) {
             .seccion-navbar ul {
