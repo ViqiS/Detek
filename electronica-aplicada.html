@@ -46,6 +46,7 @@
             overflow: hidden;
             display: flex;
             justify-content: flex-end;
+            align-items: flex-end;
         }
         .imagen-portada {
             width: 100%;
@@ -61,13 +62,14 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            width: 100%;
+            width: 200px;
             font-family: var(--font);
             font-weight: bold;
             color: var(--white);
             position: relative;
             left: 0;
             padding: 0 15px;
+            bottom: 3rem;
         }
         
 
@@ -320,9 +322,6 @@
                 font-size: 1.5rem;
                 width: 147px;
             }
-            .texto1 {
-                font-size: var(--sm);
-            }
             .detek {
                 display: none;
             }
@@ -340,7 +339,7 @@
         @media (min-width: 781px) {
             .titulo-elect {
                 font-size: 3.3rem;
-                width: 300px;
+                width: 280px;
             }
             .cards-rubros {
                 grid-template-columns: repeat(3, 240px);
@@ -368,7 +367,8 @@
         @media (min-width:959px) {
             .titulo-elect {
                 font-size: var(--tt);
-                width: 100%;
+                width: 400px;
+                margin-bottom: 5rem;
             }
             .menu-hamburguesa {
                 display: none;
@@ -383,6 +383,12 @@
             .seccion-navbar ul {
                 display: none;
             }
+        }
+        @media (min-width: 1600px) {
+            .titulo-elect {
+                width: 739px;
+            }
+            
         }
     </style>
 </head>
