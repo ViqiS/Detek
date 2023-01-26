@@ -261,22 +261,27 @@
 
         .espacio {
             width: 100%;/* 100% */
-            height: 287px; /* 600px; */
-            border-radius:35% 65% 26% 74% / 52% 50% 50% 48% ;
-            background-color:var(--gris);
+            height: fit-content; /* 600px; */
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             border-top: 30px;
             align-items: center;
         }
         
-        .espacio img {
-            width: 250px;
-            height: 250px;
+        .contenedor-imagen {
+            width: 350px;
+            height: 350px;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: var(--gris);
+            border-radius: 86% 14% 84% 16% / 18% 87% 13% 82%   ;
+        }
+        .contenedor-imagen img {
+            width: 250px;
+            height: 90%;
             border-radius: 12% 88% 9% 91% / 78% 23% 77% 22% ;
+            object-fit: cover;
         }
 
         .nuestro {
@@ -288,7 +293,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 200px;
+            height: 150px;
             font-family: var(--font);
             color: var(--crema);
             font-size: var(--lg);
@@ -386,6 +391,7 @@
         .telefonos p {
             margin-top: 1rem;
         }
+        
         @media (max-width: 375px) {
             .detek {
                 display: none;
@@ -425,6 +431,16 @@
             width: 50px;
             height: 50px;
             }
+            .contenedor-imagen {
+                width: 90%;
+                height: 525px;
+            }
+            .contenedor-imagen img {
+                width: 60%;
+            }
+            .nuestros {
+                font-size: 30px;
+            }
         }
         @media (min-width: 781px) {
             
@@ -438,7 +454,7 @@
                 font-size: var(--tt);
             }
             .card-clientes {
-                grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+                grid-template-columns: auto auto auto auto auto auto auto auto ;
             }
             .card-clientes img {
                 width: 60px;
@@ -474,6 +490,9 @@
             .copyright,
             .telefonos {
                 font-size: var(--md);
+            }
+            .card-clientes {
+                grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
             }
             
         }
@@ -616,7 +635,9 @@
         </section>
 
         <section class="espacio">
-            <figure><img src="./fotos-detek/deportes.jpg" alt=""></figure>
+            <figure class="contenedor-imagen">
+                <img src="./fotos-detek/deportes.jpg" alt="Foto consola de tablero">
+            </figure>
         </section>
 
         <section class="nuestro">
