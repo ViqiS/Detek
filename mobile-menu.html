@@ -30,17 +30,21 @@
         }
         html {
             font-size: 62.5%;
+            background-color: var(--crema);
         }
         body {
             background-color: var(--black);
         }
-        .contenedor {
+        .inactive {
+            display: none;
+        }
+        .contenedor-mobile {
             display: flex;
             justify-content: flex-end;
             height: 500px;
         }
 
-        .menu{
+        .menu-mobile {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -89,19 +93,18 @@
 </head>
 <body>
     
-</body>
-</html>
+
 <header>
-    <section class="contenedor">
-        <nav class="menu">
+    <section class="contenedor-mobile inactive">
+        <ul class="menu-mobile inactive">
                 <a href="/">HOME</a>
                 <a href="/">EMPRESA</a>
                 <a href="/">ELECTRONICA APLICADA</a>
                 <a href="/">DEPORTES</a>
                 <a href="/">CONTACTO</a>
-            </section>
-        </nav>
-
-    </section>
+            
+        </ul>
     </section>
     </header>
+</body>
+</html>

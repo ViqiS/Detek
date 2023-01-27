@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
-    <title>DETEK</title>
-    <style>
         :root {
             --white: #ffffff;
             --black: #000;
@@ -33,6 +21,9 @@
         }
         body {
             background-color: var(--black);
+        }
+        .inactive {
+            display: none;
         }
         
         /* Portada */
@@ -166,7 +157,61 @@
             background-color: none;
             color: var(--verde-claro);
         }
-        
+        /* navbarmobilemenu */
+
+        .contenedor-mobile {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;/* cambios para fusion */;
+            border: 30px;
+            height: 500px;
+            margin-top: 6.5rem;
+        }
+
+        .menu-mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: var(--black);
+            width: 100%;
+            align-items: flex-end;
+            padding-right: 2rem;
+        }
+        .menu-mobile a{
+            position: relative;
+            list-style: none;
+            text-decoration: none;
+            padding-right: 0.5rem;
+            color: var(--verde-oscuro);
+            cursor: pointer;
+            font-size: var(--sm);
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            font-family: var(--font);
+        }
+        .menu-mobile a:before,
+        .menu-mobile a:after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 0;
+            background: var(--verde-oscuro);
+            transition: .5s;
+        }
+        .menu-mobile a:after {
+            left: 0;
+            bottom: -10px;
+        }
+        .menu-mobile a:before {
+            right: 0;
+            top: -10px;
+        }
+        .menu-mobile a:hover:after,
+        .menu-mobile a:hover:before {
+            width: 100%;
+        }
         /* Contenido */
         .subtitulo {
             margin-top: 5rem;
@@ -416,6 +461,9 @@
             .menu-hamburguesa {
                 display: none;
             }
+            .contenedor-mobile {
+                display: none;
+            }
             .span-seguinos,
             .copyright,
             .telefonos {
@@ -428,138 +476,4 @@
             }
         }
         
-    </style>
-</head>
-<body>
-    <header>
-    <section>
-            <nav class="menu">
-                
-                <section class="seccion-logo">
-                <div class="logo">
-                    <div class="line1"></div>
-                    <p>D</p>
-                    <p class="k">K</p>
-                    <div class="line2"></div>
-                </div>
-                <div class="detek">
-                    <h2>DETEK</h2>
-                    </div>  
-                </section>
-                
-                <section class="seccion-navbar">
-                    <figure class="menu-hamburguesa">
-                    <img src="./iconos/menu-hamburguesa.png" alt="menu" class="icono-menu">
-                    </figure>
-
-                <ul class="navbar">
-                    <li class="navbar-menu"><a href="/">HOME</a></li>
-                    <li class="navbar-menu"><a href="empresa.html">EMPRESA</a></li>
-                    <li class="navbar-menu"><a href="electronica-aplicada.html">ELECTRONICA APLICADA</a></li>
-                    <li class="navbar-menu"><a href="deportes.html">DEPORTES</a></li>
-                    <li class="navbar-menu"><a href="Contact.html">CONTACTO</a></li>
-                </ul>
-                </section>
-
-                <section class="contenedor-mobile inactive">
-                    <ul class="menu-mobile">
-                            <a href="index.html">HOME</a>
-                            <a href="empresa.html">EMPRESA</a>
-                            <a href="electronica-aplicada.html">ELECTRONICA APLICADA</a>
-                            <a href="deportes.html">DEPORTES</a>
-                            <a href="Contact.html">CONTACTO</a>
-                    </ul>
-                </section>
-                
-            </nav>
-    </section>
-
-        <section class="seccion-portada">
-            <div class="imagen-portada">
-                <figure class="portada">
-                    <img src="./fotos-detek/home-portada.jpg" alt="Foto de una plaqueta">
-                </figure>
-            </div>
-        </section>
-        </header>
-
-        <h2 class="subtitulo">FABRICACIÓN DE ELECTRÓNICA APLICADA</h2>
-
-        <section class="presentacion">
-
-        <figure class="imagen-presentacion">
-        <img src="./fotos-detek/foto-presentacion.jpg" alt="work">
-        </figure>
-        <div class="empresa-info">
-        <p>Somos una empresa dedicada a la fabricación de productos electrónicos en serie, diseñados para cumplir los requerimientos de los clientes.
-            Utilizando las herramientas más avanzadas de diseño desarrollamos desde cero equipos electrónicos; cubriendo inclusive las áreas de mecánica, paneles, software, gráfica y embalaje.
-            De esta manera conseguimos los mejores resultados para incluir electrónica a medida en equipos Industriales, Agrícolas, Comerciales. 
-            También fabricamos productos estandarizados, como por ejemplo la línea de Tableros Deportivos, en contínua actualización y mejora para adecuarse a las normativas y reglamentos en evolución de las diferentes disciplinas.
-            Experiencia y trato personal es lo que nos permiten establecer vínculos que siempre alcanzan resultados exitosos.</p>
-        </div>
-        </section>
-
-        <section class="contactanos">
-            <img src="./fotos-detek/contactanos-grupo.jpg" alt="">
-            <a href="Contact.html">
-            <p class="contacto-home">CONTACTANOS</p>
-            </a>
-        </section>
-
     
-    <footer>
-        <section class="container-footer"> 
-
-        <section class="redes">
-
-        <span class="span-seguinos">Seguinos en nuestras redes</span>
-
-            <div class="orden-del-footer">
-            <ul class="social-icons">
-                <li class="facebook">
-                    <a href="https://es-la.facebook.com/detek.ar/">
-                    <img src="./redes/facebook.png" alt="facebook">
-                    </a>
-                </li>
-                <li class="instagram">
-                    <a href="https://instagram.com/detek_ar?igshid=YmMyMTA2M2Y=">
-                    <img src="./redes/instagram.png" alt="instagram">
-                    </a>
-                </li>
-                <li class="whatsapp">
-                    <a href="https://wa.me/5493415417731">
-                    <img src="./redes/whatsapp.png" alt="whatsapp">
-                    </a>
-                </li>
-            </ul>
-            </div>
-        </section>
-
-        <section class="derechos">
-            <div class="logo">
-                <div class="line1"></div>
-                <p>D</p>
-                <p class="k">K</p>
-                <div class="line2"></div>
-            </div>
-            <div class="copyright">
-                <p>Copyright © DETEK-IER 2023 - Todos los Derechos Reservados</p>
-                <p class="diseñadores">Diseñado por Pablo Re & Victoria Escalada</p>
-            </div>
-        </section>
-
-        <section class="contact">
-            <div class="telefonos">
-                <p>Ventas: </p>
-                <p>341 653-5347 ventas@detek.com.ar</p>
-                <p>At. al cliente: </p>
-                <p>341 541-7731 consultas@detek.com.ar</p>
-                <p>Ubicación: </p>
-                <p>Argentina, Santa Fe (Rosario) Pasaje Zavalla 3240 A</p>
-            </div>
-        </section>
-</section>
-</footer>
-<script src="./main.js"></script>
-</body>
-</html>
