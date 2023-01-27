@@ -165,8 +165,7 @@
             right: 0;
             width: 100%;/* cambios para fusion */;
             border: 30px;
-            height: 500px;
-            margin-top: 6.5rem;
+            margin-top: 6.4rem;
         }
 
         .menu-mobile {
@@ -272,6 +271,7 @@
         .contactanos img {
             width: 100%;
             height: 100%;
+            filter: blur(4px);
             object-fit: cover;
             position: absolute;
             opacity: 0.6;
@@ -291,6 +291,9 @@
             border-radius: 8px;
             box-shadow: inset 0 0 0 0 var(--verde-claro);
             transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+            }
+            .contactanos a {
+                text-decoration: none;
             }
 
         .contactanos p:hover {
