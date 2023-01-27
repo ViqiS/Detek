@@ -166,6 +166,7 @@
             width: 100%;/* cambios para fusion */;
             border: 30px;
             height: 500px;
+            margin-top: 6.5rem;
         }
 
         .menu-mobile {
@@ -176,7 +177,6 @@
             width: 100%;
             align-items: flex-end;
             padding-right: 2rem;
-            margin-top: 6.5rem;
         }
         .menu-mobile a{
             position: relative;
@@ -459,6 +459,9 @@
         }
         @media (min-width:959px) {
             .menu-hamburguesa {
+                display: none;
+            }
+            .contenedor-mobile {
                 display: none;
             }
             .span-seguinos,
