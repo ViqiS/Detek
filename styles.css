@@ -26,7 +26,7 @@
             display: none;
         }
         
-        /* Portada */
+        /* Portada index */
         .seccion-portada {
             height: 43vh;
             width: 100%;
@@ -58,6 +58,114 @@
             top: 33%;
             left: 0;
             padding: 0 50px;
+        }
+        /* Portada empresa */
+        .seccion-portada-empresa { 
+            height: 43vh;
+            width: 100%;
+        }
+        .portada-empresa {
+            width: 100%;
+            height: 43vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .imagen-portada-empresa {
+            width: 100%;
+            height: fit-content;
+        }
+        .imagen-portada-empresa figure img{
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            height: 43vh;
+        }
+        .titulo-nuestra-empresa {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            font-family: var(--font);
+            font-size: xx-large;
+            font-weight: bold;
+            color: var(--black);
+            position: relative;
+            left: 0;
+            padding: 0 15px;
+            text-align: center;
+            -webkit-text-stroke: 1px var(--black);
+        }
+        /* Portada electronica */
+        .seccion-portada-electronica { 
+            height: 43vh;
+            width: 100%;
+        }
+        .portada-electronica {
+            width: 100%;
+            height: 43vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .imagen-portada-electronica {
+            width: 100%;
+            height: fit-content;
+        }
+        .imagen-portada-electronica figure img{
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            height: 43vh;
+        }
+        .titulo-elect {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 200px;
+            font-family: var(--font);
+            font-weight: bold;
+            color: var(--white);
+            position: relative;
+            left: 0;
+            padding: 0 15px;
+            bottom: 3rem;
+        }
+        /* Portada deportes */
+        .seccion-portada-deportes { 
+            height: 43vh;
+            width: 100%;
+        }
+        .portada-deportes {
+            width: 100%;
+            height: 43vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .imagen-portada-deportes {
+            width: 100%;
+            height: fit-content;
+        }
+        .imagen-portada-deportes figure img{
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            height: 43vh;
+        }
+        .titulo-deportes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-size: 3rem;
+            font-family: var(--font);
+            font-weight: bold;
+            color: var(--white);
+            position: relative;
+            left: 0;
+            padding: 0 15px;
         }
         
         /* Navbar */
@@ -211,7 +319,7 @@
         .menu-mobile a:hover:before {
             width: 100%;
         }
-        /* Contenido */
+        /* Contenido index */
         .subtitulo {
             margin-top: 5rem;
             display: flex;
@@ -255,6 +363,390 @@
         .empresa-info {
             width: 100%;
             height: fit-content;
+        }
+        /* Contenido empresa*/
+        .nuestra-empresa {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .elegirnos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 25px 50px 25px;
+        }
+        .titulo-empresa {
+            text-align: center;
+            width: 100%;
+            height: fit-content;
+            font-size: var(--md);
+            color: var(--verde-claro);
+            font-family: var(--font);
+        }
+        .subtitulo-empresa {
+            text-align: center;
+            width: 100%;
+            height: fit-content;
+            font-size: var(--sm);
+            color: var(--white);
+            font-family: var(--font);
+            margin-top: 2rem;
+        }
+        .texto {
+            color: var(--crema);
+            font-size: var(--sm);
+            font-family: var(--font);
+            width: 100%;
+            margin-top: 2rem;
+        }
+        div .iconos-empresa {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .iconos-empresa {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-top: 10px;
+            padding: 5px;
+        }
+        .iconos-empresa img {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Soluciones */
+
+        .soluciones {
+            width: 95%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            position: relative;
+            margin: auto;
+        }
+        .imagen-soluciones {
+            width: 100%;
+            height: 350px;
+            display: flex;      
+            background-color: var(--verde-oscuro);
+            border-radius: 20% 100% 49% 51% / 100% 22% 78% 0%;
+        }
+        .imagen-soluciones img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: opacity(75%);
+            border-radius: 20% 100% 49% 51% / 100% 22% 78% 0%;
+        }
+        .empresa-informacion {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem;
+
+        }
+        .info-listado {
+            font-family: var(--font);
+            font-size: var(--sm);
+            width: 100%;
+            text-align: center;
+            color: var(--verde-claro);
+            align-self: center;
+            margin-bottom: 2rem;
+        }
+        .funcionalidad p {
+            color: var(--white);
+            font-family: var(--font);
+            font-size: var(--sm);
+            width: 100%;
+        }
+        .contenedor-listado {
+            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+            height: fit-content;
+            justify-content: space-around;
+            border-radius: 8px;
+            -webkit-box-shadow: 0px 0px 10px 0px var(--verde-claro);
+            -moz-box-shadow: 0px 0px 10px 0px var(--verde-claro);
+            box-shadow: 0px 0px 10px 0px var(--verde-claro);
+        }
+        .funcionalidad {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 2rem;
+            font-family: var(--font);
+            font-size: var(--sm);
+            color: var(--white);
+        }
+        .custom-shape-divider-top-1673615515 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-top-1673615515 svg {
+            position: relative;
+            display: block;
+            width: calc(106% + 1.3px);
+            height: 121px;
+            transform: rotateY(180deg);
+        }
+
+        .custom-shape-divider-top-1673615515 .shape-fill {
+            fill: #313131;
+        }
+        /* Contenido pesaje */
+        .titulo-pesaje {
+            display: flex;
+            justify-content: center;
+            font-size: var(--tt);
+            font-weight: bold;
+            color: var(--white);
+            font-family: var(--font);
+            height: 60px;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        .contenedor-pesaje {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+            }
+
+        .cards-pesaje-contenedor {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            grid-auto-rows: 200px;      
+            justify-items: center;
+            align-items: center;
+            justify-content: center;  
+            border-radius: 8px;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }  
+        .producto {
+
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 3px 5px 5px rgb(61, 61, 61);
+            position: relative;
+            
+        }   
+        .iconpesaje {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product-info {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            font-family: var(--font);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: var(--sm);
+            color: var(--white);
+            background: rgb(0, 0, 0, .7);
+            border-radius: 8px;
+            opacity: 0;
+        }
+        .producto:hover .product-info {
+            opacity: 1;  
+        }
+        /* Contenido deportes */
+        .texto-deportes {
+            display: flex;
+            justify-content: center;
+            font-size: var(--sm);
+            color: var(--verde-agua);
+            font-family: var(--font);
+            height: 60px;
+            margin: 2rem;
+            align-items: center;
+            text-align: center;
+        }
+        .cards-deportes {
+            display: grid;
+            gap: 26px;/* separacion entre cards */
+            place-content: center;
+            justify-content: space-around;
+            margin-bottom: 5rem;
+            grid-template-columns: repeat(1, 155px);/* 240px */
+            
+        }
+        .card-deportes {
+            width: 155px;/* 240px; */
+            height: 150px;
+            border: 1px solid gray;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: box-shadow 620ms ease-out;
+        }
+        .card-deportes img { 
+            max-width: 134px;
+            height: 86px;
+            object-fit: cover;
+        }
+        .disciplinas-text {
+            font-size: 1.5rem;
+            color: var(--verde-claro);
+            font-family:  var(--font);
+            font-weight: bold;
+            text-decoration-line: none;
+            margin-top: 1rem;
+        }
+        .card-deportes a {
+            width: 100%;
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-deportes:hover {
+            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
+        }
+        .clientes {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: fit-content;
+            width: 100%;
+        }
+        .card-clientes {
+            padding: 1rem;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-column-gap: 2rem;
+            width: fit-content;
+            height:100%;
+            justify-items: center;
+            align-items: center;
+            align-content: space-evenly;
+            justify-content: center;
+            border-radius: 8px;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
+            box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
+        }
+        .card-clientes img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 4px;
+        }
+
+        .espacio {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .contenedor-imagen {
+            width: 80vw;
+            height: 300px;
+            background-color: var(--gris);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 69% 100% 33% 28% / 46% 36% 41% 100%  ;
+        }
+        .contenedor-imagen img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 86% 63% 34% 43% / 51% 24% 38% 72% ;
+        }
+
+        .nuestro {
+            width: 100%;
+        }
+
+        .nuestros {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 150px;
+            font-family: var(--font);
+            color: var(--crema);
+            font-size: var(--lg);
+        }
+        /* Contenido disciplinas */
+        .contenedor-basquet {
+            display: flex;
+            justify-content: center;
+            height: fit-content;
+            width: 100%;
+            margin-top: 5rem;
+        }
+        .cards-disciplinas {
+            width: 90%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+        }
+        .texto-basquet {
+            font-size: var(--tt);
+            font-family: var(--font);
+            color: var(--white);
+        }
+        .caracteristicas-basquet {
+            color: var(--white);
+            font-family: var(--font);
+            font-size: var(--sm);
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+        .imagen-disciplinas {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .imagen-disciplinas img  {
+            width: 100%;
+            max-width: 1200px;
         }
         /* Contactanos */
         .contactanos {
@@ -300,6 +792,57 @@
             box-shadow: inset 500px 0 0 0 var(--verde-claro) ;
             color: white;
             cursor: pointer;           
+        }
+        /* Contenido electronica */
+        .texto1 {
+            display: flex;
+            justify-content: center;
+            font-size: var(--md);
+            color: var(--white);
+            font-family: var(--font);
+            height: 60px;
+            margin-top: 5rem;
+            align-items: center;
+        }
+        .cards-rubros {
+            display: grid;
+            gap: 26px;/* separacion entre cards */
+            place-content: center;
+            justify-content: space-around;
+            margin-bottom: 5rem;
+        }
+        .card-rubros {
+            width: 240px;
+            height: 150px;
+            border: 1px solid gray;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: box-shadow 620ms ease-out;
+        }
+        .card-rubros img { 
+            max-width: 134px;
+            height: 86px;
+            object-fit: cover;
+        }
+        .texto2 {
+            font-size: 25px;
+            color: var(--verde-oscuro);
+            font-family:  var(--font);
+            font-weight: bold;
+            text-decoration-line: none;
+        }
+        .card-rubros a {
+            width: 100%;
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-rubros:hover {
+            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
         }
          /* Footer */
         .container-footer {
@@ -400,17 +943,73 @@
             .detek {
                 display: none;
             }
+            .titulo-elect {
+                font-size: 1.5rem;
+                width: 147px;
+            }
+            .titulo-pesaje {
+                font-size: 2rem;
+            }
             
         }
         @media (min-width: 376px ) {/* dwesde 375px pasa esto */
             .subtitulo{ 
                 font-size:3rem;
             }
+            .titulo-elect {
+                font-size: 2.5rem;
+                width: 253px;
+            }
+            .titulo-pesaje {
+                font-size: 3rem
+            }
+            .cards-deportes {
+                grid-template-columns: repeat(2, 150px);
+            }
+            .card-deportes { 
+                width: 150px;
+            }
+            .texto-deportes {
+                font-size: var(--lg);
+            }
+            .titulo-deportes {
+                font-size: 4rem;
+                justify-content: flex-start;
+            }
             .contactanos {
                 height: 350px;
             }
             .copyright {
                 width: 80%;
+            }
+        }
+        @media (min-width:525px) {
+            .titulo-deportes {
+                color: var(--black);
+            }
+            .texto-deportes {
+                font-size: 2.5rem;
+            }
+            .card-clientes {
+                grid-template-columns: auto auto auto auto auto auto auto;
+            }
+            .card-clientes img {
+            width: 50px;
+            height: 50px;
+            }
+            .contenedor-imagen {
+                height: 500px;
+            }
+            .nuestros {
+                font-size: 30px;
+            }
+        }
+        @media (min-width: 650px) {
+            .soluciones {
+                flex-direction: row;
+            }
+            .imagen-soluciones {
+                height: 420px;
             }
         }
         @media (min-width: 781px) {/* desde 781px pasa esto */
@@ -433,6 +1032,38 @@
             .empresa-info {
                 width: 550px;
                 height: fit-content;
+            }
+            /* Electronica */
+            .titulo-elect {
+                font-size: 3.3rem;
+                width: 280px;
+            }
+            .cards-rubros {
+                grid-template-columns: repeat(3, 240px);
+            }
+            /* Pesaje */
+            .titulo-pesaje {
+                font-size: 4rem;
+            }
+            .cards-pesaje-contenedor {
+                grid-template-columns: 1fr 1fr;
+            }
+            /* Deportes */
+            .cards-deportes {
+                grid-template-columns: repeat(3, 240px);
+            }
+            .card-deportes { 
+                width: 240px;
+            }
+            .titulo-deportes {
+                font-size: var(--tt);
+            }
+            .card-clientes {
+                grid-template-columns: auto auto auto auto auto auto auto auto ;
+            }
+            .card-clientes img {
+                width: 60px;
+                height: 60px;
             }
             .contactanos {
                 height: 750px;
@@ -459,6 +1090,19 @@
             .derechos .line2 {
             height: 0.5rem
             }
+            /* media-empresa */
+            .titulo-nuestra-empresa{ 
+                font-size:var(--tt);
+            }
+            .subtitulo-empresa {
+                font-size: var(--md);
+            }
+            .texto {
+                font-size: var(--md);
+            }
+            .info-listado {
+                font-size: var(--md);
+            }
         }
         @media (min-width:959px) {
             .menu-hamburguesa {
@@ -466,6 +1110,24 @@
             }
             .contenedor-mobile {
                 display: none;
+            }
+            .titulo-elect {
+                font-size: var(--tt);
+                width: 400px;
+                margin-bottom: 5rem;
+            }
+            .titulo-pesaje {
+                font-size: var(--tt);
+            }
+            .cards-pesaje-contenedor {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-auto-rows: auto;
+            }
+            .card-clientes {
+                grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+            }
+            .contenedor-imagen {
+                height: 700px;
             }
             .span-seguinos,
             .copyright,
@@ -478,5 +1140,9 @@
                 display: none;
             }
         }
-        
+        @media (min-width: 1600px) {
+            .titulo-elect {
+                width: 739px;
+            }        
+        }
     

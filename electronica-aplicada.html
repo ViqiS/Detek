@@ -8,428 +8,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
     <title>Electronica apliacada</title>
-    <style>
-        :root {
-            --white: #ffffff;
-            --black: #000;
-            --crema: #FAD6A5;
-            --verde-claro: #9BA17B;
-            --verde-oscuro: #61764B;
-            --verde-agua: #CFB997;
-            --font: 'Montserrat', sans-serif;
-            --sm: 1.4rem;
-            --md: 1.6rem;
-            --lg: 1.8rem;
-            --tt: 5rem;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        html {
-            font-size: 62.5%;
-        }
-        body {
-            background-color: var(--black);
-        }
-
-        /* portada */
-        .seccion-portada-electronica { 
-            height: 43vh;
-            width: 100%;
-        }
-        .portada {
-            width: 100%;
-            height: 43vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-        }
-        .imagen-portada {
-            width: 100%;
-            height: fit-content;
-        }
-        .imagen-portada figure img{
-            width: 100%;
-            object-fit: cover;
-            position: absolute;
-            height: 43vh;
-        }
-        .titulo-elect {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            width: 200px;
-            font-family: var(--font);
-            font-weight: bold;
-            color: var(--white);
-            position: relative;
-            left: 0;
-            padding: 0 15px;
-            bottom: 3rem;
-        }
-        
-
-        /* navbar */
-        .detek {
-            display: flex;
-            justify-content: flex-start;
-            height: 6.5rem;
-            color: var(--white);
-            align-items: center;
-            font-family:var(--font);
-            font-size: 2rem;
-        }
-        .menu {
-            position: fixed;
-            display: flex;
-            width: 100%;
-            z-index: 2;
-            background-color: var(--black);
-            justify-content: end;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .seccion-logo {
-            margin-left: 1rem;
-            display: flex;
-        }
-        .logo {
-            height: 65px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 4px;
-        }
-        .line1, .line2 {
-            height: 0.3rem;
-            width: 1.6rem;
-            background-color: var(--white);
-        }
-        .seccion-navbar {
-            display: flex;/* flex */
-            justify-content: end;
-        }
-
-        .contenedor-navbar {
-            width: auto;
-            height: 6.5rem;        
-        }    
-        
-        .logo p {
-            color: var(--white);
-            font-size: 3rem;
-            font-family: 'M PLUS 1p', sans-serif;
-            align-items: center;
-            display: flex;
-            letter-spacing: -0.1rem;
-        }
-        p .k {
-            width: 100%;
-            height: 100%;
-        }
-        .k {
-            transform: rotateY(180deg);
-        }
-        
-        .menu-hamburguesa {
-
-            display: flex;
-            width: 4rem;
-            height: 3rem;
-            margin-right: 2rem;
-        }
-        .seccion-navbar ul{
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            background-color: var(--black);
-            height: 6.5rem;
-            font-family: var(--font);
-            font-size: var(--sm);
-            letter-spacing: 3px;
-            font-weight: bold;
-        }
-        .navbar-menu {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 2rem;
-        }
-        .navbar-menu a{
-            list-style: none;
-            text-decoration: none;
-            border-right: 1px solid var(--verde-claro);
-            padding-right: 0.5rem;
-            color: var(--verde-oscuro);
-
-        }
-        .menu .navbar-menu a:hover {
-            background-color: none;
-            color: var(--verde-claro);
-        }
-        
-        /* productos */
-        .texto1 {
-            display: flex;
-            justify-content: center;
-            font-size: var(--md);
-            color: var(--white);
-            font-family: var(--font);
-            height: 60px;
-            margin-top: 5rem;
-            align-items: center;
-        }
-        .cards-rubros {
-            display: grid;
-            gap: 26px;/* separacion entre cards */
-            place-content: center;
-            justify-content: space-around;
-            margin-bottom: 5rem;
-        }
-        .card-rubros {
-            width: 240px;
-            height: 150px;
-            border: 1px solid gray;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: box-shadow 620ms ease-out;
-        }
-        .card-rubros img { 
-            max-width: 134px;
-            height: 86px;
-            object-fit: cover;
-        }
-        .texto2 {
-            font-size: 25px;
-            color: var(--verde-oscuro);
-            font-family:  var(--font);
-            font-weight: bold;
-            text-decoration-line: none;
-        }
-        .card-rubros a {
-            width: 100%;
-            text-decoration: none;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .card-rubros:hover {
-            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
-        }
-        
-        /* Footer */
-        .container-footer {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 50rem;
-            margin-bottom: 0.5rem;
-            
-        }
-        footer {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            border-top: 1px solid rgb(100, 98, 98);
-        }
-
-        /* Redes */
-        .redes {
-            width: 375px;
-            display: flex;
-            justify-items: center;
-            margin-top: 2.5rem;
-            flex-direction: column;
-            align-items: center;
-        }
-        .span-seguinos {
-            font-family: var(--font);
-            font-size: 1.2rem;
-            color: var(--white);
-        }
-        .redes .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-            width: 100px;
-        }
-        .redes ul li a {
-            display: flex;
-            justify-content: center;
-            align-content: space-between;
-            width: 3rem;
-            height: 3rem;
-            margin-right: 5px;
-        }
-        .facebook img {
-            background-color: #4f60ff;
-        }
-        ul li {
-            text-decoration: none;
-            list-style: none;
-        }
-        ul li img{
-            border-radius: 50%;
-        }
-        /* 6EDF44 codigo de color de los iconos */
-
-        /* Derechos */
-        .derechos {
-            background-color: var(--black);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1.2rem;
-            color: var(--white);
-            font-family: var(--font);
-            width: 100%;
-            justify-content: space-around;
-        }
-        .copyright {
-            height: 6rem;
-            width: 58%;
-            display: flex;
-            flex-direction: column;
-            justify-content: baseline;
-        }
-        .copyright p {
-            width: 100%;
-            text-align: center;
-        }
-
-        /* contacto-footer */
-        .contact {
-            display: flex;
-            flex-direction: column;
-            color: var(--white);
-            font-size: 1.2rem;
-            font-family: var(--font);
-            margin-top: 20px;
-            width: 100%;
-            padding-left: 3rem;
-        }
-        .telefonos p {
-            margin-top: 1rem;
-        }
-        @media (max-width: 375px) {
-            .titulo-elect {
-                font-size: 1.5rem;
-                width: 147px;
-            }
-            .detek {
-                display: none;
-            }
-        }
-        @media (min-width: 376px ) {/* desde 375px pasa esto */
-            .titulo-elect {
-                font-size: 2.5rem;
-                width: 253px;
-            }
-            
-            .copyright {
-                width: 80%;
-            }
-        }
-        @media (min-width: 781px) {
-            .titulo-elect {
-                font-size: 3.3rem;
-                width: 280px;
-            }
-            .cards-rubros {
-                grid-template-columns: repeat(3, 240px);
-            }
-            .container-footer {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                justify-content: space-between;
-                height: 20rem;
-                width: 100%;
-            }
-            .redes {
-                height: 100%;
-                width: 100%;
-                justify-items: center;
-            }
-            .derechos .logo p {
-                font-size: var(--tt);
-            }
-            .derechos .line1,
-            .derechos .line2 {
-            height: 0.5rem
-            }
-        }
-        @media (min-width:959px) {
-            .titulo-elect {
-                font-size: var(--tt);
-                width: 400px;
-                margin-bottom: 5rem;
-            }
-            .menu-hamburguesa {
-                display: none;
-            }
-            .span-seguinos,
-            .copyright,
-            .telefonos {
-                font-size: var(--md);
-            }
-        }
-        @media (max-width: 960px) {
-            .seccion-navbar ul {
-                display: none;
-            }
-        }
-        @media (min-width: 1600px) {
-            .titulo-elect {
-                width: 739px;
-            }
-            
-        }
-    </style>
 </head>
 <body>
     <header>
-    <section>
-        
-        <nav class="menu">
+        <section>
+            <nav class="menu">
                 
-            <section class="seccion-logo">
-            <div class="logo">
-                <div class="line1"></div>
-                <p>D</p>
-                <p class="k">K</p>
-                <div class="line2"></div>
-            </div>
-            <div class="detek">
-                <h2>DETEK</h2>
-                </div>  
-            </section>
-            
-            <section class="seccion-navbar">
+                <section class="seccion-logo">
+                <div class="logo">
+                    <div class="line1"></div>
+                    <p>D</p>
+                    <p class="k">K</p>
+                    <div class="line2"></div>
+                </div>
+                <div class="detek">
+                    <h2>DETEK</h2>
+                    </div>  
+                </section>
+                
+                <section class="seccion-navbar">
+                    <figure class="menu-hamburguesa">
+                    <img src="./iconos/menu-hamburguesa.png" alt="menu" class="icono-menu">
+                    </figure>
 
-                <figure class="menu-hamburguesa">
-                <img src="./iconos/menu-hamburguesa.png" alt="menu">
-                </figure>
+                <ul>
+                    <li class="navbar-menu"><a href="index.html">HOME</a></li>
+                    <li class="navbar-menu"><a href="empresa.html">EMPRESA</a></li>
+                    <li class="navbar-menu"><a href="electronica-aplicada.html">ELECTRONICA APLICADA</a></li>
+                    <li class="navbar-menu"><a href="deportes.html">DEPORTES</a></li>
+                    <li class="navbar-menu"><a href="Contact.html">CONTACTO</a></li>
+                </ul>
+                </section>
 
-            <ul>
-                <li class="navbar-menu"><a href="index.html">HOME</a></li>
-                <li class="navbar-menu"><a href="empresa.html">EMPRESA</a></li>
-                <li class="navbar-menu"><a href="electronica-aplicada.html">ELECTRONICA APLICADA</a></li>
-                <li class="navbar-menu"><a href="deportes.html">DEPORTES</a></li>
-                <li class="navbar-menu"><a href="Contact.html">CONTACTO</a></li>
-            </ul>
-            </section>
-        </nav>
-        </section>
-        
+                <section class="contenedor-mobile inactive">
+                    <ul class="menu-mobile">
+                            <a href="index.html">HOME</a>
+                            <a href="empresa.html">EMPRESA</a>
+                            <a href="electronica-aplicada.html">ELECTRONICA APLICADA</a>
+                            <a href="deportes.html">DEPORTES</a>
+                            <a href="Contact.html">CONTACTO</a>
+                    </ul>
+                </section>
+                
+            </nav>
+    </section>
         <section class="seccion-portada-electronica">
-        <div class="imagen-portada">
-            <figure class="portada">
+        <div class="imagen-portada-electronica">
+            <figure class="portada-electronica">
                 <img src="./fotos-detek/electronica1.jpg" alt="Foto portada">
             <p class="titulo-elect">ELECTRONICA APLICADA</p>
             </figure>
@@ -525,6 +152,6 @@
         </section>
 </section>
 </footer>
-
+<script src="./main.js"></script>
 </body>
 </html>
