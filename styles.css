@@ -28,12 +28,12 @@
         
         /* Portada index */
         .seccion-portada {
-            height: 43vh;
+            height: 55vh;
             width: 100%;
         }
         .portada {
             width: 100%;
-            height: 43vh;/* 80vh en 1920*1080 */
+            height: 55vh;/* 80vh en 1920*1080 */
             overflow: hidden;
         }
         .imagen-portada {
@@ -61,12 +61,12 @@
         }
         /* Portada empresa */
         .seccion-portada-empresa { 
-            height: 43vh;
+            height: 55vh;
             width: 100%;
         }
         .portada-empresa {
             width: 100%;
-            height: 43vh;
+            height: 55vh;
             overflow: hidden;
             display: flex;
             justify-content: flex-end;
@@ -80,7 +80,7 @@
             width: 100%;
             object-fit: cover;
             position: absolute;
-            height: 43vh;
+            height: 55vh;
         }
         .titulo-nuestra-empresa {
             display: flex;
@@ -89,21 +89,21 @@
             font-family: var(--font);
             font-size: xx-large;
             font-weight: bold;
-            color: var(--black);
+            color: var(--white);
             position: relative;
             left: 0;
             padding: 0 15px;
             text-align: center;
-            -webkit-text-stroke: 1px var(--black);
+            -webkit-text-stroke: 1px var(--white);
         }
         /* Portada electronica */
         .seccion-portada-electronica { 
-            height: 43vh;
+            height: 55vh;
             width: 100%;
         }
         .portada-electronica {
             width: 100%;
-            height: 43vh;
+            height: 55vh;
             overflow: hidden;
             display: flex;
             justify-content: flex-end;
@@ -117,7 +117,7 @@
             width: 100%;
             object-fit: cover;
             position: absolute;
-            height: 43vh;
+            height: 55vh;
         }
         .titulo-elect {
             display: flex;
@@ -1343,11 +1343,6 @@
             }
             .contenedor-imagen {
                 height: 700px;
-            }
-            .span-seguinos,
-            .copyright,
-            .telefonos {
-                font-size: var(--md);
             }
         }
         @media (max-width: 960px) {
