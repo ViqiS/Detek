@@ -718,6 +718,7 @@
         .contenedor-disciplinas {
             display: flex;
             justify-content: center;
+            align-items: center;
             height: fit-content;
             width: 100%;
             margin-top: 5rem;
@@ -734,30 +735,27 @@
             font-size: var(--tt);
             font-family: var(--font);
             color: var(--white);
-            margin-left: 20px;
+            padding-left: 20px;
+            width: 300px;
         }
         .caracteristicas-disciplinas {
             color: var(--white);
             font-family: var(--font);
             font-size: var(--sm);
-            width: 100%;
+            width: 300px;
             height: auto;
-            margin-left: 20px;
+            padding-left: 20px;
             margin-bottom: 2rem;
             text-align: justify;
         }
         .imagen-disciplinas {
-            width: 100%;
-            height: 100%;
+            width: 270px;
+            height: 270px;
             display: flex;
             justify-items: center;
             justify-content: center;
             margin-bottom: 2rem;
             flex-direction: column;
-        }
-        .imagen-disciplinas3 {
-            width: 270px;
-            height: 270px;
         }
         .imagen-disciplinas img  {
             width: 100%;
@@ -1237,7 +1235,7 @@
             .imagen-soluciones {
                 height: 420px;
             }
-            .imagen-disciplinas3 {
+            .imagen-disciplinas {
                 width: 400px;
                 height: 400px;
             }
@@ -1295,9 +1293,9 @@
                 width: 60px;
                 height: 60px;
             }
-            .imagen-disciplinas3 {
-                width: 600px;
-                height: 600px;
+            .imagen-disciplinas {
+                width: 500px;
+                height: 500px;
             }
             /* index-contactanos*/
             .contactanos {
