@@ -721,17 +721,20 @@
             height: fit-content;
             width: 100%;
             margin-top: 5rem;
+            flex-direction: column;
         }
         .cards-disciplinas {
-            width: 90%;
-            height: fit-content;
+            width: 100%;
+            /* height: fit-content; */
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
         .texto-disciplinas{
             font-size: var(--tt);
             font-family: var(--font);
             color: var(--white);
+            margin-left: 20px;
         }
         .caracteristicas-disciplinas {
             color: var(--white);
@@ -739,6 +742,7 @@
             font-size: var(--sm);
             width: 100%;
             height: auto;
+            margin-left: 20px;
             margin-bottom: 2rem;
             text-align: justify;
         }
@@ -749,9 +753,16 @@
             justify-items: center;
             justify-content: center;
             margin-bottom: 2rem;
+            flex-direction: column;
+        }
+        .imagen-disciplinas3 {
+            width: 270px;
+            height: 270px;
         }
         .imagen-disciplinas img  {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             max-width: 1200px;
         }
         /* Contactanos */
@@ -1226,6 +1237,10 @@
             .imagen-soluciones {
                 height: 420px;
             }
+            .imagen-disciplinas3 {
+                width: 400px;
+                height: 400px;
+            }
         }
         @media (min-width: 781px) {/* desde 781px pasa esto */
             
@@ -1280,12 +1295,18 @@
                 width: 60px;
                 height: 60px;
             }
+            .imagen-disciplinas3 {
+                width: 600px;
+                height: 600px;
+            }
+            /* index-contactanos*/
             .contactanos {
                 height: 750px;
             }
             .contactanos p {
                 font-size: var(--tt);
             }
+            /* footer */
             .container-footer {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
