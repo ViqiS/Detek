@@ -731,6 +731,18 @@
             flex-direction: column;
             align-items: center;
         }
+        .imgvoley1 {
+            width: 338px;
+            height: 252px;
+        }
+        .imgvoley2 {
+            width: 210px;
+            height: 270px;
+        }
+        .imgfutbol {
+            width: 270px;
+            height: 270px;
+        }
         .texto-disciplinas{
             font-size: var(--tt);
             font-family: var(--font);
@@ -749,8 +761,8 @@
             text-align: justify;
         }
         .imagen-disciplinas {
-            width: 270px;
-            height: 270px;
+            /* width: 270px;
+            height: 270px; */
             display: flex;
             justify-items: center;
             justify-content: center;
@@ -758,8 +770,8 @@
             flex-direction: column;
         }
         .imagen-disciplinas img  {
-            width: 100%;
-            height: 100%;
+            /* width: 100%;
+            height: 100%; */
             object-fit: cover;
             max-width: 1200px;
         }
@@ -1235,8 +1247,16 @@
             .imagen-soluciones {
                 height: 420px;
             }
-            .imagen-disciplinas {
+            .imgfutbol {
                 width: 400px;
+                height: 400px;
+            }
+            .imgvoley1 {
+                width: 468px;
+                height: 382px;/* se sube 130px a cada width y heigth */
+            }
+            .imgvoley2 {
+                width: 340px;
                 height: 400px;
             }
         }
@@ -1293,8 +1313,16 @@
                 width: 60px;
                 height: 60px;
             }
-            .imagen-disciplinas {
+            .imgfutbol {
                 width: 500px;
+                height: 500px;
+            }
+            .imgvoley1 {
+                width: 568px;
+                height: 482px;/* se sube 100px a cada width y heigth */
+            }
+            .imgvoley2 {
+                width: 440px;
                 height: 500px;
             }
             /* index-contactanos*/
