@@ -576,7 +576,6 @@
             font-size: var(--mini);
             width: 300px;
             height: auto;
-            padding-left: 20px;
             margin-bottom: 2rem;
         }
         .product-info-electronica li,
@@ -765,13 +764,13 @@
             font-size: var(--tt);
             font-family: var(--font);
             color: var(--white);
-            padding-left: 20px;
-            width: 300px;
+            text-align: center;
+            width: 90%
         }
         .caracteristicas-disciplinas {
             color: var(--white);
             font-family: var(--font);
-            font-size: var(--sm);
+            font-size: var(--mini);
             width: 300px;
             height: auto;
             margin-bottom: 2rem;
@@ -1216,6 +1215,7 @@
             .product-info-electronica p,
             .product-info-electronica li {
                 width: 100%;
+                padding-left: 2rem;
                 font-size: var(--sm);
                 text-align: justify;
             }
@@ -1224,6 +1224,10 @@
             }
             .card-deportes { 
                 width: 150px;
+            }
+            .caracteristicas-disciplinas {
+                width: 90vw;
+                font-size: var(--sm);
             }
             .texto-deportes {
                 font-size: var(--lg);
@@ -1266,7 +1270,12 @@
             .cards-pesaje-contenedor {    
                 grid-auto-rows: 400px; 
                 width: 500px;
-
+            }
+            .texto-disciplinas {
+                text-align: left;
+            }
+            .caracteristicas-disciplinas {
+                text-align: left;
             }
         }
         @media (min-width: 650px) {
@@ -1291,6 +1300,10 @@
             .imgarqueria {
                 width: 460px;
                 height: 480px;
+            }
+            .imgbasquet1, .imgbasquet2 {
+                width: 500px;
+                height: 500px;
             }
         }
         @media (min-width: 781px) {/* desde 781px pasa esto */
@@ -1363,6 +1376,10 @@
             .imgarqueria {
                 width: 800px;
                 height: 487px;
+            }
+            .imgbasquet1, .imgbasquet2 {
+                width: 700px;
+                height: 700px;
             }
             /* index-contactanos*/
             .contactanos {
