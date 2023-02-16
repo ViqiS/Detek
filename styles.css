@@ -760,6 +760,26 @@
             width: 300px;
             height: 300px;
         }
+        .imghokey1 {
+            width: 366px;
+            height: 125px;
+        }
+        .imghokey2 {
+            width: 366px;
+            height: 194px;
+        }
+        .imghokey3 {
+            width: 366px;
+            height: 260px;
+        }
+        .imgrunners1 {
+            width: 300px;
+            height: 210px;
+        }
+        .imgrunners2 {
+            width: 300px;
+            height: 282px;
+        }
         .texto-disciplinas{
             font-size: var(--tt);
             font-family: var(--font);
@@ -1317,6 +1337,26 @@
                 width: 500px;
                 height: 500px;
             }
+            .imghokey1 {
+                width: 585px;
+                height: 212px;
+            }
+            .imghokey2 {
+                width: 585px;
+                height: 324px;
+            }
+            .imghokey3 {
+                width: 585px;
+                height: 390px;
+            }
+            .imgrunners1 {
+                width: 430px;
+                height: 300px;
+            }
+            .imgrunners2 {
+                width: 430px;
+                height: 412px;
+            }
         }
         @media (min-width: 781px) {/* desde 781px pasa esto */
             
@@ -1405,6 +1445,26 @@
                 width: 700px;
                 height: 700px;
             }
+            .imghokey1 {
+                width: 851px;
+                height: 277px;
+            }
+            .imghokey2 {
+                width: 596px;
+                height: 424px;
+            }
+            .imghokey3 {
+                width: 596px;
+                height: 490px;
+            }
+            .imgrunners1 {
+                width: 530px;
+                height: 363px;
+            }
+            .imgrunners2 {
+                width: 530px;
+                height: 512px;
+            }
             /* index-contactanos*/
             .contactanos {
                 height: 750px;
@@ -1472,6 +1532,22 @@
             }
             .card-clientes {
                 grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+            }
+            .imgbasquet1, .imgbasquet2 {
+                width: 1000px;
+                height: 700px;
+            }
+            .imghokey1 {
+                width: 1200px;
+                height: 455px;
+            }
+            .imgrunners1 {
+                width: 820px;
+                height: 558px;
+            }
+            .imgrunners2 {
+                width: 820px;
+                height: 1150px;
             }
             .contenedor-imagen {
                 height: 700px;
