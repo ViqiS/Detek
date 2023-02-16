@@ -6,9 +6,11 @@
             --verde-oscuro: #61764B;
             --verde-agua: #CFB997;
             --font: 'Montserrat', sans-serif;
+            --mini: 1.2rem;
             --sm: 1.4rem;
             --md: 1.6rem;
             --lg: 1.8rem;
+            --st: 3rem;
             --tt: 5rem;
         }
         * {
@@ -515,16 +517,11 @@
         }
         /* Contenido pesaje */
         .titulo-pesaje {
-            display: flex;
-            justify-content: center;
-            font-size: var(--tt);
-            font-weight: bold;
-            color: var(--white);
+            width: 90%;
+            font-size: var(--st);
             font-family: var(--font);
-            height: 60px;
-            margin-top: 5rem;
-            margin-bottom: 2rem;
-            align-items: center;
+            color: var(--white);
+            text-align: center;
         }
         .contenedor-pesaje {
             width: 100%;
@@ -536,10 +533,11 @@
             }
 
         .cards-pesaje-contenedor {
+            width: 300px;
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
-            grid-auto-rows: 200px;      
+            grid-auto-rows: 300px;      
             justify-items: center;
             align-items: center;
             justify-content: center;  
@@ -572,22 +570,18 @@
             object-fit: cover;
             border-radius: 8px;
         }
-        .product-info {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            font-family: var(--font);
-            display: flex;
-            align-items: center;
-            text-align: center;
-            font-size: var(--sm);
+        .product-info-electronica {
             color: var(--white);
-            background: rgb(0, 0, 0, .7);
-            border-radius: 8px;
-            opacity: 0;
+            font-family: var(--font);
+            font-size: var(--mini);
+            width: 300px;
+            height: auto;
+            padding-left: 20px;
+            margin-bottom: 2rem;
         }
-        .producto:hover .product-info {
-            opacity: 1;  
+        .product-info-electronica li,
+        .product-info-electronica p {
+            margin-bottom: 1rem;
         }
         /* Contenido deportes */
         .texto-deportes {
@@ -1206,12 +1200,9 @@
                 font-size: 1.5rem;
                 width: 147px;
             }
-            .titulo-pesaje {
-                font-size: 2rem;
-            }
             
         }
-        @media (min-width: 376px ) {/* dwesde 375px pasa esto */
+        @media (min-width: 376px ) {/* dwesde 376px pasa esto */
             .subtitulo{ 
                 font-size:3rem;
             }
@@ -1219,8 +1210,14 @@
                 font-size: 2.5rem;
                 width: 253px;
             }
-            .titulo-pesaje {
-                font-size: 3rem
+            .product-info-electronica {
+                width: 90vw;
+            }
+            .product-info-electronica p,
+            .product-info-electronica li {
+                width: 100%;
+                font-size: var(--sm);
+                text-align: justify;
             }
             .cards-deportes {
                 grid-template-columns: repeat(2, 150px);
@@ -1261,6 +1258,15 @@
             }
             .nuestros {
                 font-size: 30px;
+            }
+            .titulo-pesaje {
+                text-align: left;     
+                padding-left: 2rem;
+            }
+            .cards-pesaje-contenedor {    
+                grid-auto-rows: 400px; 
+                width: 500px;
+
             }
         }
         @media (min-width: 650px) {
@@ -1321,7 +1327,9 @@
                 font-size: 4rem;
             }
             .cards-pesaje-contenedor {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;   
+                grid-auto-rows: 500px; 
+                width: 750px;
             }
             /* Deportes */
             .cards-deportes {
@@ -1418,7 +1426,8 @@
             }
             .cards-pesaje-contenedor {
                 grid-template-columns: 1fr 1fr 1fr;
-                grid-auto-rows: auto;
+                grid-auto-rows: 400px; 
+                width: 90%;
             }
             .card-clientes {
                 grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
