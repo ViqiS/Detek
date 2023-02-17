@@ -518,8 +518,9 @@
         /* Contenido pesaje */
         .titulo-pesaje {
             width: 90%;
-            font-size: var(--st);
+            font-size: var(--lg);
             font-family: var(--font);
+            font-weight: bold;
             color: var(--white);
             text-align: center;
         }
@@ -530,6 +531,7 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 2rem;
+            margin-top: 5rem;
             }
 
         .cards-pesaje-contenedor {
