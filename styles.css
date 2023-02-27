@@ -1062,13 +1062,14 @@
             font-size: var(--md);
             padding: 6px;
             margin-bottom: 12px;
+            color: var(--white);
         }
         .input-nombre,
         .input-email,
         .input-numero,
         .input-mensaje {
             border: 2px solid var(--verde-agua);
-            background-color: transparent;
+            background-color: var(--black);
         }
         .boton-enviar {
             background-color: transparent;
