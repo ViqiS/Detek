@@ -546,7 +546,8 @@
             border-radius: 8px;
             margin-left: 2rem;
             margin-right: 2rem;
-        }  
+        } 
+
         .producto {
 
             width: 100%;
@@ -556,7 +557,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 3px 5px 5px rgb(61, 61, 61);
             position: relative;
             
         }
@@ -571,6 +571,13 @@
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
+        }
+        .control1,
+        .control7,
+        .pesaje7, 
+        .pesaje8,
+        .pesaje9 {
+            object-fit: contain;
         }
         .product-info-electronica {
             color: var(--white);
@@ -626,6 +633,7 @@
             font-family:  var(--font);
             font-weight: bold;
             text-decoration-line: none;
+            text-align: center;
             margin-top: 1rem;
         }
         .card-deportes a {
@@ -637,6 +645,51 @@
             align-items: center;
         }
         .card-deportes:hover {
+            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
+        }
+        /* Manuales */
+        .contenedor-manuales {
+            display: grid;
+            gap: 26px;/* separacion entre cards */
+            place-content: center;
+            justify-content: space-around;
+            margin-bottom: 5rem;
+            grid-template-columns: repeat(1, 155px);/* 240px */
+            
+        }
+        .cards-manuales {
+            width: 155px;/* 240px; */
+            height: 150px;
+            border: 1px solid gray;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: box-shadow 620ms ease-out;
+        }
+        .titulo-manuales {
+            width: 100%;
+            font-size: var(--st);
+            font-family: var(--font);
+            font-weight: bold;
+            color: var(--white);
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .texto-manuales p {
+            font-size: 1.5rem;
+            color: var(--verde-claro);
+            font-family:  var(--font);
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .cards-manuales a {
+            text-decoration: none;
+            list-style: none;
+        }
+        .cards-manuales:hover {
             box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
         }
         .clientes {
@@ -762,6 +815,10 @@
             width: 300px;
             height: 300px;
         }
+        .imgrugby3 {
+            width: 300px;
+            height: 360px;
+        }
         .imghokey1 {
             width: 366px;
             height: 125px;
@@ -783,7 +840,7 @@
             height: 282px;
         }
         .texto-disciplinas{
-            font-size: var(--tt);
+            font-size: var(--st);
             font-family: var(--font);
             font-weight: bold;
             color: var(--white);
@@ -797,7 +854,7 @@
             width: 300px;
             height: auto;
             margin-bottom: 2rem;
-            text-align: justify;
+            text-align: center;
         }
         .imagen-disciplinas {
             /* width: 270px;
@@ -1244,6 +1301,9 @@
             .cards-deportes {
                 grid-template-columns: repeat(2, 150px);
             }
+            .contenedor-manuales {
+                grid-template-columns: repeat(2, 150px);
+            }
             .card-deportes { 
                 width: 150px;
             }
@@ -1254,7 +1314,8 @@
             .texto-deportes {
                 font-size: var(--lg);
             }
-            .titulo-deportes {
+            .titulo-deportes,
+            .titulo-manuales {
                 font-size: 4rem;
                 justify-content: flex-start;
             }
@@ -1292,7 +1353,8 @@
                 grid-auto-rows: 400px; 
                 width: 420px;
             }
-            .texto-disciplinas {
+            .texto-disciplinas,
+            .texto-manuales {
                 text-align: left;
             }
             .caracteristicas-disciplinas {
@@ -1362,6 +1424,10 @@
                 width: 500px;
                 height: 500px;
             }
+            .imgrugby3 {
+                width: 500px;
+                height: 640px;
+            }
         }
         @media (min-width: 781px) {/* desde 781px pasa esto */
             
@@ -1404,6 +1470,9 @@
             /* Deportes */
             .cards-deportes {
                 grid-template-columns: repeat(3, 240px);
+            }
+            .contenedor-manuales {
+                grid-template-columns: repeat(4, 150px);
             }
             .card-deportes { 
                 width: 240px;
@@ -1470,7 +1539,7 @@
                 width: 530px;
                 height: 512px;
             }
-            .imgrugby1, .imgrugby2 {
+            .imgrugby1, .imgrugby2, .imgrugby3 {
                 width: 600px;
                 height: 700px;
             }
@@ -1560,6 +1629,9 @@
             }
             .contenedor-imagen {
                 height: 700px;
+            }
+            .contenedor-manuales {
+                grid-template-columns: repeat(5, 150px);
             }
 
         }
