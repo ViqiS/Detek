@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="es" lang="es">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/png" href="./logo/logodk.png">
     <title>Contacto</title>
 </head>
@@ -36,21 +36,21 @@
         </div>
 
         <section class="seccion-formulario">
-        <form action="https://formsubmit.co/your@email.com" method="POST" class="form">
+        <form action="./contacto.php" method="post" class="form">
         <div>
             <label for="nombre" class="etiqueta">Nombre</label>
-            <input type="text" id="nombre" placeholder="Tu nombre" class="input input-nombre">
+            <input name="nombre" type="text" id="nombre" placeholder="Tu nombre" class="input input-nombre">
 
             <label for="email" class="etiqueta">Email</label>
-            <input type="text" id="email" placeholder="Ejemplo123@ejemplo.com" class="input input-email">
+            <input name="email" type="text" id="email" placeholder="Ejemplo123@ejemplo.com" class="input input-email">
 
             <label for="numero" class="etiqueta">Numero de telefono</label>
-            <input type="text" id="numero" placeholder="341999999" class="input input-numero">
+            <input name="numero" type="text" id="numero" placeholder="341999999" class="input input-numero">
 
             <label for="Mensaje" class="etiqueta">Mensaje</label>
-            <input type="text" id="mensaje" placeholder="Envianos tu mensaje" class="input input-mensaje">
+            <input name="mensaje" type="text" id="mensaje" placeholder="Envianos tu mensaje" class="input input-mensaje">
 
-            <input type="submit" value="Enviar" class="boton-enviar send-button hvr-wobble-to-bottom-right">
+            <input name="submit" type="submit" value="Enviar" class="boton-enviar send-button hvr-wobble-to-bottom-right">
             <!-- boton-enviar añadir segunda clase? -->
         </div>
         </form>

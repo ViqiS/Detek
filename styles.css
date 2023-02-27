@@ -982,7 +982,7 @@
             place-items: center;
         }
         .form-container {
-            height: 55rem;
+            height: 60rem;
             font-family: var(--font);
             display: grid;
             grid-template-rows: auto 1fr auto;
