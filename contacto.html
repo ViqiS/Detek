@@ -1,28 +1,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xml:lang="es" lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" type="image/png" href="./logo/logodk.png">
-    <title>Contacto</title>
-</head>
-<body class="contact-contacto gradient-background">
+    <head>        
+        <title>Contacto</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="icon" type="image/png" href="./logo/logodk.png">
+    </head>        
+    
+    <body class="contact-contacto gradient-background">
 
-    <section class="contenedor-contacto form-container">
-        
+        <div class="container contenedor-contacto form-container">
+
         <section class="seccion-flecha">
-        <figure class="icono-flecha">
-        <a href="index.html"><img src="./iconos/angulo-doble-blanco.png" class="flecha" alt="flecha para volver"></a>
-        </figure>
-        </section>
-
-        <section class="seccion-logo-contacto">
+            <figure class="icono-flecha">
+            <a href="index.html"><img src="./iconos/angulo-doble-blanco.png" class="flecha" alt="flecha para volver"></a>
+            </figure>
+            </section>
+            
+            <section class="seccion-logo-contacto">
             <div class="logo-contacto">
             <div class="line1-contact"></div>
             <p class="d-contact">D</p>
@@ -31,30 +31,26 @@
             </div>
         </section>
 
-        <div class="pregunta">
-        <h2 class="title-pregunta">¿Necesitas nuestros servicios?</h2>
-        </div>
 
-        <section class="seccion-formulario">
-        <form action="./contacto.php" method="post" class="form">
-        <div>
+        <form id="contact" action="contacto.php" method="post" class="form">
+            <h3 class="title-pregunta">¿Necesitas nuestros servicios?</h3>
+            <div>
+            
             <label for="nombre" class="etiqueta">Nombre</label>
-            <input name="nombre" type="text" id="nombre" placeholder="Tu nombre" class="input input-nombre">
+            <input  name="nombre" placeholder="Tu nombre" type="text" tabindex="1" required autofocus class="input input-nombre" >
 
             <label for="email" class="etiqueta">Email</label>
-            <input name="email" type="text" id="email" placeholder="Ejemplo123@ejemplo.com" class="input input-email">
+            <input name="email" placeholder="Ejemplo123@ejemplo.com" type="email" tabindex="2" required class="input input-email">
 
             <label for="numero" class="etiqueta">Numero de telefono</label>
-            <input name="numero" type="text" id="numero" placeholder="341999999" class="input input-numero">
+            <input name="numero" placeholder="3412345678" type="tel" tabindex="2" required class="input input-numero">
 
             <label for="Mensaje" class="etiqueta">Mensaje</label>
-            <input name="mensaje" type="text" id="mensaje" placeholder="Envianos tu mensaje" class="input input-mensaje">
-
-            <input name="submit" type="submit" value="Enviar" class="boton-enviar send-button hvr-wobble-to-bottom-right">
-            <!-- boton-enviar añadir segunda clase? -->
-        </div>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje...." tabindex="5" required class="input input-mensaje"></textarea>
+            
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Enviar" class="boton-enviar send-button hvr-wobble-to-bottom-right">Enviar</button>
+            <div>
         </form>
-    </section>
-    </section>
-</body>
+        </div>
+    </body>
 </html>

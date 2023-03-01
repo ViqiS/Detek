@@ -13,15 +13,14 @@ if ( !isset($_POST["nombre"]) || !isset($_POST["email"]) || !isset($_POST["mensa
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];
 $mensaje = $_POST["mensaje"];
-$tel = $_POST["numero"];
 
 // Datos de la cuenta de correo utilizada para enviar vía SMTP
-$smtpHost = "smtp.gmail.com";  // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "psre96@gmail.com";  // Mi cuenta de correo
-$smtpClave = "11Octubre.";  // Mi contraseña
+$smtpHost = "dtcwin175.ferozo.com";  // Dominio alternativo brindado en el email de alta 
+$smtpUsuario = "consultas@detek.com.ar";  // Mi cuenta de correo
+$smtpClave = "camila14";  // Mi contraseña
 
 // Email donde se enviaran los datos cargados en el formulario de contacto
-$emailDestino = "pvdev.web@gmail.com";
+$emailDestino = "consultas@detek.com.ar";
 
 $mail = new PHPMailer();
 $mail->IsSMTP();
@@ -43,7 +42,7 @@ $mail->AddAddress($emailDestino); // Esta es la dirección a donde enviamos los 
 
 $mail->Subject = "DonWeb - Ejemplo de formulario de contacto"; // Este es el titulo del email.
 $mensajeHtml = nl2br($mensaje);
-$mail->Body = "{$mensajeHtml} <br /><br />Formulario de ejemplo. By DonWeb<br />" . "Telefono: " . $tel; // Texto del email en formato HTML
+$mail->Body = "{$mensajeHtml} <br /><br />Formulario de ejemplo. By DonWeb<br />"; // Texto del email en formato HTML
 $mail->AltBody = "{$mensaje} \n\n Formulario de ejemplo By DonWeb"; // Texto sin formato HTML
 // FIN - VALORES A MODIFICAR //
 
@@ -53,4 +52,3 @@ if($estadoEnvio){
 } else {
     echo "Ocurrió un error inesperado.";
 }
-?>
