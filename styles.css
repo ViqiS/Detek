@@ -1,1567 +1,1661 @@
-        :root {
-            --white: #ffffff;
-            --black: #000;
-            --crema: #FAD6A5;
-            --verde-claro: #9BA17B;
-            --verde-oscuro: #61764B;
-            --verde-agua: #CFB997;
-            --font: 'Montserrat', sans-serif;
-            --mini: 1.2rem;
-            --sm: 1.4rem;
-            --md: 1.6rem;
-            --lg: 1.8rem;
-            --st: 3rem;
-            --tt: 5rem;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        html {
-            font-size: 62.5%;
-        }
-        body {
-            background-color: var(--black);
-        }
-        .inactive {
-            display: none;
-        }
-        
-        /* Portada index */
-        .seccion-portada {
-            height: 55vh;
-            width: 100%;
-        }
-        .portada {
-            width: 100%;
-            height: 55vh;/* 80vh en 1920*1080 */
-            overflow: hidden;
-        }
-        .imagen-portada {
-            width: 100%;
-            height: fit-content;
-        }
-        .imagen-portada figure img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .titulo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 375px;
-            height: 6rem;
-            font-family: var(--font);
-            font-size: 6rem;
-            color: var(--white);
-            position: absolute;
-            top: 33%;
-            left: 0;
-            padding: 0 50px;
-        }
-        /* Portada empresa */
-        .seccion-portada-empresa { 
-            height: 55vh;
-            width: 100%;
-        }
-        .portada-empresa {
-            width: 100%;
-            height: 55vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-        .imagen-portada-empresa {
-            width: 100%;
-            height: fit-content;
-        }
-        .imagen-portada-empresa figure img{
-            width: 100%;
-            object-fit: cover;
-            position: absolute;
-            height: 55vh;
-        }
-        .titulo-nuestra-empresa {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            font-family: var(--font);
-            font-size: xx-large;
-            font-weight: bold;
-            color: var(--white);
-            position: relative;
-            left: 0;
-            padding: 0 15px;
-            text-align: center;
-            -webkit-text-stroke: 1px var(--white);
-        }
-        /* Portada electronica */
-        .seccion-portada-electronica { 
-            height: 55vh;
-            width: 100%;
-        }
-        .portada-electronica {
-            width: 100%;
-            height: 55vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-        }
-        .imagen-portada-electronica {
-            width: 100%;
-            height: fit-content;
-        }
-        .imagen-portada-electronica figure img{
-            width: 100%;
-            object-fit: cover;
-            position: absolute;
-            height: 55vh;
-        }
-        .titulo-elect {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            width: 200px;
-            font-family: var(--font);
-            font-weight: bold;
-            color: var(--white);
-            position: relative;
-            left: 0;
-            padding: 0 15px;
-            bottom: 3rem;
-        }
-        /* Portada deportes */
-        .seccion-portada-deportes { 
-            height: 55vh;
-            width: 100%;
-        }
-        .portada-deportes {
-            width: 100%;
-            height: 55vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: flex-end;
-        }
-        .imagen-portada-deportes {
-            width: 100%;
-            height: fit-content;
-        }
-        .imagen-portada-deportes figure img{
-            width: 100%;
-            object-fit: cover;
-            position: absolute;
-            height: 55vh;
-        }
-        .titulo-deportes {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            font-size: 3rem;
-            font-family: var(--font);
-            font-weight: bold;
-            color: var(--white);
-            position: relative;
-            left: 0;
-            padding: 0 15px;
-        }
-        
-        /* Navbar */
-        .detek {
-            display: flex;
-            justify-content: flex-start;
-            height: 6.5rem;
-            color: var(--white);
-            align-items: center;
-            font-family:var(--font);
-            font-size: 2rem;
-        }
-        .menu {
-            position: fixed;
-            display: flex;
-            width: 100%;
-            z-index: 2;
-            background-color: var(--black);
-            justify-content: end;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .seccion-logo {
-            margin-left: 1rem;
-            display: flex;
-        }
-        .logo {
-            height: 65px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 4px;
-        }
-        .line1, .line2 {
-            height: 0.3rem;
-            width: 1.6rem;
-            background-color: var(--white);
-        }
-        .seccion-navbar {
-            display: flex;/* flex */
-            justify-content: end;
-        }
+:root {
+    --white: #ffffff;
+    --black: #000;
+    --crema: #FAD6A5;
+    --verde-claro: #9BA17B;
+    --verde-oscuro: #61764B;
+    --verde-agua: #CFB997;
+    --font: 'Montserrat', sans-serif;
+    --mini: 1.2rem;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --st: 3rem;
+    --tt: 5rem;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: var(--black);
+}
+.inactive {
+    display: none;
+}
 
-        .contenedor-navbar {
-            width: auto;
-            height: 6.5rem;        
-        }    
-        
-        .logo p {
-            color: var(--white);
-            font-size: 3rem;
-            font-family: 'M PLUS 1p', sans-serif;
-            align-items: center;
-            display: flex;
-            letter-spacing: -0.1rem;
-        }
-        p .k {
-            width: 100%;
-            height: 100%;
-        }
-        .k {
-            transform: rotateY(180deg);
-        }
-        
-        .menu-hamburguesa {
+/* Portada index */
+.seccion-portada {
+    height: 55vh;
+    width: 100%;
+}
+.portada {
+    width: 100%;
+    height: 55vh;/* 80vh en 1920*1080 */
+    overflow: hidden;
+}
+.imagen-portada {
+    width: 100%;
+    height: fit-content;
+}
+.imagen-portada figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    height: 6rem;
+    font-family: var(--font);
+    font-size: 6rem;
+    color: var(--white);
+    position: absolute;
+    top: 33%;
+    left: 0;
+    padding: 0 50px;
+}
+/* Portada empresa */
+.seccion-portada-empresa { 
+    height: 55vh;
+    width: 100%;
+}
+.portada-empresa {
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.imagen-portada-empresa {
+    width: 100%;
+    height: fit-content;
+}
+.imagen-portada-empresa figure img{
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    height: 55vh;
+}
+.titulo-nuestra-empresa {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: var(--font);
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--white);
+    position: relative;
+    left: 0;
+    padding: 0 15px;
+    text-align: center;
+    -webkit-text-stroke: 1px var(--white);
+}
+/* Portada electronica */
+.seccion-portada-electronica { 
+    height: 55vh;
+    width: 100%;
+}
+.portada-electronica {
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.imagen-portada-electronica {
+    width: 100%;
+    height: fit-content;
+}
+.imagen-portada-electronica figure img{
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    height: 55vh;
+}
+.titulo-elect {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 200px;
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--white);
+    position: relative;
+    left: 0;
+    padding: 0 15px;
+    bottom: 3rem;
+}
+/* Portada deportes */
+.seccion-portada-deportes { 
+    height: 55vh;
+    width: 100%;
+}
+.portada-deportes {
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+.imagen-portada-deportes {
+    width: 100%;
+    height: fit-content;
+}
+.imagen-portada-deportes figure img{
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    height: 55vh;
+}
+.titulo-deportes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 3rem;
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--white);
+    position: relative;
+    left: 0;
+    padding: 0 15px;
+}
 
-            display: flex;
-            width: 4rem;
-            height: 3rem;
-            margin-right: 2rem;
-        }
-        .seccion-navbar ul{
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            background-color: var(--black);
-            height: 6.5rem;
-            font-family: var(--font);
-            font-size: var(--sm);
-            letter-spacing: 3px;
-            font-weight: bold;
-        }
-        .navbar-menu {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 2rem;
-        }
-        .navbar-menu a{
-            list-style: none;
-            text-decoration: none;
-            border-right: 1px solid var(--verde-claro);
-            padding-right: 0.5rem;
-            color: var(--verde-oscuro);
+/* Navbar */
+.ancla-inicio {
+    text-decoration: none;
+}
+.detek {
+    display: flex;
+    justify-content: flex-start;
+    height: 6.5rem;
+    color: var(--white);
+    align-items: center;
+    font-family:var(--font);
+    font-size: 2rem;
+}
+.menu {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--black);
+    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
+}
+.seccion-logo {
+    margin-left: 1rem;
+    display: flex;
+}
+.logo {
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+.line1, .line2 {
+    height: 0.3rem;
+    width: 1.6rem;
+    background-color: var(--white);
+}
+.seccion-navbar {
+    display: flex;/* flex */
+    justify-content: end;
+}
 
-        }
-        .menu .navbar-menu a:hover {
-            background-color: none;
-            color: var(--verde-claro);
-        }
-        /* navbarmobilemenu */
+.contenedor-navbar {
+    width: auto;
+    height: 6.5rem;        
+}    
 
-        .contenedor-mobile {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;/* cambios para fusion */;
-            border: 30px;
-            margin-top: 6.4rem;
-        }
+.logo p {
+    color: var(--white);
+    font-size: 3rem;
+    font-family: 'M PLUS 1p', sans-serif;
+    align-items: center;
+    display: flex;
+    letter-spacing: -0.1rem;
+}
+p .k {
+    width: 100%;
+    height: 100%;
+}
+.k {
+    transform: rotateY(180deg);
+}
 
-        .menu-mobile {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            background-color: var(--black);
-            width: 100%;
-            align-items: flex-end;
-            padding-right: 2rem;
-        }
-        .menu-mobile a{
-            position: relative;
-            list-style: none;
-            text-decoration: none;
-            padding-right: 0.5rem;
-            color: var(--verde-oscuro);
-            cursor: pointer;
-            font-size: var(--sm);
-            letter-spacing: 3px;
-            font-weight: bold;
-            margin-bottom: 3rem;
-            font-family: var(--font);
-        }
-        .menu-mobile a:before,
-        .menu-mobile a:after {
-            content: "";
-            position: absolute;
-            height: 3px;
-            width: 0;
-            background: var(--verde-oscuro);
-            transition: .5s;
-        }
-        .menu-mobile a:after {
-            left: 0;
-            bottom: -10px;
-        }
-        .menu-mobile a:before {
-            right: 0;
-            top: -10px;
-        }
-        .menu-mobile a:hover:after,
-        .menu-mobile a:hover:before {
-            width: 100%;
-        }
-        /* Contenido index */
-        .subtitulo {
-            margin-top: 5rem;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            font-family: var(--font);
-            font-size: 2rem;
-            color: var(--verde-claro);
-        }
-        /* Presentacion */
-        .presentacion {
-            width: 100%;
-            height: fit-content; /* 793px;/* estaba 600px */
-            
-            margin-top: 5rem;
-            background-color: rgb(29, 29, 29);
-            border-radius: 82% 18% 49% 51% / 43% 79% 21% 57% ;
-            justify-content: space-around;
-        }
-        .imagen-presentacion {
-            width: 100%;/*530px;/* 600px */
-            height: fit-content;
-            display: flex;
-        }
-        .imagen-presentacion img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20% 100% 49% 51% / 100% 22% 78% 0% ;
+.menu-hamburguesa {
 
-        }
-        .presentacion p{
-            height: fit-content;
-            width: 90%;/* 500px; */
-            padding: 1rem 2rem;
-            font-size: var(--sm);
-            font-family: var(--font);
-            color: var(--white);
-            border-right: 1px solid var(--verde-claro);
-        }
-        .empresa-info {
-            width: 100%;
-            height: fit-content;
-        }
-        /* Contenido empresa*/
-        .nuestra-empresa {
-            width: 100%;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-        }
-        .elegirnos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 50px 25px 50px 25px;
-        }
-        .titulo-empresa {
-            text-align: center;
-            width: 100%;
-            height: fit-content;
-            font-size: var(--md);
-            color: var(--verde-claro);
-            font-family: var(--font);
-        }
-        .subtitulo-empresa {
-            text-align: center;
-            width: 100%;
-            height: fit-content;
-            font-size: var(--sm);
-            color: var(--white);
-            font-family: var(--font);
-            margin-top: 2rem;
-        }
-        .texto {
-            color: var(--crema);
-            font-size: var(--sm);
-            font-family: var(--font);
-            width: 100%;
-            margin-top: 2rem;
-        }
-        div .iconos-empresa {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-        .iconos-empresa {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            margin-top: 10px;
-            padding: 5px;
-        }
-        .iconos-empresa img {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        /* Soluciones */
+    display: flex;
+    width: 4rem;
+    height: 3rem;
+    margin-right: 2rem;
+}
+.seccion-navbar ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--black);
+    height: 6.5rem;
+    font-family: var(--font);
+    font-size: var(--sm);
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+.navbar-menu a{
+    list-style: none;
+    text-decoration: none;
+    border-right: 1px solid var(--verde-claro);
+    padding-right: 0.5rem;
+    color: var(--verde-oscuro);
 
-        .soluciones {
-            width: 95%;
-            height: fit-content;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-content: center;
-            position: relative;
-            margin: auto;
-        }
-        .imagen-soluciones {
-            width: 100%;
-            height: 350px;
-            display: flex;      
-            background-color: var(--verde-oscuro);
-            border-radius: 20% 100% 49% 51% / 100% 22% 78% 0%;
-        }
-        .imagen-soluciones img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: opacity(75%);
-            border-radius: 20% 100% 49% 51% / 100% 22% 78% 0%;
-        }
-        .empresa-informacion {
-            width: 100%;
-            height: fit-content;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 2rem;
+}
+.menu .navbar-menu a:hover {
+    background-color: none;
+    color: var(--verde-claro);
+}
+/* navbarmobilemenu */
 
-        }
-        .info-listado {
-            font-family: var(--font);
-            font-size: var(--sm);
-            width: 100%;
-            text-align: center;
-            color: var(--verde-claro);
-            align-self: center;
-            margin-bottom: 2rem;
-        }
-        .funcionalidad p {
-            color: var(--white);
-            font-family: var(--font);
-            font-size: var(--sm);
-            width: 100%;
-        }
-        .contenedor-listado {
-            padding: 1rem;
-            display: flex;
-            flex-direction: row;
-            width: fit-content;
-            height: fit-content;
-            justify-content: space-around;
-            border-radius: 8px;
-            -webkit-box-shadow: 0px 0px 10px 0px var(--verde-claro);
-            -moz-box-shadow: 0px 0px 10px 0px var(--verde-claro);
-            box-shadow: 0px 0px 10px 0px var(--verde-claro);
-        }
-        .funcionalidad {
-            display: grid;
-            grid-template-columns: auto;
-            gap: 2rem;
-            font-family: var(--font);
-            font-size: var(--sm);
-            color: var(--white);
-        }
-        .custom-shape-divider-top-1673615515 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
-        }
+.contenedor-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;/* cambios para fusion */;
+    border: 30px;
+    margin-top: 6.4rem;
+}
 
-        .custom-shape-divider-top-1673615515 svg {
-            position: relative;
-            display: block;
-            width: calc(106% + 1.3px);
-            height: 121px;
-            transform: rotateY(180deg);
-        }
-
-        .custom-shape-divider-top-1673615515 .shape-fill {
-            fill: #313131;
-        }
-        /* Contenido pesaje */
-        .titulo-pesaje {
-            width: 90%;
-            font-size: var(--st);
-            font-family: var(--font);
-            color: var(--white);
-            text-align: center;
-        }
-        .contenedor-pesaje {
-            width: 100%;
-            height: fit-content;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 2rem;
-            }
-
-        .cards-pesaje-contenedor {
-            width: 300px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            grid-auto-rows: 300px;      
-            justify-items: center;
-            align-items: center;
-            justify-content: center;  
-            border-radius: 8px;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }  
-        .producto {
-
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 3px 5px 5px rgb(61, 61, 61);
-            position: relative;
-            
-        }
-        .iconcontrol {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-        }   
-        .iconpesaje {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .product-info-electronica {
-            color: var(--white);
-            font-family: var(--font);
-            font-size: var(--mini);
-            width: 300px;
-            height: auto;
-            margin-bottom: 2rem;
-        }
-        .product-info-electronica li,
-        .product-info-electronica p {
-            margin-bottom: 1rem;
-        }
-        /* Contenido deportes */
-        .texto-deportes {
-            display: flex;
-            justify-content: center;
-            font-size: var(--sm);
-            color: var(--verde-agua);
-            font-family: var(--font);
-            height: 60px;
-            margin: 2rem;
-            align-items: center;
-            text-align: center;
-        }
-        .cards-deportes {
-            display: grid;
-            gap: 26px;/* separacion entre cards */
-            place-content: center;
-            justify-content: space-around;
-            margin-bottom: 5rem;
-            grid-template-columns: repeat(1, 155px);/* 240px */
-            
-        }
-        .card-deportes {
-            width: 155px;/* 240px; */
-            height: 150px;
-            border: 1px solid gray;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: box-shadow 620ms ease-out;
-        }
-        .card-deportes img { 
-            max-width: 134px;
-            height: 86px;
-            object-fit: cover;
-        }
-        .disciplinas-text {
-            font-size: 1.5rem;
-            color: var(--verde-claro);
-            font-family:  var(--font);
-            font-weight: bold;
-            text-decoration-line: none;
-            margin-top: 1rem;
-        }
-        .card-deportes a {
-            width: 100%;
-            text-decoration: none;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .card-deportes:hover {
-            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
-        }
-        .clientes {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: fit-content;
-            width: 100%;
-        }
-        .card-clientes {
-            padding: 1rem;
-            margin-bottom: 2rem;
-            display: grid;
-            grid-template-columns: auto auto auto auto auto;
-            grid-column-gap: 2rem;
-            width: fit-content;
-            height:100%;
-            justify-items: center;
-            align-items: center;
-            align-content: space-evenly;
-            justify-content: center;
-            border-radius: 8px;
-            -webkit-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
-            -moz-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
-            box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
-        }
-        .card-clientes img {
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 4px;
-        }
-
-        .espacio {
-            width: 100%;
-            height: fit-content;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .contenedor-imagen {
-            width: 80vw;
-            height: 300px;
-            background-color: var(--gris);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 69% 100% 33% 28% / 46% 36% 41% 100%  ;
-        }
-        .contenedor-imagen img {
-            width: 90%;
-            height: 90%;
-            object-fit: cover;
-            border-radius: 86% 63% 34% 43% / 51% 24% 38% 72% ;
-        }
-
-        .nuestro {
-            width: 100%;
-        }
-
-        .nuestros {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 150px;
-            font-family: var(--font);
-            color: var(--crema);
-            font-size: var(--lg);
-        }
-        /* Contenido disciplinas */
-        .contenedor-disciplinas {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: fit-content;
-            width: 100%;
-            margin-top: 5rem;
-            flex-direction: column;
-        }
-        .cards-disciplinas {
-            width: 100%;
-            /* height: fit-content; */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .imgvoley1 {
-            width: 338px;
-            height: 252px;
-        }
-        .imgvoley2 {
-            width: 338px;
-            height: 410px;
-        }
-        .imgfutbol {
-            width: 270px;
-            height: 270px;
-        }
-        .imgarqueria {
-            width: 330px;
-            height: 350px;
-        }
-        .imgwateropolo1 {
-            width: 345px;
-            height: 250px;
-        }
-        .imgwateropolo2 {
-            width: 345px;
-            height: 529px;
-        }
-        .imgwateropolo3 {
-            width: 345px;
-            height: 222px;
-        }
-        .imgbasquet1 {
-            width: 300px;
-            height: 300px;
-        }
-        .imgbasquet2 {
-            width: 300px;
-            height: 300px;
-        }
-        .imghokey1 {
-            width: 366px;
-            height: 125px;
-        }
-        .imghokey2 {
-            width: 366px;
-            height: 194px;
-        }
-        .imghokey3 {
-            width: 366px;
-            height: 260px;
-        }
-        .imgrunners1 {
-            width: 300px;
-            height: 210px;
-        }
-        .imgrunners2 {
-            width: 300px;
-            height: 282px;
-        }
-        .texto-disciplinas{
-            font-size: var(--tt);
-            font-family: var(--font);
-            color: var(--white);
-            text-align: center;
-            width: 90%
-        }
-        .caracteristicas-disciplinas {
-            color: var(--white);
-            font-family: var(--font);
-            font-size: var(--mini);
-            width: 300px;
-            height: auto;
-            margin-bottom: 2rem;
-            text-align: justify;
-        }
-        .imagen-disciplinas {
-            /* width: 270px;
-            height: 270px; */
-            display: flex;
-            justify-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            flex-direction: column;
-        }
-        .imagen-disciplinas img  {
-            /* width: 100%;
-            height: 100%; */
-            object-fit: cover;
-            max-width: 1200px;
-        }
-        /* Contactanos */
-        .contactanos {
-            width: 100%;
-            height: 300px;/*395px; 500px */
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 2rem;
-
-        }
-        .contactanos img {
-            width: 100%;
-            height: 100%;
-            filter: blur(4px);
-            object-fit: cover;
-            position: absolute;
-            opacity: 0.6;
-            
-        }
-        .contactanos p {
-            font-size: 2rem;/* 3rem; 6rem */
-            font-weight: bolder;
-            color: var(--white); 
-            position: relative;
-            z-index: 1;
-            width: fit-content;
-            height: fit-content;
-            background: rgb(255,255,255);
-            background: linear-gradient(0deg, rgba(255,255,255,0.5472008627669818) 0%, rgba(97,118,75,0.5275930196297269) 100%);
-            font-family: var(--font);
-            border-radius: 8px;
-            box-shadow: inset 0 0 0 0 var(--verde-claro);
-            transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-            }
-            .contactanos a {
-                text-decoration: none;
-            }
-
-        .contactanos p:hover {
-            box-shadow: inset 500px 0 0 0 var(--verde-claro) ;
-            color: white;
-            cursor: pointer;           
-        }
-        /* Contenido electronica */
-        .texto1 {
-            display: flex;
-            justify-content: center;
-            font-size: var(--md);
-            color: var(--white);
-            font-family: var(--font);
-            height: 60px;
-            margin-top: 5rem;
-            align-items: center;
-        }
-        .cards-rubros {
-            display: grid;
-            gap: 26px;/* separacion entre cards */
-            place-content: center;
-            justify-content: space-around;
-            margin-bottom: 5rem;
-        }
-        .card-rubros {
-            width: 240px;
-            height: 150px;
-            border: 1px solid gray;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: box-shadow 620ms ease-out;
-        }
-        .card-rubros img { 
-            max-width: 134px;
-            height: 86px;
-            object-fit: cover;
-        }
-        .texto2 {
-            font-size: 25px;
-            color: var(--verde-oscuro);
-            font-family:  var(--font);
-            font-weight: bold;
-            text-decoration-line: none;
-        }
-        .card-rubros a {
-            width: 100%;
-            text-decoration: none;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .card-rubros:hover {
-            box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
-        }
-        /* CONTACTO */
-        /* Container */
-        .contenedor-contacto {
-            width: 320px;
-            height: 600px;
-            display: flex;
-            align-items: center;
-        }
-        .contact-contacto{
-            width: 100%;
-            height: 100vh;
-            display: grid;
-            place-items: center;
-        }
-        .form-container {
-            height: 55rem;
-            font-family: var(--font);
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            width: 320px;
-            background-color: var(--black);
-            border-radius: 6px;
-            border: 1px solid var(--verde-oscuro);
-            padding: 20px 20px
-        }
-
-        /* Flecha */
-        .flecha {
-            width: 20px;
-            height: 20px;
-            transform: rotate(-180deg);
-        }
-
-        /* logo-contacto */
-        .seccion-logo-contacto {
-            display: flex;
-            justify-content: center;
-        }
-        .logo-contacto {
-            height: 103px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            padding: 4px;
-            width: 170px;
-            letter-spacing: -0.2rem;
-        }
-        .logo-contacto p {
-            color: var(--white);
-            font-size: 7rem;
-            font-family: 'M PLUS 1p', sans-serif;
-            align-items: center;
-            display: flex;
-        }
-        p .k-contact{
-            width: 100%;
-            height: 10%;
-        }
-        .k-contact {
-            transform: rotateY(180deg);
-        }
-        .line1-contact, .line2-contact {
-            height: 0.7rem;
-            width: 3rem;
-            background-color: var(--white);
-        }
-
-        /* Pregunta */
-        .title-pregunta {
-            color: var(--verde-claro);
-            font-size: 18px;
-            width: 100%;
-            margin: 1rem 0;
-        }
-        
-        /* Formulario*/
-        .form div {
-            display: flex;
-            flex-direction: column;
-        }
-        .etiqueta {
-            font-size: var(--sm);
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: var(--white);
-        }
-        .input {
-            background-color: var(--verde-agua);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
-            font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
-        }
-        .input-nombre,
-        .input-email,
-        .input-numero,
-        .input-mensaje {
-            border: 2px solid var(--verde-agua);
-            background-color: transparent;
-        }
-        .boton-enviar {
-            background-color: transparent;
-            border-radius: 8px;
-            border: 1px solid var(--white);
-            color: var(--white);
-            width: 80%;
-            cursor: pointer;
-            font-size: var(--md);
-            font-weight: bold;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            margin-left: 29px;
-        }
-        .send-button {
-            margin-top: 14px;
-            margin-bottom: 30px;
-        }
-         /* background */
-        .gradient-background {
-        background: linear-gradient(91deg,#61764b,#9ba17b,#000000);
-        background-size: 180% 180%;
-        animation: gradient-animation 15s ease infinite;
-        }
-        @keyframes gradient-animation {
-            0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-        background-position: 0% 50%;
-        }
-        }
-
-        /* animation1 */
-        @-webkit-keyframes hvr-wobble-to-bottom-right {
-        16.65% {
-            -webkit-transform: translate(8px, 8px);
-            transform: translate(8px, 8px);
-        }
-        33.3% {
-            -webkit-transform: translate(-6px, -6px);
-            transform: translate(-6px, -6px);
-        }
-        49.95% {
-            -webkit-transform: translate(4px, 4px);
-            transform: translate(4px, 4px);
-        }
-        66.6% {
-            -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-        }
-        83.25% {
-            -webkit-transform: translate(1px, 1px);
-            transform: translate(1px, 1px);
-        }
-        100% {
-            -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-        }
-        }
-        @keyframes hvr-wobble-to-bottom-right {
-        16.65% {
-            -webkit-transform: translate(8px, 8px);
-            transform: translate(8px, 8px);
-        }
-        33.3% {
-            -webkit-transform: translate(-6px, -6px);
-            transform: translate(-6px, -6px);
-        }
-        49.95% {
-            -webkit-transform: translate(4px, 4px);
-            transform: translate(4px, 4px);
-        }
-        66.6% {
-            -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-        }
-        83.25% {
-            -webkit-transform: translate(1px, 1px);
-            transform: translate(1px, 1px);
-        }
-        100% {
-            -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-        }
-        }
-        .hvr-wobble-to-bottom-right {
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-transform: perspective(1px) translateZ(0);
-        transform: perspective(1px) translateZ(0);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        }
-        .hvr-wobble-to-bottom-right:hover, .hvr-wobble-to-bottom-right:focus, .hvr-wobble-to-bottom-right:active {
-        -webkit-animation-name: hvr-wobble-to-bottom-right;
-        animation-name: hvr-wobble-to-bottom-right;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-timing-function: ease-in-out;
-        animation-timing-function: ease-in-out;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
-        }
-         /* Footer */
-        .container-footer {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 50rem;
-            margin-bottom: 0.5rem;
-            
-        }
-        footer {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            border-top: 1px solid rgb(100, 98, 98);
-        }
-
-        /* Redes */
-        .redes {
-            width: 375px;
-            display: flex;
-            justify-items: center;
-            margin-top: 2.5rem;
-            flex-direction: column;
-            align-items: center;
-        }
-        .span-seguinos {
-            font-family: var(--font);
-            font-size: 1.2rem;
-            color: var(--white);
-        }
-        .redes .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-            width: 100px;
-        }
-        .redes ul li a {
-            display: flex;
-            justify-content: center;
-            align-content: space-between;
-            width: 3rem;
-            height: 3rem;
-            margin-right: 5px;
-        }
-        .facebook img {
-            background-color: #4f60ff;/* 6EDF44 codigo de color de los iconos */
-        }
-        ul li {
-            text-decoration: none;
-            list-style: none;
-        }
-        ul li img{
-            border-radius: 50%;
-        }
-        
-
-        /* Derechos */
-        .derechos {
-            background-color: var(--black);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1.2rem;
-            color: var(--white);
-            font-family: var(--font);
-            width: 100%;
-            justify-content: space-around;
-        }
-        .copyright {
-            height: 6rem;
-            width: 58%;
-            display: flex;
-            flex-direction: column;
-            justify-content: baseline;
-        }
-        .copyright p {
-            width: 100%;
-            text-align: center;
-        }
-
-        /* contacto-footer */
-        .contact {
-            display: flex;
-            flex-direction: column;
-            color: var(--white);
-            font-size: 1.2rem;
-            font-family: var(--font);
-            margin-top: 20px;
-            width: 100%;
-            padding-left: 3rem;
-        }
-        .telefonos p {
-            margin-top: 1rem;
-        }
-        
-        @media (max-width: 375px ) {/* hasta 375px pasa esto */
-            .detek {
-                display: none;
-            }
-            .titulo-elect {
-                font-size: 1.5rem;
-                width: 147px;
-            }
-            
-        }
-        @media (min-width: 376px ) {/* dwesde 376px pasa esto */
-            .subtitulo{ 
-                font-size:3rem;
-            }
-            .titulo-elect {
-                font-size: 2.5rem;
-                width: 253px;
-            }
-            .product-info-electronica {
-                width: 90vw;
-            }
-            .product-info-electronica p,
-            .product-info-electronica li {
-                width: 100%;
-                padding-left: 2rem;
-                font-size: var(--sm);
-                text-align: justify;
-            }
-            .cards-deportes {
-                grid-template-columns: repeat(2, 150px);
-            }
-            .card-deportes { 
-                width: 150px;
-            }
-            .caracteristicas-disciplinas {
-                width: 90vw;
-                font-size: var(--sm);
-            }
-            .texto-deportes {
-                font-size: var(--lg);
-            }
-            .titulo-deportes {
-                font-size: 4rem;
-                justify-content: flex-start;
-            }
-            .contactanos {
-                height: 350px;
-            }
-            .copyright {
-                width: 80%;
-            }
-        }
-        @media (min-width:525px) {
-            .titulo-deportes {
-                color: var(--black);
-            }
-            .texto-deportes {
-                font-size: 2.5rem;
-            }
-            .card-clientes {
-                grid-template-columns: auto auto auto auto auto auto auto;
-            }
-            .card-clientes img {
-            width: 50px;
-            height: 50px;
-            }
-            .contenedor-imagen {
-                height: 500px;
-            }
-            .nuestros {
-                font-size: 30px;
-            }
-            .titulo-pesaje {
-                text-align: left;     
-                padding-left: 2rem;
-            }
-            .cards-pesaje-contenedor {    
-                grid-auto-rows: 400px; 
-                width: 500px;
-            }
-            .texto-disciplinas {
-                text-align: left;
-            }
-            .caracteristicas-disciplinas {
-                text-align: left;
-            }
-        }
-        @media (min-width: 650px) {
-            .soluciones {
-                flex-direction: row;
-            }
-            .imagen-soluciones {
-                height: 420px;
-            }
-            .imgfutbol {
-                width: 400px;
-                height: 400px;
-            }
-            .imgvoley1 {
-                width: 468px;
-                height: 382px;/* se sube 130px a cada width y heigth */
-            }
-            .imgvoley2 {
-                width: 468px;
-                height: 602px;
-            }
-            .imgarqueria {
-                width: 460px;
-                height: 480px;
-            }
-            .imgwateropolo1 {
-                width: 505px;
-                height: 380px;
-            }
-            .imgwateropolo2 {
-                width: 505px;
-                height: 659px;
-            }
-            .imgwateropolo3 {
-                width: 505px;
-                height: 352px;
-            }
-            .imgbasquet1, .imgbasquet2 {
-                width: 500px;
-                height: 500px;
-            }
-            .imghokey1 {
-                width: 585px;
-                height: 212px;
-            }
-            .imghokey2 {
-                width: 585px;
-                height: 324px;
-            }
-            .imghokey3 {
-                width: 585px;
-                height: 390px;
-            }
-            .imgrunners1 {
-                width: 430px;
-                height: 300px;
-            }
-            .imgrunners2 {
-                width: 430px;
-                height: 412px;
-            }
-        }
-        @media (min-width: 781px) {/* desde 781px pasa esto */
-            
-            .subtitulo{ 
-                font-size:var(--tt);
-            }
-            .presentacion p {
-                width: 90%;
-                padding: 2rem;
-                font-size: var(--lg);
-            }
-            .presentacion {
-                display: flex;
-            }
-            .imagen-presentacion {
-                width: 920px;
-                height: 600px;
-            }
-            .empresa-info {
-                width: 550px;
-                height: fit-content;
-            }
-            /* Electronica */
-            .titulo-elect {
-                font-size: 3.3rem;
-                width: 280px;
-            }
-            .cards-rubros {
-                grid-template-columns: repeat(3, 240px);
-            }
-            /* Pesaje */
-            .titulo-pesaje {
-                font-size: 4rem;
-            }
-            .cards-pesaje-contenedor {
-                grid-template-columns: 1fr 1fr;   
-                grid-auto-rows: 500px; 
-                width: 750px;
-            }
-            /* Deportes */
-            .cards-deportes {
-                grid-template-columns: repeat(3, 240px);
-            }
-            .card-deportes { 
-                width: 240px;
-            }
-            .titulo-deportes {
-                font-size: var(--tt);
-            }
-            .card-clientes {
-                grid-template-columns: auto auto auto auto auto auto auto auto ;
-            }
-            .card-clientes img {
-                width: 60px;
-                height: 60px;
-            }
-            .imgfutbol {
-                width: 500px;
-                height: 500px;
-            }
-            .imgvoley1 {
-                width: 568px;
-                height: 482px;/* se sube 100px a cada width y heigth */
-            }
-            .imgvoley2 {
-                width: 568px;
-                height: 721px;
-            }
-            .imgarqueria {
-                width: 800px;
-                height: 487px;
-            }
-            .imgwateropolo1 {
-                width: 635px;
-                height: 480px;
-            }
-            .imgwateropolo2 {
-                width: 635px;
-                height: 900px;
-            }
-            .imgwateropolo3 {
-                width: 635px;
-                height: 438px;
-            }
-            .imgbasquet1, .imgbasquet2 {
-                width: 700px;
-                height: 700px;
-            }
-            .imghokey1 {
-                width: 851px;
-                height: 277px;
-            }
-            .imghokey2 {
-                width: 596px;
-                height: 424px;
-            }
-            .imghokey3 {
-                width: 596px;
-                height: 490px;
-            }
-            .imgrunners1 {
-                width: 530px;
-                height: 363px;
-            }
-            .imgrunners2 {
-                width: 530px;
-                height: 512px;
-            }
-            /* index-contactanos*/
-            .contactanos {
-                height: 750px;
-            }
-            .contactanos p {
-                font-size: var(--tt);
-            }
-            /* footer */
-            .container-footer {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                justify-content: space-between;
-                height: 20rem;
-                width: 100%;
-            }
-            .redes {
-                height: 100%;
-                width: 100%;
-                justify-items: center;
-            }
-            .derechos .logo p {
-                font-size: var(--tt);
-            }
-            .derechos .line1,
-            .derechos .line2 {
-            height: 0.5rem
-            }
-            /* media-empresa */
-            .titulo-nuestra-empresa{ 
-                font-size:var(--tt);
-            }
-            .subtitulo-empresa {
-                font-size: var(--md);
-            }
-            .texto {
-                font-size: var(--md);
-            }
-            .info-listado {
-                font-size: var(--md);
-            }
-        }
-        @media (min-width:959px) {
-            .menu-hamburguesa {
-                display: none;
-            }
-            .contenedor-mobile {
-                display: none;
-            }
-            .titulo-elect {
-                font-size: var(--tt);
-                width: 400px;
-                margin-bottom: 5rem;
-            }
-            .titulo-pesaje {
-                font-size: var(--tt);
-            }
-            .imgarqueria {
-                width: 1000px;
-                height: 587px;
-            }
-            .cards-pesaje-contenedor {
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-auto-rows: 400px; 
-                width: 90%;
-            }
-            .card-clientes {
-                grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-            }
-            .imgbasquet1, .imgbasquet2 {
-                width: 1000px;
-                height: 700px;
-            }
-            .imghokey1 {
-                width: 1200px;
-                height: 455px;
-            }
-            .imgrunners1 {
-                width: 820px;
-                height: 558px;
-            }
-            .imgrunners2 {
-                width: 820px;
-                height: 1150px;
-            }
-            .contenedor-imagen {
-                height: 700px;
-            }
-
-        }
-        @media (max-width: 960px) {
-            .seccion-navbar ul {
-                display: none;
-            }
-        }
-        @media (min-width: 1600px) {
-            .titulo-elect {
-                width: 739px;
-            }        
-        }
+.menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--black);
+    width: 100%;
+    align-items: flex-end;
+    padding-right: 2rem;
+}
+.menu-mobile a{
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    padding-right: 0.5rem;
+    color: var(--verde-oscuro);
+    cursor: pointer;
+    font-size: var(--sm);
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    font-family: var(--font);
+}
+.menu-mobile a:before,
+.menu-mobile a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: var(--verde-oscuro);
+    transition: .5s;
+}
+.menu-mobile a:after {
+    left: 0;
+    bottom: -10px;
+}
+.menu-mobile a:before {
+    right: 0;
+    top: -10px;
+}
+.menu-mobile a:hover:after,
+.menu-mobile a:hover:before {
+    width: 100%;
+}
+/* Contenido index */
+.subtitulo {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 2rem;
+    color: var(--verde-claro);
+}
+/* Presentacion */
+.presentacion {
+    width: 100%;
+    height: fit-content; /* 793px;/* estaba 600px */
     
+    margin-top: 5rem;
+    background-color: rgb(29, 29, 29);
+    border-radius: 82% 18% 49% 51% / 43% 79% 21% 57% ;
+    justify-content: space-around;
+}
+.imagen-presentacion {
+    width: 100%;/*530px;/* 600px */
+    height: fit-content;
+    display: flex;
+}
+.imagen-presentacion img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20% 100% 49% 51% / 100% 22% 78% 0% ;
+
+}
+.presentacion p{
+    height: fit-content;
+    width: 90%;/* 500px; */
+    padding: 1rem 2rem;
+    font-size: var(--sm);
+    font-family: var(--font);
+    color: var(--white);
+    border-right: 1px solid var(--verde-claro);
+}
+.empresa-info {
+    width: 100%;
+    height: fit-content;
+}
+/* Contenido empresa*/
+.nuestra-empresa {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.elegirnos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 25px 50px 25px;
+}
+.titulo-empresa {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    font-size: var(--md);
+    color: var(--verde-claro);
+    font-family: var(--font);
+}
+.subtitulo-empresa {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    font-size: var(--sm);
+    color: var(--white);
+    font-family: var(--font);
+    margin-top: 2rem;
+}
+.texto {
+    color: var(--crema);
+    font-size: var(--sm);
+    font-family: var(--font);
+    width: 100%;
+    margin-top: 2rem;
+}
+div .iconos-empresa {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.iconos-empresa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+}
+.iconos-empresa img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Soluciones */
+
+.soluciones {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    margin: auto;
+}
+.imagen-soluciones {
+    width: 100%;
+    height: 350px;
+    display: flex;      
+    background-color: var(--verde-oscuro);
+    border-radius: 20% 100% 49% 51% / 100% 22% 78% 0%;
+}
+.imagen-soluciones img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: opacity(75%);
+    border-radius: 20% 100% 49% 51% / 100% 22% 78% 0%;
+}
+.empresa-informacion {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+
+}
+.info-listado {
+    font-family: var(--font);
+    font-size: var(--sm);
+    width: 100%;
+    text-align: center;
+    color: var(--verde-claro);
+    align-self: center;
+    margin-bottom: 2rem;
+}
+.funcionalidad p {
+    color: var(--white);
+    font-family: var(--font);
+    font-size: var(--sm);
+    width: 100%;
+}
+.contenedor-listado {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    justify-content: space-around;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 10px 0px var(--verde-claro);
+    -moz-box-shadow: 0px 0px 10px 0px var(--verde-claro);
+    box-shadow: 0px 0px 10px 0px var(--verde-claro);
+}
+.funcionalidad {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 2rem;
+    font-family: var(--font);
+    font-size: var(--sm);
+    color: var(--white);
+}
+.custom-shape-divider-top-1673615515 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1673615515 svg {
+    position: relative;
+    display: block;
+    width: calc(106% + 1.3px);
+    height: 121px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1673615515 .shape-fill {
+    fill: #313131;
+}
+/* Contenido pesaje */
+.titulo-pesaje {
+    width: 90%;
+    font-size: var(--lg);
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--white);
+    text-align: center;
+}
+.contenedor-pesaje {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    }
+
+.cards-pesaje-contenedor {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    grid-auto-rows: 300px;      
+    justify-items: center;
+    align-items: center;
+    justify-content: center;  
+    border-radius: 8px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+} 
+
+.producto {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+.iconcontrol {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+} 
+.iconpesaje {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.control1,
+.control7,
+.pesaje7, 
+.pesaje8,
+.pesaje9 {
+    object-fit: contain;
+}
+.product-info-electronica {
+    color: var(--white);
+    font-family: var(--font);
+    font-size: var(--mini);
+    width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+.product-info-electronica li,
+.product-info-electronica p {
+    margin-bottom: 1rem;
+}
+/* Contenido deportes */
+.texto-deportes {
+    display: flex;
+    justify-content: center;
+    font-size: var(--sm);
+    color: var(--verde-agua);
+    font-family: var(--font);
+    height: 60px;
+    margin: 2rem;
+    align-items: center;
+    text-align: center;
+}
+.cards-deportes {
+    display: grid;
+    gap: 26px;/* separacion entre cards */
+    place-content: center;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    grid-template-columns: repeat(1, 155px);/* 240px */
+    
+}
+.card-deportes {
+    width: 155px;/* 240px; */
+    height: 150px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 620ms ease-out;
+}
+.card-deportes img { 
+    max-width: 134px;
+    height: 86px;
+    object-fit: cover;
+}
+.disciplinas-text {
+    font-size: 1.5rem;
+    color: var(--verde-claro);
+    font-family:  var(--font);
+    font-weight: bold;
+    text-decoration-line: none;
+    text-align: center;
+    margin-top: 1rem;
+}
+.card-deportes a {
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-deportes:hover {
+    box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
+}
+/* Manuales */
+.contenedor-manuales {
+    display: grid;
+    gap: 26px;/* separacion entre cards */
+    place-content: center;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    grid-template-columns: repeat(1, 155px);/* 240px */
+    
+}
+.cards-manuales {
+    width: 155px;/* 240px; */
+    height: 150px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 620ms ease-out;
+}
+.cards-manuales a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.titulo-manuales {
+    width: 100%;
+    font-size: var(--st);
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--white);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.texto-manuales p {
+    font-size: 1.5rem;
+    color: var(--verde-claro);
+    font-family:  var(--font);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+.cards-manuales a {
+    text-decoration: none;
+    list-style: none;
+}
+.cards-manuales:hover {
+    box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
+}
+.clientes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+    width: 100%;
+}
+.card-clientes {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 2rem;
+    width: fit-content;
+    height:100%;
+    justify-items: center;
+    align-items: center;
+    align-content: space-evenly;
+    justify-content: center;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
+    box-shadow: 0px 0px 10px 0px rgba(87,87,87,1);
+}
+.card-clientes img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.espacio {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-imagen {
+    width: 80vw;
+    height: 300px;
+    background-color: var(--gris);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 69% 100% 33% 28% / 46% 36% 41% 100%  ;
+}
+.contenedor-imagen img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 86% 63% 34% 43% / 51% 24% 38% 72% ;
+}
+
+.nuestro {
+    width: 100%;
+}
+
+.nuestros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    font-family: var(--font);
+    color: var(--crema);
+    font-size: var(--lg);
+}
+/* Contenido disciplinas */
+.contenedor-disciplinas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    margin-top: 5rem;
+    flex-direction: column;
+}
+.cards-disciplinas {
+    width: 100%;
+    /* height: fit-content; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imgvoley1 {
+    width: 338px;
+    height: 252px;
+}
+.imgvoley2 {
+    width: 338px;
+    height: 410px;
+}
+.imgfutbol {
+    width: 270px;
+    height: 270px;
+}
+.imgarqueria {
+    width: 330px;
+    height: 350px;
+}
+.imgwateropolo1 {
+    width: 345px;
+    height: 250px;
+}
+.imgwateropolo2 {
+    width: 345px;
+    height: 529px;
+}
+.imgwateropolo3, .imgwateropolo4 {
+    width: 345px;
+    height: 222px;
+}
+.imgbasquet1, .imgbasquet2, .imgbasquet3, .imgbasquet4 {
+    width: 300px;
+    height: 300px;
+}
+.imgrugby1, .imgrugby2 {
+    width: 300px;
+    height: 300px;
+}
+.imgrugby3 {
+    width: 300px;
+    height: 360px;
+}
+.imghokey1 {
+    width: 366px;
+    height: 125px;
+}
+.imghokey2 {
+    width: 366px;
+    height: 194px;
+}
+.imghokey3 {
+    width: 366px;
+    height: 260px;
+}
+.imgrunners1 {
+    width: 300px;
+    height: 210px;
+}
+.imgrunners2 {
+    width: 300px;
+    height: 282px;
+}
+.texto-disciplinas{
+    font-size: var(--st);
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--white);
+    text-align: center;
+    width: 90%
+}
+.caracteristicas-disciplinas {
+    color: var(--white);
+    font-family: var(--font);
+    font-size: var(--mini);
+    width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.imagen-disciplinas {
+    /* width: 270px;
+    height: 270px; */
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+.imagen-disciplinas img  {
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+    max-width: 1200px;
+}
+/* Contactanos */
+.contactanos {
+    width: 100%;
+    height: 300px;/*395px; 500px */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+.contactanos img {
+    width: 100%;
+    height: 100%;
+    filter: blur(4px);
+    object-fit: cover;
+    position: absolute;
+    opacity: 0.6;
+    
+}
+.contactanos p {
+    font-size: 2rem;/* 3rem; 6rem */
+    font-weight: bolder;
+    color: var(--white); 
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0.5472008627669818) 0%, rgba(97,118,75,0.5275930196297269) 100%);
+    font-family: var(--font);
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 0 var(--verde-claro);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+    .contactanos a {
+        text-decoration: none;
+    }
+
+.contactanos p:hover {
+    box-shadow: inset 500px 0 0 0 var(--verde-claro) ;
+    color: white;
+    cursor: pointer;           
+}
+/* Contenido electronica */
+.texto1 {
+    display: flex;
+    justify-content: center;
+    font-size: var(--md);
+    color: var(--white);
+    font-family: var(--font);
+    height: 60px;
+    margin-top: 5rem;
+    align-items: center;
+}
+.cards-rubros {
+    display: grid;
+    gap: 26px;/* separacion entre cards */
+    place-content: center;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+.card-rubros {
+    width: 240px;
+    height: 150px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 620ms ease-out;
+}
+.card-rubros img { 
+    max-width: 134px;
+    height: 86px;
+    object-fit: cover;
+}
+.texto2 {
+    font-size: 25px;
+    color: var(--verde-oscuro);
+    font-family:  var(--font);
+    font-weight: bold;
+    text-decoration-line: none;
+}
+.card-rubros a {
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-rubros:hover {
+    box-shadow: 0px 0px 60px 14px var(--verde-oscuro);
+}
+/* CONTACTO */
+/* Container */
+.contenedor-contacto {
+    width: 320px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+.contact-contacto{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.form-container {
+    height: 60rem;
+    font-family: var(--font);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 320px;
+    background-color: var(--black);
+    border-radius: 6px;
+    border: 1px solid var(--verde-oscuro);
+    padding: 20px 20px
+}
+
+/* Flecha */
+.flecha {
+    width: 20px;
+    height: 20px;
+    transform: rotate(-180deg);
+}
+
+/* logo-contacto */
+.seccion-logo-contacto {
+    display: flex;
+    justify-content: center;
+}
+.logo-contacto {
+    height: 103px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 4px;
+    width: 170px;
+    letter-spacing: -0.2rem;
+}
+.logo-contacto p {
+    color: var(--white);
+    font-size: 7rem;
+    font-family: 'M PLUS 1p', sans-serif;
+    align-items: center;
+    display: flex;
+}
+p .k-contact{
+    width: 100%;
+    height: 10%;
+}
+.k-contact {
+    transform: rotateY(180deg);
+}
+.line1-contact, .line2-contact {
+    height: 0.7rem;
+    width: 3rem;
+    background-color: var(--white);
+}
+
+/* Pregunta */
+.title-pregunta {
+    color: var(--verde-claro);
+    font-size: 18px;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Formulario*/
+.form div {
+    display: flex;
+    flex-direction: column;
+}
+.etiqueta {
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+.input {
+    background-color: var(--verde-agua);
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    font-size: var(--md);
+    padding: 6px;
+    margin-bottom: 12px;
+    color: var(--white);
+}
+.input-nombre,
+.input-email,
+.input-numero,
+.input-mensaje {
+    border: 2px solid var(--verde-agua);
+    background-color: var(--black);
+}
+.input-mensaje {
+    height: 80px;
+ }
+.boton-enviar {
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    width: 80%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 29px;
+}
+.send-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+ /* background */
+.gradient-background {
+background: linear-gradient(91deg,#61764b,#9ba17b,#000000);
+background-size: 180% 180%;
+animation: gradient-animation 15s ease infinite;
+}
+@keyframes gradient-animation {
+    0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+background-position: 0% 50%;
+}
+}
+
+/* animation1 */
+@-webkit-keyframes hvr-wobble-to-bottom-right {
+16.65% {
+    -webkit-transform: translate(8px, 8px);
+    transform: translate(8px, 8px);
+}
+33.3% {
+    -webkit-transform: translate(-6px, -6px);
+    transform: translate(-6px, -6px);
+}
+49.95% {
+    -webkit-transform: translate(4px, 4px);
+    transform: translate(4px, 4px);
+}
+66.6% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+}
+83.25% {
+    -webkit-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
+}
+100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+}
+@keyframes hvr-wobble-to-bottom-right {
+16.65% {
+    -webkit-transform: translate(8px, 8px);
+    transform: translate(8px, 8px);
+}
+33.3% {
+    -webkit-transform: translate(-6px, -6px);
+    transform: translate(-6px, -6px);
+}
+49.95% {
+    -webkit-transform: translate(4px, 4px);
+    transform: translate(4px, 4px);
+}
+66.6% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+}
+83.25% {
+    -webkit-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
+}
+100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+}
+.hvr-wobble-to-bottom-right {
+display: inline-block;
+vertical-align: middle;
+-webkit-transform: perspective(1px) translateZ(0);
+transform: perspective(1px) translateZ(0);
+box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-wobble-to-bottom-right:hover, .hvr-wobble-to-bottom-right:focus, .hvr-wobble-to-bottom-right:active {
+-webkit-animation-name: hvr-wobble-to-bottom-right;
+animation-name: hvr-wobble-to-bottom-right;
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-timing-function: ease-in-out;
+animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: 1;
+animation-iteration-count: 1;
+}
+ /* Footer */
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50rem;
+    margin-bottom: 0.5rem;
+    
+}
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(100, 98, 98);
+}
+
+/* Redes */
+.redes {
+    width: 375px;
+    display: flex;
+    justify-items: center;
+    margin-top: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+}
+.span-seguinos {
+    font-family: var(--font);
+    font-size: 1.2rem;
+    color: var(--white);
+}
+.redes .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 100px;
+}
+.redes ul li a {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 5px;
+}
+.facebook img {
+    background-color: #4f60ff;/* 6EDF44 codigo de color de los iconos */
+}
+ul li {
+    text-decoration: none;
+    list-style: none;
+}
+ul li img{
+    border-radius: 50%;
+}
+
+
+/* Derechos */
+.derechos {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--white);
+    font-family: var(--font);
+    width: 100%;
+    justify-content: space-around;
+}
+.copyright {
+    height: 6rem;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+.copyright p {
+    width: 100%;
+    text-align: center;
+}
+
+/* contacto-footer */
+.contact {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-family: var(--font);
+    margin-top: 20px;
+    width: 100%;
+    padding-left: 3rem;
+}
+.telefonos p {
+    margin-top: 1rem;
+}
+
+@media (max-width: 375px ) {/* hasta 375px pasa esto */
+    .detek {
+        display: none;
+    }
+    .titulo-elect {
+        font-size: 1.5rem;
+        width: 147px;
+    }
+    
+}
+@media (min-width: 376px ) {/* dwesde 376px pasa esto */
+    .subtitulo{ 
+        font-size:3rem;
+    }
+    .titulo-elect {
+        font-size: 2.5rem;
+        width: 253px;
+    }
+    .product-info-electronica {
+        width: 90vw;
+    }
+    .product-info-electronica p,
+    .product-info-electronica li {
+        width: 100%;
+        font-size: var(--sm);
+        text-align: justify;
+    }
+    .cards-deportes {
+        grid-template-columns: repeat(2, 150px);
+    }
+    .contenedor-manuales {
+        grid-template-columns: repeat(2, 150px);
+    }
+    .card-deportes { 
+        width: 150px;
+    }
+    .caracteristicas-disciplinas {
+        width: 90vw;
+        font-size: var(--sm);
+    }
+    .texto-deportes {
+        font-size: var(--lg);
+    }
+    .titulo-deportes,
+    .titulo-manuales {
+        font-size: 4rem;
+        justify-content: flex-start;
+    }
+    .contactanos {
+        height: 350px;
+    }
+    .copyright {
+        width: 80%;
+    }
+}
+@media (min-width:525px) {
+    .titulo-deportes {
+        color: var(--black);
+    }
+    .texto-deportes {
+        font-size: 2.5rem;
+    }
+    .card-clientes {
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+    .card-clientes img {
+    width: 50px;
+    height: 50px;
+    }
+    .contenedor-imagen {
+        height: 500px;
+    }
+    .nuestros {
+        font-size: 30px;
+    }
+    .titulo-pesaje {
+        text-align: left;
+    }
+    .cards-pesaje-contenedor {    
+        grid-auto-rows: 400px; 
+        width: 420px;
+    }
+    .texto-disciplinas,
+    .texto-manuales {
+        text-align: left;
+    }
+    .caracteristicas-disciplinas {
+        text-align: left;
+    }
+}
+@media (min-width: 650px) {
+    .soluciones {
+        flex-direction: row;
+    }
+    .imagen-soluciones {
+        height: 420px;
+    }
+    .imgfutbol {
+        width: 400px;
+        height: 400px;
+    }
+    .imgvoley1 {
+        width: 468px;
+        height: 382px;/* se sube 130px a cada width y heigth */
+    }
+    .imgvoley2 {
+        width: 468px;
+        height: 602px;
+    }
+    .imgarqueria {
+        width: 460px;
+        height: 480px;
+    }
+    .imgwateropolo1 {
+        width: 505px;
+        height: 380px;
+    }
+    .imgwateropolo2 {
+        width: 505px;
+        height: 659px;
+    }
+    .imgwateropolo3, .imgwateropolo4 {
+        width: 505px;
+        height: 352px;
+    }
+    .imgbasquet1, .imgbasquet2, .imgbasquet3, .imgbasquet4 {
+        width: 500px;
+        height: 500px;
+    }
+    .imghokey1 {
+        width: 585px;
+        height: 212px;
+    }
+    .imghokey2 {
+        width: 585px;
+        height: 324px;
+    }
+    .imghokey3 {
+        width: 585px;
+        height: 390px;
+    }
+    .imgrunners1 {
+        width: 430px;
+        height: 300px;
+    }
+    .imgrunners2 {
+        width: 430px;
+        height: 412px;
+    }
+    .imgrugby1, .imgrugby2 {
+        width: 500px;
+        height: 500px;
+    }
+    .imgrugby3 {
+        width: 500px;
+        height: 640px;
+    }
+}
+@media (min-width: 781px) {/* desde 781px pasa esto */
+    
+    .subtitulo{ 
+        font-size:var(--tt);
+    }
+    .presentacion p {
+        width: 90%;
+        padding: 2rem;
+        font-size: var(--lg);
+    }
+    .presentacion {
+        display: flex;
+    }
+    .imagen-presentacion {
+        width: 920px;
+        height: 600px;
+    }
+    .empresa-info {
+        width: 550px;
+        height: fit-content;
+    }
+    /* Electronica */
+    .titulo-elect {
+        font-size: 3.3rem;
+        width: 280px;
+    }
+    .cards-rubros {
+        grid-template-columns: repeat(3, 240px);
+    }
+    /* Pesaje */
+    .titulo-pesaje {
+        font-size: 4rem;
+    }
+    .cards-pesaje-contenedor {
+        grid-template-columns: 1fr 1fr;   
+        grid-auto-rows: 500px; 
+        width: 750px;
+    }
+    /* Deportes */
+    .cards-deportes {
+        grid-template-columns: repeat(3, 240px);
+    }
+    .contenedor-manuales {
+        grid-template-columns: repeat(4, 150px);
+    }
+    .card-deportes { 
+        width: 240px;
+    }
+    .titulo-deportes {
+        font-size: var(--tt);
+    }
+    .card-clientes {
+        grid-template-columns: auto auto auto auto auto auto auto auto ;
+    }
+    .card-clientes img {
+        width: 60px;
+        height: 60px;
+    }
+    .imgfutbol {
+        width: 500px;
+        height: 500px;
+    }
+    .imgvoley1 {
+        width: 568px;
+        height: 482px;/* se sube 100px a cada width y heigth */
+    }
+    .imgvoley2 {
+        width: 568px;
+        height: 721px;
+    }
+    .imgarqueria {
+        width: 800px;
+        height: 487px;
+    }
+    .imgwateropolo1 {
+        width: 635px;
+        height: 480px;
+    }
+    .imgwateropolo2 {
+        width: 635px;
+        height: 900px;
+    }
+    .imgwateropolo3, .imgwateropolo4 {
+        width: 635px;
+        height: 438px;
+    }
+    .imgbasquet1, .imgbasquet2, .imgbasquet3, .imgbasquet4 {
+        width: 700px;
+        height: 700px;
+    }
+    .imghokey1 {
+        width: 851px;
+        height: 277px;
+    }
+    .imghokey2 {
+        width: 596px;
+        height: 424px;
+    }
+    .imghokey3 {
+        width: 596px;
+        height: 490px;
+    }
+    .imgrunners1 {
+        width: 530px;
+        height: 363px;
+    }
+    .imgrunners2 {
+        width: 530px;
+        height: 512px;
+    }
+    .imgrugby1, .imgrugby2, .imgrugby3 {
+        width: 600px;
+        height: 700px;
+    }
+    /* index-contactanos*/
+    .contactanos {
+        height: 750px;
+    }
+    .contactanos p {
+        font-size: var(--tt);
+    }
+    /* footer */
+    .container-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        height: 20rem;
+        width: 100%;
+    }
+    .redes {
+        height: 100%;
+        width: 100%;
+        justify-items: center;
+    }
+    .derechos .logo p {
+        font-size: var(--tt);
+    }
+    .derechos .line1,
+    .derechos .line2 {
+    height: 0.5rem
+    }
+    /* media-empresa */
+    .titulo-nuestra-empresa{ 
+        font-size:var(--tt);
+    }
+    .subtitulo-empresa {
+        font-size: var(--md);
+    }
+    .texto {
+        font-size: var(--md);
+    }
+    .info-listado {
+        font-size: var(--md);
+    }
+}
+@media (min-width:959px) {
+    .menu-hamburguesa {
+        display: none;
+    }
+    .contenedor-mobile {
+        display: none;
+    }
+    .titulo-elect {
+        font-size: var(--tt);
+        width: 400px;
+        margin-bottom: 5rem;
+    }
+    .titulo-pesaje {
+        font-size: var(--tt);
+    }
+    .imgarqueria {
+        width: 1000px;
+        height: 587px;
+    }
+    .cards-pesaje-contenedor {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 400px; 
+        width: 90%;
+    }
+    .card-clientes {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    }
+    .imgbasquet1, .imgbasquet2 {
+        width: 1000px;
+        height: 700px;
+    }
+    .imghokey1 {
+        width: 1200px;
+        height: 455px;
+    }
+    .imgrunners1 {
+        width: 820px;
+        height: 558px;
+    }
+    .imgrunners2 {
+        width: 820px;
+        height: 1150px;
+    }
+    .contenedor-imagen {
+        height: 700px;
+    }
+    .contenedor-manuales {
+        grid-template-columns: repeat(5, 150px);
+    }
+
+}
+@media (max-width: 960px) {
+    .seccion-navbar ul {
+        display: none;
+    }
+}
+@media (min-width: 1600px) {
+    .titulo-elect {
+        width: 739px;
+    }        
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="es" lang="es">
+    <head>        
+        <title>Contacto</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="icon" type="image/png" href="./logo/logodk.png">
+    </head>        
+    
+    <body class="contact-contacto gradient-background">
+
+        <div class="container contenedor-contacto form-container">
+
+        <section class="seccion-flecha">
+            <figure class="icono-flecha">
+            <a href="index.html"><img src="./iconos/angulo-doble-blanco.png" class="flecha" alt="flecha para volver"></a>
+            </figure>
+            </section>
+            
+            <section class="seccion-logo-contacto">
+            <div class="logo-contacto">
+            <div class="line1-contact"></div>
+            <p class="d-contact">D</p>
+            <p class="k-contact">K</p>
+            <div class="line2-contact"></div>
+            </div>
+        </section>
+
+
+        <form id="contact" action="contacto.php" method="post" class="form">
+            <h3 class="title-pregunta">¿Necesitas nuestros servicios?</h3>
+
+            <div>
+            
+            <label for="nombre" class="etiqueta">Nombre</label>
+            <input name="nombre" placeholder="Tu nombre" type="text" tabindex="1" required autofocus class="input input-nombre" >
+
+            <label for="email" class="etiqueta">Email</label>
+            <input name="email" placeholder="Ejemplo123@ejemplo.com" type="email" tabindex="2" required class="input input-email">
+
+            <label for="mensaje" class="etiqueta">Mensaje</label>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje y numero de contacto...." tabindex="5" required class="input input-mensaje"></textarea>
+            
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Enviar" class="boton-enviar send-button hvr-wobble-to-bottom-right">Enviar</button>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>
