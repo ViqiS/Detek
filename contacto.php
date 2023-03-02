@@ -52,3 +52,5 @@ if($estadoEnvio){
 } else {
     echo "Ocurrió un error inesperado.";
 }
+
+?>
