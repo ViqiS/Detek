@@ -14,6 +14,7 @@ $nombre = $_POST["nombre"];
 $email = $_POST["email"];
 $mensaje = $_POST["mensaje"];
 
+
 // Datos de la cuenta de correo utilizada para enviar vía SMTP
 $smtpHost = "dtcwin175.ferozo.com";  // Dominio alternativo brindado en el email de alta 
 $smtpUsuario = "consultas@detek.com.ar";  // Mi cuenta de correo

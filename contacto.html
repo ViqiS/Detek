@@ -37,16 +37,12 @@
 
             <div>
             
-            <label for="nombre" class="etiqueta">Nombre</label>
-            <input name="nombre" placeholder="Tu nombre" type="text" tabindex="1" required autofocus class="input input-nombre" >
+                <label for="nombre" class="etiqueta">Nombre</label>
+                <input name="nombre" placeholder="Tu nombre" type="text" tabindex="1" required autofocus class="input input-nombre" >
 
-            <label for="email" class="etiqueta">Email</label>
-            <input name="email" placeholder="Ejemplo123@ejemplo.com" type="email" tabindex="2" required class="input input-email">
-
-            <label for="mensaje" class="etiqueta">Mensaje</label>
-            <textarea name="mensaje" placeholder="Escribe tu mensaje y numero de contacto...." tabindex="5" required class="input input-mensaje"></textarea>
-            
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Enviar" class="boton-enviar send-button hvr-wobble-to-bottom-right">Enviar</button>
+                <a href="http://api.whatsapp.com/send?phone=+5493412282537&text=Hola!, quiero solicitar sus servicios" >
+                    <button class="boton-enviar send-button hvr-wobble-to-bottom-right" >Enviar mensaje por whatsapp</button>
+                </a>
             </div>
         </form>
         </div>
